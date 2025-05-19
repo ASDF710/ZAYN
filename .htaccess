@@ -1,0 +1,43 @@
+SetEnvIfNoCase User-Agent "pwnd" bad_bot
+SetEnvIfNoCase User-Agent "p0wn" bad_bot
+SetEnvIfNoCase User-Agent "botnet" bad_bot
+SetEnvIfNoCase User-Agent "scanner" bad_bot
+SetEnvIfNoCase User-Agent "havij" bad_bot
+SetEnvIfNoCase User-Agent "zmeu" bad_bot
+SetEnvIfNoCase User-Agent "binlar" bad_bot
+SetEnvIfNoCase User-Agent "morfeus" bad_bot
+SetEnvIfNoCase User-Agent "sqlninja" bad_bot
+SetEnvIfNoCase User-Agent "libwww-perl" bad_bot
+SetEnvIfNoCase User-Agent "domino" bad_bot
+SetEnvIfNoCase User-Agent "curl" bad_bot
+SetEnvIfNoCase User-Agent "wget" bad_bot
+SetEnvIfNoCase User-Agent "python-requests" bad_bot
+SetEnvIfNoCase User-Agent "masscan" bad_bot
+SetEnvIfNoCase User-Agent "nmap" bad_bot
+SetEnvIfNoCase User-Agent "sqlmap" bad_bot
+SetEnvIfNoCase User-Agent "nessus" bad_bot
+SetEnvIfNoCase User-Agent "nikto" bad_bot
+SetEnvIfNoCase User-Agent "fimap" bad_bot
+SetEnvIfNoCase User-Agent "acunetix" bad_bot
+SetEnvIfNoCase User-Agent "netsparker" bad_bot
+SetEnvIfNoCase User-Agent "ZmEu" bad_bot
+
+<IfModule mod_access_compat.c>
+    Order Allow,Deny
+    Allow from all
+    Deny from env=bad_bot
+</IfModule>
+
+<FilesMatch "(r57|c99|cmd|shell|backdoor)\.(php|txt)">
+    <IfModule mod_access_compat.c>
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+<Files ~ "^.*\.(htaccess|htpasswd|ini|log|conf)$">
+    <IfModule mod_access_compat.c>
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
+</Files>
