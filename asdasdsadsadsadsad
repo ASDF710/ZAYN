@@ -1,5 +1,3 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://adam-arts.com/</loc>
-</url>
-</urlset>
+User-Agent: *
+Allow: /index.php
+Sitemap: https://adam-arts.com/sitemap.xml
