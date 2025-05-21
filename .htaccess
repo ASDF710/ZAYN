@@ -1,43 +1,106 @@
-SetEnvIfNoCase User-Agent "pwnd" bad_bot
-SetEnvIfNoCase User-Agent "p0wn" bad_bot
-SetEnvIfNoCase User-Agent "botnet" bad_bot
-SetEnvIfNoCase User-Agent "scanner" bad_bot
-SetEnvIfNoCase User-Agent "havij" bad_bot
-SetEnvIfNoCase User-Agent "zmeu" bad_bot
-SetEnvIfNoCase User-Agent "binlar" bad_bot
-SetEnvIfNoCase User-Agent "morfeus" bad_bot
-SetEnvIfNoCase User-Agent "sqlninja" bad_bot
-SetEnvIfNoCase User-Agent "libwww-perl" bad_bot
-SetEnvIfNoCase User-Agent "domino" bad_bot
-SetEnvIfNoCase User-Agent "curl" bad_bot
-SetEnvIfNoCase User-Agent "wget" bad_bot
-SetEnvIfNoCase User-Agent "python-requests" bad_bot
-SetEnvIfNoCase User-Agent "masscan" bad_bot
-SetEnvIfNoCase User-Agent "nmap" bad_bot
-SetEnvIfNoCase User-Agent "sqlmap" bad_bot
-SetEnvIfNoCase User-Agent "nessus" bad_bot
-SetEnvIfNoCase User-Agent "nikto" bad_bot
-SetEnvIfNoCase User-Agent "fimap" bad_bot
-SetEnvIfNoCase User-Agent "acunetix" bad_bot
-SetEnvIfNoCase User-Agent "netsparker" bad_bot
-SetEnvIfNoCase User-Agent "ZmEu" bad_bot
+# BEGIN LSCACHE
+## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
+<IfModule LiteSpeed>
+RewriteEngine on
+CacheLookup on
+RewriteRule .* - [E=Cache-Control:no-autoflush]
+RewriteRule \.litespeed_conf\.dat - [F,L]
 
-<IfModule mod_access_compat.c>
-    Order Allow,Deny
-    Allow from all
-    Deny from env=bad_bot
+### marker MOBILE start ###
+RewriteCond %{HTTP_USER_AGENT} Mobile|Android|Silk/|Kindle|BlackBerry|Opera\ Mini|Opera\ Mobi [NC]
+RewriteRule .* - [E=Cache-Control:vary=%{ENV:LSCACHE_VARY_VALUE}+ismobile]
+### marker MOBILE end ###
+
+### marker CACHE RESOURCE start ###
+RewriteRule wp-content/.*/[^/]*(responsive|css|js|dynamic|loader|fonts)\.php - [E=cache-control:max-age=3600]
+### marker CACHE RESOURCE end ###
+
+### marker FAVICON start ###
+RewriteRule favicon\.ico$ - [E=cache-control:max-age=86400]
+### marker FAVICON end ###
+
+### marker DROPQS start ###
+CacheKeyModify -qs:fbclid
+CacheKeyModify -qs:gclid
+CacheKeyModify -qs:utm*
+CacheKeyModify -qs:_ga
+### marker DROPQS end ###
+
+</IfModule>
+## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
+# END LSCACHE
+# BEGIN NON_LSCACHE
+## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
+## LITESPEED WP CACHE PLUGIN - Do not edit the contents of this block! ##
+# END NON_LSCACHE
+# BEGIN WordPress
+# Las directivas (líneas) entre «BEGIN WordPress» y «END WordPress» son
+# generadas dinámicamente y solo deberían ser modificadas mediante filtros de WordPress.
+# Cualquier cambio en las directivas que hay entre esos marcadores serán sobrescritas.
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 24 hours"
+    ExpiresByType image/jpeg "access plus 24 hours"
+    ExpiresByType image/gif "access plus 24 hours"
+    ExpiresByType image/png "access plus 24 hours"
+    ExpiresByType text/css "access plus 24 hours"
+    ExpiresByType application/pdf "access plus 1 week"
+    ExpiresByType text/javascript "access plus 24 hours"
+    ExpiresByType text/html "access plus 5 minutes"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresDefault "access plus 24 hours"
+</IfModule>
+Options -Indexes
+<IfModule mod_headers.c>
+    Header set X-Endurance-Cache-Level "2"
+    Header set X-nginx-cache "WordPress"
+</IfModule>
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
 </IfModule>
 
-<FilesMatch "(r57|c99|cmd|shell|backdoor)\.(php|txt)">
-    <IfModule mod_access_compat.c>
-        Order Allow,Deny
-        Deny from all
-    </IfModule>
-</FilesMatch>
+# END WordPress
+# BEGIN LiteSpeed
+# Las directivas (líneas) entre «BEGIN LiteSpeed» y «END LiteSpeed» son
+# generadas dinámicamente y solo deberían ser modificadas mediante filtros de WordPress.
+# Cualquier cambio en las directivas que hay entre esos marcadores serán sobrescritas.
+<IfModule Litespeed>
+SetEnv noabort 1
+</IfModule>
+# END LiteSpeed
 
-<Files ~ "^.*\.(htaccess|htpasswd|ini|log|conf)$">
-    <IfModule mod_access_compat.c>
-        Order Allow,Deny
-        Deny from all
-    </IfModule>
-</Files>
+# BEGIN cPanel-generated php ini directives, do not edit
+# Manual editing of this file may result in unexpected behavior.
+# To make changes to this file, use the cPanel MultiPHP INI Editor (Home >> Software >> MultiPHP INI Editor)
+# For more information, read our documentation (https://go.cpanel.net/EA4ModifyINI)
+<IfModule php7_module>
+   php_flag display_errors Off
+   php_value max_execution_time 30
+   php_value max_input_time 60
+   php_value max_input_vars 10000
+   php_value memory_limit 512M
+   php_value post_max_size 1024M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php74"
+   php_value upload_max_filesize 1024M
+   php_flag zlib.output_compression Off
+</IfModule>
+<IfModule lsapi_module>
+   php_flag display_errors Off
+   php_value max_execution_time 30
+   php_value max_input_time 60
+   php_value max_input_vars 10000
+   php_value memory_limit 512M
+   php_value post_max_size 1024M
+   php_value session.gc_maxlifetime 1440
+   php_value session.save_path "/var/cpanel/php/sessions/ea-php74"
+   php_value upload_max_filesize 1024M
+   php_flag zlib.output_compression Off
+</IfModule>
+# END cPanel-generated php ini directives, do not edit
