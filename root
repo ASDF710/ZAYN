@@ -1,6 +1,6 @@
 #!/bin/bash
 
-directory="/home/jnafau/webapps/app-jnafaulive" 
+directory="/home/u1644027/public_html/" 
 publicHtmlPermission="0555"
 indexFile="$directory/index.php"
 indexFilePermission="0444"
