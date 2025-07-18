@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<title>Insurance Market Advisors</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+<link rel="icon" href="framework/img/png/fav.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700&amp;family=Fira+Sans:wght@400;500&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="framework/css/app.min.css" />
+<link rel="stylesheet" href="framework/css/fontawesome.min.css" />
+<link rel="stylesheet" href="framework/css/slidercss/slider-pro.min.css">
+<link rel="stylesheet" href="framework/css/slidercss/slider-style.css">
+<link rel="stylesheet" href="framework/css/slidercss/responsiveslides.css">
+<link rel="stylesheet" href="framework/css/style.css" />
+
+</head>
+<body class="cstm-des-cdn">
+<div class="header-cstm">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="header-cstm-top dk-hide">
+<p><span>Contact Us:</span> <a href="tel:803-639-7884">803-639-7884</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="vs-menu-wrapper">
+<div class="vs-menu-area text-center">
+<button class="vs-menu-toggle"><i class="fal fa-times"></i></button>
+<div class="mobile-logo">
+<a href="index.php"><img src="framework/img/logo.png" alt="logo" class="logo" /></a>
+</div>
+</div>
+</div>
+<header class="vs-header cstm-header-layout">
+<div class="container">
+<div class="row align-items-center justify-content-between gx-15">
+<div class="col-auto">
+<div class="header-logo">
+<a href="index.php"><img src="framework/img/logo.png" alt="logo" class="logo" /></a>
+</div>
+</div>
+<div class="col-auto">
+<div class="cm-punk mob-vw">
+<p class="mob-hide text-center"><span>Contact Us:</span> <a href="tel:803-639-7884">803-639-7884</a></p>
+</div>
+</div>
+<div class="col-auto">
+</div>
+<div class="col-auto d-block d-lg-none">
+<button class="vs-menu-toggle style2 d-inline-block d-lg-none"><i class="fal fa-bars"></i></button>
+</div>
+</div>
+</div>
+</header>
+
+<!-- slider starts -->
+
+<div class="slider-sec">
+
+<ul class="rslides" id="slider4">
+
+<li>
+<img src="framework/img/image4.jpg" alt="">
+<div class="img-caption">
+<div class="caption-inner">
+<h1>No one can surely predict the future. But we can protect it.</h1>        		
+</div>
+</div>
+</li>
+
+<li>
+<img src="framework/img/image1.jpg" alt="">
+<div class="img-caption">
+<div class="caption-inner">
+<h1>Welcome To Insurance Market Advisors</h1>     		
+</div>
+</div>
+</li>
+
+<li>
+<img src="framework/img/image3.jpg" alt="">
+<div class="img-caption">
+<div class="caption-inner">
+<h1>Affordable insurance plans just for you</h1>    		
+</div>
+</div>
+</li>
+
+<li>
+<img src="framework/img/image2.jpg" alt="">
+<div class="img-caption">
+<div class="caption-inner">  
+<h1>We focus on your risk so you can focus on your dreams.</h1>      		
+</div>
+</div>
+</li>
+
+</ul>
+
+</div>
+<div class="form-div">
+<div class="form-div-inner">
+<h2>Shop Health Insurance Smarter </h2>
+<h3>Compare Affordable Coverage Options</h3>
+<p>Find Out How Much You Can Save!</p>
+<div class="form-cont-bt">
+<p class="text-center"><span>Contact Us:</span> <a href="tel:803-639-7884">803-639-7884</a></p>
+</div>
+
+
+
+<form name="frm" method="GET" action="https://apply.mymfgapp.com/aca/step-1?agentId=rbaer">
+<ul>
+<li><div class="input-field">
+<input type="text" name="zipcode" value="" required/>
+<label>Enter your Zip Code</label>
+</div></li>
+<li><button class="srt-btn-crt" type="submit">Find plans</button>
+</li>
+</ul>
+</form>
+
+
+</div>
+</div>
+
+<!-- slider ends -->
+
+<section class="new-sec-srt">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-8 set-bg-clr-st">
+<div class="sub-inn-head"><h1>Find your plan in few easy steps: </h1></div>
+
+
+<div class="timeline">
+<div class="timeline-container primary">
+<div class="timeline-icon">
+<i class="far fa-grin-wink"></i>
+</div>
+<div class="timeline-body">
+<h4 class="timeline-title"><span class="badge">Step 1</span></h4>
+<h3 class="timeline-subtitle">Enter your zip code</h3>
+<p>This will help us provide you plan options in your area since many insurance carriers only operate in certain states, or certain parts of states.</p>
+</div>
+</div>
+<div class="timeline-container danger">
+<div class="timeline-icon">
+<i class="far fa-grin-hearts"></i>
+</div>
+<div class="timeline-body">
+<h4 class="timeline-title"><span class="badge">Step 2</span></h4>
+<h3 class="timeline-subtitle">Who needs health coverage?  Tell us about yourself and your household.</h3>
+<p>Apply for you and citizenshipForm of your household. Tell us a little about yourself so we can match you with plans tailored to what you need. </p>
+</div>
+</div>
+<div class="timeline-container">
+<div class="timeline-icon">
+<i class="far fa-grin-beam-sweat"></i>
+</div>
+<div class="timeline-body">
+<h4 class="timeline-title"><span class="badge">Step 3</span></h4>
+<h3 class="timeline-subtitle">Get Results</h3>
+<p>We’ll show you all of the plan options, and the premium tax credit subsidy you will receive. To hep you make a better decision about your health plan, we show you the Real Total Cost. This is what the plan will cost you overall with premiums, copays, deductibles, and any other out of pocket costs you might incur.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="img-wt-mv">
+<img src="framework/img/lines.png" alt="image">
+</div>
+</section>
+
+<section class="new-about">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-md-6">
+<div class="side-cont">
+<h4>Insurance Market Advisors is dedicated to making sure you’re informed about the Affordable Care Act and health insurance.</h4>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="side-img">
+<img src="framework/img/talk.jpg" alt="image">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="new-srtup position-relative">
+<div class="container">
+<div class="row justify-content-center align-items-center">
+<div class="col-md-7">
+<div class="new-srt-btn-srt">
+<h2>Start Now! </h2>
+<p>To see your personalized list of health plan options now, enter your zip code. </p>
+
+
+<form name="frm" method="GET" action="https://apply.mymfgapp.com/aca/step-1?agentId=rbaer">
+<div class="find-plan">
+<input placeholder="Enter Zip code" type="text" name="zipcode" value="" required>
+<button class="srt-btn-crt">Find Plans</button>
+</div>
+</form>
+
+</div>
+</div>
+<div class="col-md-3">
+<div class="new-srt-gif">
+<img src="framework/img/form.gif" alt="image">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="new-about last-div-pad-chng position-relative">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-8">
+<div class="new-some-data">
+<h3>Important Information:</h3>
+<p>Insurance Market Advisors is owned and operated by Senior Benefits Center, which is an independent broker and is not a federal or state insurance Marketplace or other website. It does not provide access to any federal or state marketplace or exchange.</p>
+<p>Insurance Market Advisors is required to comply with all applicable federal law, including the standards established under 45 CFR 155.220(c) and (d) and standards established under 45 CFR 155.260 to protect the privacy and security of personally identifiable information. This website does not provide a complete listing of, or display all data on all Qualified Health Plans being offered in your state or service area through the Marketplace website or the federal Medicare program.</p>
+</div>
+</div>
+<div class="col-md-4">
+<div class="new-fix-sty">
+<div class="new-some-det">
+<ul>
+<li><span>Insurance market Advisors</span></li>
+<li><span>Address:</span> 147 HERLONG AVE, ROCK HILL, SC 29730</li>
+<li><span>Phone:</span> 803-639-7884</li>
+<li><span>Email:</span> support@imadvisors.org</li>
+<li><a href="https://www.bbb.org/us/sc/rock-hill/profile/health-insurance/senior-benefits-center-0473-810497#sealclick" target="_blank"><img src="framework/img/bbb.png" alt="image"></a></li>
+</ul>
+</div>
+<div class="more-link">
+<ul>
+<li><a href="JavaScript:void(0)" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-chevron-right"></i>Privacy Policy</a></li>
+<li><a href="https://www.seniorbenefits.us/contact.php" target="_blank"><i class="fas fa-chevron-right"></i>Contact Us</a></li>
+</ul>
+</div>
+<div class="new-some-social">
+<ul>
+<li><a href="https://www.facebook.com/IMAdvisors" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="last-img-shape">
+<img src="framework/img/star.png" alt="star">
+</div>
+</section>
+
+<section class="last-copy">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="last-copy-txt">
+<p>Copyright © 2025 | Imadvisior. All Rights Reserved| Designed by Go4websites.com</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- modal starts -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog my-cstm-modal">
+<div class="modal-content ">
+<div class="modal-header">
+<h5 class="modal-title new-title-srt" id="exampleModalLabel">Privacy Policy</h5>
+<button type="button" class="btn-close new-crx" data-bs-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></button>
+</div>
+<div class="modal-body">
+<div class="new-mod-inn">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<div class="new-mod-inn-data">
+<p>This privacy policy discloses the privacy practices for www.seniorbenefits.us, this privacy policy applies solely to information collected by this web site. It will notify you of the following:</p>
+<ul class="first-lst">
+<li>What personally identifiable information is collected from you through the web site, how it is used and with whom it may be shared.</li>
+<li>What choices are available to you regarding the use of your data.</li>
+<li>The security procedures in place to protect the misuse of your information.</li>
+<li>How you can correct any inaccuracies in the information.</li>
+</ul>
+<p>Information Collection, Use, and Sharing</p>
+<p>We are the sole owners of the information collected on this site. We only have access to/collect information that you voluntarily give us via email or other direct contact from you. </p>
+<p>We will not sell or rent this information to anyone.</p>
+<p>We will use your information to respond to you, regarding the reason you contacted us. We will not share your information with any third party outside of our organization, other than as necessary to fulfill your request, e.g. to ship an order.</p>
+<p> Unless you ask us not to, we may contact you via email in the future to tell you about specials, new products or services, or changes to this privacy policy.</p>
+
+<h2>Links</h2>
+<p>This web site contains links to other sites. Please be aware that we are not responsible for the content or privacy practices of such other sites. We encourage our users to be aware when they leave our site and to read the privacy statements of any other site that collects personally identifiable information.</p>
+<p>Your Access to and Control Over Information</p>
+<p>You may opt out of any future contacts from us at any time. You can do the following at any time by contacting us via the email address or phone number given on our website:</p>
+
+<ul class="second-lst">
+<li>See what data we have about you, if any.</li>
+<li>Change/correct any data we have about you.</li>
+<li>Have us delete any data we have about you.</li>
+<li>Express any concern you have about our use of your data.</li>
+</ul>
+
+<h2>Security</h2>
+<p>We take precautions to protect your information. When you submit sensitive information via the website, your information is protected both online and offline.</p>
+<p>Wherever we collect sensitive information (such as credit card data), that information is encrypted and transmitted to us in a secure way. You can verify this by looking for a closed lock icon at the bottom of your web browser, or looking for “https” at the beginning of the address of the web page.</p>
+<p>While we use encryption to protect sensitive information transmitted online, we also protect your information offline. Only employees who need the information to perform a specific job (for example, billing or customer service) are granted access to personally identifiable information. The computers/servers in which we store personally identifiable information are kept in a secure environment.</p>
+
+<h2>Updates</h2>
+<p>Our Privacy Policy may change from time to time and all updates will be posted on this page.</p>
+<p>If you feel that we are not abiding by this privacy policy, you should contact us immediately via telephone at <span class="bld mail-link"><a href="JavaScript:void(0)">803-639-7884</a></span> or <span class="mail-link"><a href="mailto:admin@mailsbc.com">admin@mailsbc.com</a>.</span></p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="srt-btn-crt cst-bd-btn" data-bs-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+
+<!-- modal ends -->
+
+<a href="javascript: void(0)" class="scrollToTop scroll-btn"><i class="far fa-arrow-up"></i></a>
+<script src="framework/js/vendor/jquery-3.6.0.min.js"></script>
+<script src="framework/js/app.min.js"></script>
+<script src="framework/js/main.js"></script>
+<script src="framework/css/slidercss/jquery.sliderPro.min.js"></script>
+<script src="framework/css/slidercss/responsiveslides.js"></script>
+
+<script>
+//slider js 
+
+// You can also use "$(window).load(function() {"
+$(function () {
+$("#slider4").responsiveSlides({
+auto: true,
+pager: false,
+nav: true,
+speed: 500,
+namespace: "callbacks",
+before: function () {
+$('.events').append("<li>before event fired.</li>");
+},
+after: function () {
+$('.events').append("<li>after event fired.</li>");
+}
+});
+
+});
+</script>
+
+
+
+
+</body>
+</html>
