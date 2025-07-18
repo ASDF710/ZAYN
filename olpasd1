@@ -1,0 +1,484 @@
+<?php
+error_reporting(0);
+require('user-panel/library/DB.class.php');
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<?php
+$sql2 = "SELECT * FROM about_details";
+$getAbout = FetchAsocRow($conn, $sql2);
+
+$sql3 = "SELECT * FROM homepage";
+$gethome = FetchAsocRow($conn, $sql3);
+
+$sql5 = "SELECT * FROM contact_details";
+$sql_exe5 = FetchAsocRow($conn, $sql5);
+
+$sql4 = "SELECT * FROM social_links";
+$getsocial = FetchAsocRow($conn, $sql4);
+
+$sql55 = "SELECT * FROM property_details";
+$getpDetails = FetchAsoc($conn, $sql55);
+
+
+if(isset($_POST['action']) && $_POST['action'] == 'subscribe'){
+$subs = "INSERT INTO additional_content (description) VALUES ('".$_POST['newseml']."')";
+$subsExe = runQuery($conn, $subs);
+}
+
+?>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+
+<title>Florida Houseboat Vacation Rentals | Vacation Rentals Apalachicola FL</title>
+<meta name="title" content="Boating Vacation Rental Apalachicola - Florida Houseboat Vacation Rentals Venue ">
+<meta name="description" content="Enjoy your Journey with Florida Houseboat Vacation Rentals Venue and Apalachicola Houseboat Vacation, these one and two-bedroom with Apalachicola Vacation Rental">
+<meta name="keywords" content="Boating Vacation Rental Apalachicola, Florida Houseboat Vacation Rentals, Vacation Rentals Apalachicola Florida, Apalachicola Houseboat Vacation, Houseboat Vacation Rentals Apalachicola, Vacation Rentals Apalachicola Florida, Apalachicola Houseboat Rentals Florida">
+
+<link rel="canonical" href="https://www.floridahouseboatvacationrentals.com">
+<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="css/bliss-slider.css">
+<link href="css/responsive.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link  href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.userway.org/widget.js" data-account="tLPSvXWUCa"></script>
+</head>
+
+<body>
+
+<?php include('user-header.php'); ?>
+
+
+<div class="slider-section">
+<div id="slider" class="slider-container">
+<ul class="slider">
+
+<li class="slide">
+<div class="slide-bg">
+<img src="img/slider/1.jpg" alt="Image" draggable="false">
+<div class="calendar-sec1 wel">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12 text-center">
+<div class="silder-con-pt">
+<h1>Welcome To</h1>
+<div class="clearfix"></div>
+<h3>Florida Houseboat Vacation Rentals</h3>
+</div>	
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+
+
+<li class="slide">
+<div class="slide-bg">
+<img src="img/slider/general.jpg" alt="Image" draggable="false">
+<div class="calendar-sec1">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12 text-center">
+<div class="silder-con-pt">
+<h1>The General Lee</h1>
+<div class="clearfix"></div>
+<h3>Spectacular Views From Your 2 Story Porch</h3>
+</div>	
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+
+
+<li class="slide">
+<div class="slide-bg">
+<img src="img/slider/rebel.jpg" alt="Image" draggable="false">
+<div class="calendar-sec1">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12 text-center">
+<div class="silder-con-pt">
+<h1>The Rebel's Rest</h1>
+<div class="clearfix"></div>
+<h3>A Romantic Getway Moored On The Apalachicola River</h3>
+</div>	
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+
+
+<li class="slide">
+<div class="slide-bg">
+<img src="img/slider/relax.jpg" alt="Image" draggable="false">
+<div class="calendar-sec1">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12 text-center">
+<div class="silder-con-pt">
+<h1>The Reelaxation</h1>
+<div class="clearfix"></div>
+<h3>A Comfortable Cabin On The Apalachicola River</h3>
+</div>	
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+
+
+<li class="slide">
+<div class="slide-bg">
+<img src="img/slider/south.jpg" alt="Image" draggable="false">
+<div class="calendar-sec1">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12 text-center">
+<div class="silder-con-pt">
+<h1>The Southern Comfort</h1>
+<div class="clearfix"></div>
+<h3>Unique And Well Appointed Floating Condo</h3>
+</div>	
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+
+</ul>
+
+<div class="slider-controls">
+<div class="slide-nav">
+<a href="#" class="prev"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+<a href="#" class="next"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="sear" id="book">
+<div class="container">
+<form method="post" action="result.php">
+<div class="form-row align-items-center justify-content-center">
+<div class="col-auto">
+<label class="sr-only" >Check In</label>
+<input type="text" name="arrival" class="form-control" id="datepicker1" placeholder="Check In" Required>
+</div>
+
+<div class="col-auto">
+<label class="sr-only" >Check Out</label>
+<input type="text" name="departure" class="form-control" id="datepicker2" placeholder="Check Out" Required>
+</div>
+
+<div class="col-auto">
+<label class="sr-only" >Guests</label>
+<select class="custom-select " name="guests" id="inlineFormCustomSelect">
+<option selected="selected">Guests</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+</select>
+</div>
+
+<div class="col-auto">
+<button type="submit" name="submit" value="submit" class="btn btn-primary">Search</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+
+
+
+<section class="prop-sec-i pt-100 pb-70 section-bg">
+<div class="tri"><img src="img/bg.png" alt=""></div>
+<div class="sp2"><img src="img/bg.png" alt=""></div>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<div class="section-title text-center">
+<h2>Featured Property</h2>
+<div class="heading-bor">&nbsp;</div>
+</div>
+</div>
+</div>
+<div class="row pt-45">
+
+<?php foreach($getpDetails as $getDataArr) { 
+$sql7 = "SELECT * FROM property_gallery_list WHERE property_id = '".$getDataArr['property_id']."' ORDER BY order_id ASC ";
+$getimg  = FetchArrRow($conn, $sql7);
+?>
+
+<div class="col-md-6">
+<div class="florida-prop-card-two">
+<div class="row align-items-center">
+<div class="col-lg-5 col-md-4 p-0">
+<div class="florida-prop-card-img">
+<a href="<?php echo $getDataArr['prop_url']; ?>">
+<img src="uploads/<?php echo $getimg['property_img']; ?>" alt="Image">
+</a>
+</div>
+</div>
+<div class="col-lg-7 col-md-8 p-0">
+<div class="florida-prop-card-content">
+<h3>
+<a href="<?php echo $getDataArr['prop_url']; ?>"><?php echo $getDataArr['property_head_title']; ?></a>
+</h3>
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+</div>
+<p><?php echo substr(strip_tags(html_entity_decode(stripslashes(htmlspecialchars($getDataArr['property_home_content'])))),0,150); ?></p>
+<ul>
+<li><i class="fa fa-home"></i> <?php echo $getDataArr['property_type']; ?></li>
+<li><i class="fa fa-bed"></i> <?php echo $getDataArr['property_no_of_bedrooms']; ?></li>
+</ul>
+<ul class="mb-20">
+<li><i class="fa fa-bath"></i> <?php echo $getDataArr['property_no_of_baths']; ?></li>
+<li><i class="fa fa-user"></i> <?php echo $getDataArr['property_no_of_sleeps']; ?> </li>
+</ul>
+<a href="<?php echo $getDataArr['prop_url']; ?>" class="book-more-btn">
+Book Now
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<?php  } ?>
+
+</div>
+</div>
+</section>
+
+
+
+<section class="about-sec about-us-area style-1" style="background-image: url('img/bgmap.png')">
+<img class="shape-1 wow zoomInDown" src="img/dots.png" alt="Shape">
+<div class="container">
+<div class="row">
+<div class="col-xl-6">
+<div class="about-in-content-box">
+<div class="sec-title black">
+<div class="icon"><span class="flaticon-rudder"></span></div>
+<div class="big-title black"><h1>About Us</h1><div class="heading-bor">&nbsp;</div></div>
+</div>
+<div class="inner-content-box">
+<p><?php echo substr(strip_tags(html_entity_decode(stripslashes(htmlspecialchars($getAbout['about_owner'])))),0,740); ?></p>
+<div class="read-btn">
+<a href="javascript:void(0)" class="my-btn-str" data-toggle="modal" data-target="#show-book-form-dsk">Read More</a>
+</div>
+</div>
+</div>    
+</div>
+<div class="col-xl-6">
+<div class="about-in-image-box">
+<img src="img/slider/general.jpg" alt="Awesome Image">   
+</div> 
+<div class="about-in-image-box">
+<img src="img/slider/rebel.jpg" alt="Awesome Image">   
+</div>    
+</div>
+</div>
+</div>
+<div class="icon-holder">
+<img src="img/big-icon-2.png" class="rotating" alt="Icon">
+</div>
+</section>
+
+<div class="cal-sec dsk-vw">
+<div class="modal fade" id="show-book-form-dsk" role="dialog" style="z-index: 99999 !important;">
+<div class="modal-dialog examp2">
+<div class="modal-content">
+<div class="modal-header">
+<h5 class="modal-title">About Us</h5>
+<button type="button" class="close" data-dismiss="modal">&times;</button>
+</div>
+<div class="modal-body">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="in-md-par">
+<?php echo $getAbout['about_owner']; ?>
+</div>
+<div class="snd-btn">
+<a href="https://coastalanglermag.com/southern-living-northern-floridas-apalachicola/" target="_blank">Article on Apalachacola</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default md-close" data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="cta-area style-1" style="background-image: url('img/side.jpg')">
+<div class="container">
+<div class="row">
+<div class="col-md-7">
+<div class="section-title black">
+<h2><?php echo $gethome['home_heading']; ?></h2>
+<div class="heading-bor">&nbsp;</div>
+</div>
+<div class="inner-content-box">
+<?php echo $gethome['home_des']; ?>
+</div>
+</div>
+<div class="col-md-5">
+<div class="index-foto">
+<img class="wave-shape" src="img/wave-black.png" alt="Shape">
+<img class="top-circle" src="img/circle-1.png" alt="Shape">
+<img class="bottom-circle" src="img/circle-2.png" alt="Shape"> 
+<div class="fotorama" data-width="100%" data-allowfullscreen="true"  data-loop="true" data-autoplay="true">
+<img src="img/relax/rc1.webp" alt="img" loading="lazy"/>
+<img src="img/relax/rc2.webp" alt="img" loading="lazy"/>
+<img src="img/relax/rc3.webp" alt="img" loading="lazy"/>
+<img src="img/relax/rc4.webp" alt="img" loading="lazy"/>
+<img src="img/relax/rc5.webp" alt="img" loading="lazy"/>
+<img src="img/relax/rc6.webp" alt="img" loading="lazy"/>
+<img src="img/relax/rc7.webp" alt="img" loading="lazy"/>
+<img src="img/relax/rc8.webp" alt="img" loading="lazy"/>
+<img src="img/relax/rc9.webp" alt="img" loading="lazy"/>
+<img src="img/relax/rc10.webp" alt="img" loading="lazy"/>
+</div> 
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<?php include('user-footer.php'); ?>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bliss-slider.js"></script>
+
+<script>
+var scrollToTopBtn = document.querySelector(".scrollToTopBtn")
+var rootElement = document.documentElement
+
+function handleScroll() {
+var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
+if ((rootElement.scrollTop / scrollTotal ) > 0.15) {
+scrollToTopBtn.classList.add("showBtn")
+} else {
+scrollToTopBtn.classList.remove("showBtn")
+}
+}
+
+function scrollToTop() {
+rootElement.scrollTo({
+top: 0,
+behavior: "smooth"
+})
+}
+scrollToTopBtn.addEventListener("click", scrollToTop)
+document.addEventListener("scroll", handleScroll)
+</script>
+
+<script type="text/javascript">
+$(window).on('load',function(){
+$('#myModal').modal('show');
+});
+</script>
+
+
+
+<script>
+$(function() {
+$("#slider").blissSlider({
+auto: 1,
+transitionTime: 500,
+timeBetweenSlides: 4000
+});
+});
+</script>
+
+<script src="js/owl.carousel.js"></script> 
+
+
+<script>
+$(window).scroll(function(){
+if ($(window).scrollTop() >=45) {
+$('header').addClass('fixed-header');
+}
+else {
+$('header').removeClass('fixed-header');
+}
+});
+</script>
+
+<link href="css/jquery-ui.css" rel="stylesheet">
+<script src="js/jquery-ui.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+<script>
+$(document).ready(function () {
+var daysToAdd = 3;
+$("#datepicker1").datepicker({
+minDate: 0 ,
+onSelect: function (selected) {
+var dtMax = new Date(selected);
+dtMax.setDate(dtMax.getDate() + daysToAdd); 
+var dd = dtMax.getDate();
+var mm = dtMax.getMonth() + 1;
+var y = dtMax.getFullYear();
+var dtFormatted = mm + '/'+ dd + '/'+ y;
+$("#datepicker2").datepicker("option", "minDate", dtFormatted);
+}
+});
+
+$("#datepicker2").datepicker({
+minDate: 0 ,
+onSelect: function (selected) {
+var dtMax = new Date(selected);
+dtMax.setDate(dtMax.getDate() - daysToAdd); 
+var dd = dtMax.getDate();
+var mm = dtMax.getMonth() + 1;
+var y = dtMax.getFullYear();
+var dtFormatted = mm + '/'+ dd + '/'+ y;
+$("#datepicker1").datepicker("option", "maxDate", dtFormatted)
+}
+});
+});
+</script>
+
+
+</body>
+</html>
