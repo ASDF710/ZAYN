@@ -1,0 +1,65 @@
+<?php
+// Nama file: smap.php
+// Deskripsi: Membuat sitemap yang valid dengan hanya memasukkan direktori yang mengandung 'index.html' dan mengabaikan file PHP/HTML lainnya.
+
+// Fungsi untuk mendapatkan URL base secara otomatis dari server
+function getBaseUrl() {
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+    $host = $_SERVER['HTTP_HOST'];
+    $directory = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/') . '/';
+    return $protocol . $host . $directory;
+}
+
+// Fungsi untuk membaca direktori secara otomatis dan menghasilkan URL sitemap hanya untuk folder yang memiliki 'index.html'
+function generateSitemap($directory) {
+    $sitemap_urls = [];
+    $rii = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory, RecursiveDirectoryIterator::SKIP_DOTS));
+
+    // Iterasi melalui semua file di direktori
+    foreach ($rii as $file) {
+        $file_path = str_replace('\\', '/', $file->getPathname());  // Ubah path agar universal
+        $file_name = basename($file_path);
+
+        // Masukkan hanya folder yang memiliki 'index.html' dan abaikan file PHP/HTML lainnya
+        if ($file_name === 'index.html') {
+            $folder_path = str_replace($directory, '', dirname($file_path));
+            $relative_url = getBaseUrl() . ltrim($folder_path, '/');
+            $sitemap_urls[] = rtrim($relative_url, '/') . '/';  // Pastikan URL diakhiri dengan '/'
+        }
+    }
+
+    return array_unique($sitemap_urls);  // Menghindari duplikasi URL
+}
+
+// Fungsi untuk membuat sitemap XML yang valid dari array URL
+function createSitemapXML($urls) {
+    $sitemapContent = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+    $sitemapContent .= "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n";
+
+    foreach ($urls as $url) {
+        $sitemapContent .= "  <url>\n";
+        $sitemapContent .= "    <loc>$url</loc>\n";
+        $sitemapContent .= "    <lastmod>" . date('Y-m-d') . "</lastmod>\n"; // Tambahkan tanggal sekarang sebagai lastmod
+        $sitemapContent .= "    <changefreq>daily</changefreq>\n"; // Frekuensi perubahan bisa disesuaikan
+        $sitemapContent .= "    <priority>0.5</priority>\n"; // Prioritas bisa disesuaikan
+        $sitemapContent .= "  </url>\n";
+    }
+
+    $sitemapContent .= "</urlset>\n";
+    return $sitemapContent;
+}
+
+// Dapatkan direktori root secara otomatis
+$directory = __DIR__;
+
+// Hasilkan URL sitemap hanya untuk folder yang memiliki 'index.html'
+$sitemap_urls = generateSitemap($directory);
+
+// Buat sitemap XML
+$sitemap_xml = createSitemapXML($sitemap_urls);
+
+// Simpan sitemap ke file 'sitemap.xml' di direktori yang sama dengan smap.php
+file_put_contents('sitemap.xml', $sitemap_xml);
+
+echo "Sitemap berhasil dibuat dan disimpan di 'sitemap.xml'";
+?>
