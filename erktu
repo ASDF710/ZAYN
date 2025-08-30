@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta name="description" content="Academia para la Universidad de Lima, Pre Lima, Preparamos para el Examen de Admisión  ULima, Asegura tu ingreso Con Simulacros tipo examen de admisión ULima, Te preparamos con Asesorías para alumnos academia Pre Lima, Asesorías para alumnos de pre de la universidad de Lima, Damos clases grupales y particulares para alumnos ULima, academia para la Usil, academia para Upc, academia para Católica, Admisión ULima, preparación U.Lima" />
+  <meta name="keywords" content="Academia para la Universidad de Lima, Pre Lima, Preparamos para el Examen de Admisión  ULima, Asegura tu ingreso Con Simulacros tipo examen de admisión ULima, Te preparamos con Asesorías para alumnos academia Pre Lima, Asesorías para alumnos de pre de la universidad de Lima, Damos clases grupales y particulares para alumnos ULima, academia para la Usil, academia para Upc, academia para Católica, Admisión ULima, preparación U.Lima" />
+  <meta content=https://www.academiathales.com/ name=IDENTIFIER-URL>
+  <meta property="og:image" content="https://academiathales.com/imagen/imagen-compartir-url.png">
+  <meta name="google-site-verification" content="s80Es3ALkrzKVqd-qizWUbVczwmJkvEkmzdiLF4YKqw" />
+  <title>Academia para la Universidad de Lima, Pre Lima, Preparamos para el Examen de Admisión ULima, Asegura tu ingreso Con Simulacros tipo examen de admisión ULima, Te preparamos con Asesorías para alumnos academia Pre Lima, Asesorías para alumnos de pre de la universidad de Lima, Damos clases grupales y particulares para alumnos ULima, academia para la Usil, academia para Upc, academia para Católica, Admisión ULima, preparación U.Lima</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preload" href="bootstrap/bootstrap.min.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="bootstrap/bootstrap.min.css"></noscript>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"></noscript>
+  <script src="bootstrap/jquery.min.js"></script>
+  <script src="bootstrap/popper.min.js"></script>
+  <script src="bootstrap/bootstrap.min.js"></script>
+  <script src="js/aos.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="css/slider.css">
+  <link rel="stylesheet" type="text/css" href="css/botones-videos.css">
+  <link rel="stylesheet" type="text/css" href="css/footer.css">
+  <link rel="stylesheet" type="text/css" href="css/mensaje.css">
+  <link rel="stylesheet" type="text/css" href="css/menu.css">
+  <link rel="stylesheet" type="text/css" href="css/videos-academiathales.css">
+  <link rel="preload" href="https://academiathales.com/imagen/logo.webp" as="image">
+  <link href="css/aos.css" rel="stylesheet">
+  <script src="js/aos.js"></script>
+  <script src="js/googletagmanager.js" async></script>
+  <link rel="canonical" href="https://academiathales.com/">
+</head>
+
+<body style="background-color: #ffffff;">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MVZMQWQ8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+<style>
+  .navbar-area {
+    position: relative !important;
+    z-index: 10 !important;
+  }
+</style>
+ 
+  <div class="navbar-area" id="mainContent">
+    <div class="mobile-nav" style="display:none;"></div>
+    <div class="main-nav">
+      <div class="container">
+        <nav class="navbar navbar-center navbar-expand-md navbar-light">
+          <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="https://www.instagram.com/academiathales/?hl=es-la" class="nav-link">TESTIMONIOS</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://academiathales.com/pregunthales/" class="nav-link">PREGUNTHALES</a>
+              </li>
+              <li class="nav-item">
+                <a href="https://academiathales.com/academia-thales/" class="nav-link">AULA VIRTUAL</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="container d-none d-sm-block d-md-block ">
+    <img id="logo" src="imagen/logo.webp" width="1330" height="344" alt="Academia Thales">
+  </div>
+  <div class="container d-sm-none d-md-none">
+    <img id="logo" src="imagen/logo.webp" width="1330" height="344" alt="Academia Thales">
+  </div>
+  
+  <!-- VIDEO DE FONDO -->
+<div class="video-background-wrapper">
+  <!-- Video para escritorio -->
+  <video id="videoBackgroundDesktop" autoplay muted loop playsinline>
+    <source src="video-thales.mp4" type="video/mp4">
+    Tu navegador no soporta video HTML5.
+  </video>
+
+  <!-- Video para móvil -->
+  <video id="videoBackgroundMobile" autoplay muted loop playsinline>
+    <source src="video-thales-mobile.mp4" type="video/mp4">
+    Tu navegador no soporta video HTML5.
+  </video>
+</div>
+
+  
+  <div id="slider-container" onclick="toggleDirection()">
+    <div id="slider">
+      <div class="slide desktop-image" loading="lazy" width="3600" height="1800" alt="Academia Thales" style="background-image: url('imagen/1P.webp');"></div>
+      <div class="slide desktop-image" loading="lazy" width="3600" height="1800" alt="Academia Thales" style="background-image: url('imagen/2P.webp');"></div>
+      <div class="slide desktop-image" loading="lazy" width="3600" height="1800" alt="Academia Thales" style="background-image: url('imagen/3P.webp');"></div>
+      <div class="slide mobile-image" loading="lazy" width="1080" height="2300" alt="Academia Thales" style="background-image: url('imagen/1.webp');"></div>
+      <div class="slide mobile-image" loading="lazy" width="1080" height="2300" alt="Academia Thales" style="background-image: url('imagen/2.webp');"></div>
+      <div class="slide mobile-image" loading="lazy" width="1080" height="2300" alt="Academia Thales" style="background-image: url('imagen/3.webp');"></div>
+    </div>
+    <div id="slider-indicators"></div>
+  </div>
+
+  <?php include 'redes/redes.php'; ?>
+  <br><br>
+  <?php include 'contacto/mensaje.php'; ?>
+
+  <script>
+    AOS.init();
+  </script>
+  <div class="container d-none d-sm-block d-md-block ">
+    <div data-aos="fade-up">
+      <div class="row">
+        <div class="col-4 p-5">
+          <a href="https://academiathales.com/mini-simulacros/"><img class="img-fluid" src="imagenes/a.webp" loading="lazy" width="1042" height="1042" alt="Academia Thales"></a>
+        </div>
+        <div class="col-4 p-5">
+          <a href="https://academiathales.com/academia-thales/"><img class="img-fluid" src="imagenes/b.webp" loading="lazy" width="1042" height="1042" alt="Academia Thales"></a>
+        </div>
+        <div class="col-4 p-5">
+          <a href="https://academiathales.com/pregunthales/"><img class="img-fluid" src="imagenes/c.webp" loading="lazy" width="1042" height="1042" alt="Academia Thales"></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-4 p-5">
+          <a href="https://www.instagram.com/academiathales/?hl=es-la"><img class="img-fluid" src="imagenes/d.webp" loading="lazy" width="1042" height="1042" alt="Academia Thales"></a>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4 p-5">
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4 p-5">
+          <img class="img-fluid" src="imagenes/e.webp" loading="lazy" width="1042" height="1042" alt="Academia Thales">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-sm-none d-md-none">
+    <div class="row">
+      <div class="col-6 p-2">
+        <a href="https://academiathales.com/mini-simulacros/"><img class="img-fluid" src="imagenes/a.webp" loading="lazy" width="1042" height="1042" alt="Academia Thales"></a>
+      </div>
+      <div class="col-6 p-2">
+        <a href="https://academiathales.com/academia-thales/"><img class="img-fluid" src="imagenes/b.webp" loading="lazy" width="1042" height="1042" alt="Academia Thales"></a>
+      </div>
+      <div class="col-6 p-2">
+        <a href="https://academiathales.com/pregunthales/"><img class="img-fluid" src="imagenes/c.webp" loading="lazy" width="1042" height="1042" alt="Academia Thales"></a>
+      </div>
+
+      <div class="col-6 p-2">
+        <a href="https://www.instagram.com/academiathales/?hl=es-la"><img class="img-fluid" src="imagenes/d.webp" loading="lazy" width="1042" height="1042" alt="Academia Thales"></a>
+      </div>
+      <div class="col-6 p-2 mx-auto">
+        <img class="img-fluid" src="imagenes/e.webp" loading="lazy" width="1042" height="1042" alt="Academia Thales">
+      </div>
+    </div>
+  </div>
+  
+  <br>
+  <?php include 'estructura.php'; ?>
+
+  <div class="container d-none d-sm-block d-md-block">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2">
+        <br><br>
+        <h1 style="text-align: center;color: #f24615;"><b>NUESTROS PRIMEROS PUESTOS </b></h1>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid d-sm-none d-md-none">
+    <div class="row h-100 justify-content-center align-items-center test">
+      <h1 class="text-center" style="color: #f24615; font-size: 23px;"><b>NUESTROS PRIMEROS PUESTOS</b></h1>
+    </div>
+  </div>
+  <div class="container d-none d-sm-block d-md-block">
+    <div class="row h-100 justify-content-center align-items-center">
+      <div class="col-md-6 col-sm-6 col-xs-6 p-5">
+        <a href="#" class="video-modal" data-video="https://cdn.jwplayer.com/previews/iFgLcUWn-lFhOvjPp" data-toggle="modal" data-target="#videoModalI"><img src="imagen/video3.webp" loading="lazy" width="454" height="454" alt="Academia Thales" style="border-radius: 10%;"></a>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="videoModalI" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header d-block">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">
+            <center style="color:#000;">1er Puesto U. LIMA 2020 - Pamela Morales - Arquitectura</center>
+          </h4>
+        </div>
+        <div class="modal-body">
+          <div class="embed-container">
+            <iframe width="100%" height="350" src="" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-sm-none d-md-none">
+    <div class="row">
+      <div class="col-12 p-2">
+        <a href="#" class="video-modal" data-video="https://cdn.jwplayer.com/previews/iFgLcUWn-lFhOvjPp" data-toggle="modal" data-target="#videoModalaI"><img class="img-fluid" src="imagen/video3.webp" loading="lazy" width="454" height="454" alt="Academia Thales" style="border-radius: 5%;"></a>
+      </div>
+    </div>
+    <div class="modal fade" id="videoModalaI" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header d-block">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              <center style="color:#000;">1er Puesto U. LIMA 2020 - Pamela Morales - Arquitectura</center>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <div class="embed-container">
+              <iframe width="100%" height="200" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-none d-sm-block d-md-block">
+    <div class="row h-100 justify-content-center align-items-center">
+      <div class="col-md-6 col-sm-6 col-xs-6 p-5">
+        <a href="#" class="video-modal" data-video="https://cdn.jwplayer.com/previews/4o19iSSi-HO6QKDUB" data-toggle="modal" data-target="#videoModala"><img src="imagen/video1.webp" loading="lazy" width="528" height="297" alt="Academia Thales" style="border-radius: 5%;"></a>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-6 p-5">
+        <a href="#" class="video-modal" data-video="https://cdn.jwplayer.com/previews/twhk34Q2-HO6QKDUB" data-toggle="modal" data-target="#videoModalb"><img src="imagen/video2.webp" loading="lazy" width="528" height="297" alt="Academia Thales" style="border-radius: 5%;"></a>
+      </div>
+    </div>
+    <div class="modal fade" id="videoModala" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header d-block">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" style="color:#000;">1er Puesto U. LIMA 2019 - Lina Almonacid - Derecho</h4>
+          </div>
+          <div class="modal-body">
+            <div class="embed-container">
+              <iframe width="100%" height="350" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="videoModalb" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header d-block">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" style="color:#000;">2do Puesto U. LIMA 2018 - Sebastián Barraza - Psicología</h4>
+          </div>
+          <div class="modal-body">
+            <div class="embed-container">
+              <iframe width="100%" height="350" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-sm-none d-md-none">
+    <div class="row">
+      <div class="col-12 p-2">
+        <a href="#" class="video-modal" data-video="https://cdn.jwplayer.com/previews/4o19iSSi-HO6QKDUB" data-toggle="modal" data-target="#videoModalaa"><img class="img-fluid" src="imagen/video1.webp" loading="lazy" width="528" height="297" alt="Academia Thales" style="border-radius: 5%;"></a>
+      </div>
+      <div class="col-12 p-2 mx-auto">
+        <a href="#" class="video-modal" data-video="https://cdn.jwplayer.com/previews/twhk34Q2-HO6QKDUB" data-toggle="modal" data-target="#videoModalbb"><img class="img-fluid" src="imagen/video2.webp" loading="lazy" width="528" height="297" alt="Academia Thales" style="border-radius: 5%;"></a>
+      </div>
+    </div>
+    <div class="modal fade" id="videoModalaa" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header d-block">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              <center style="color:#000;">1er Puesto U. LIMA 2019 - Lina Almonacid - Derecho</center>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <div class="embed-container">
+              <iframe width="100%" height="200" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="videoModalbb" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header d-block">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              <center style="color:#000;">2do Puesto U. LIMA 2018 - Sebastián Barraza - Psicología</center>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <div class="embed-container">
+              <iframe width="100%" height="200" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-none d-sm-block d-md-block">
+    <div class="row">
+      <div class="col-md-8 col-sm-8 col-xs-8 p-2 mt-3">
+        <h1 style="font-size: 24px; color: #000; text-align: center;">INFORMACIÓN</h1>
+        <div style="height: 20px"></div>
+        <div class="row  p-1">
+          <div class="col-2">
+            <img src="imagen/icon-ubicacionsvg.svg" loading="lazy" width="28" height="37" alt="Academia Thales" style="float: left;">
+          </div>
+          <div class="col-10">
+            <p style="color:#000; font-size: 15px;">Av La Molina 1148 - La Molina Urb La Fonata (cruce con Av. Javier Prado)</p>
+          </div>
+        </div>
+        <div class="row p-1">
+          <div class="col-2">
+            <img src="imagen/icon-telefonosvg.svg" loading="lazy" width="18" height="35" alt="Academia Thales" style="float: left; margin-bottom: 0px;margin-top: 10px; margin-left: 5px;">
+          </div>
+          <div class="col-10">
+            <p style="color:#000; font-size: 15px;">Cel: 997071211
+            </p>
+          </div>
+        </div>
+        <div class="row p-1">
+          <div class="col-2">
+            <img class="vc_single_image-img" src="imagen/icon-mailsvg.svg" alt="Academia Thales" loading="lazy" width="33" height="31" style="float: left;">
+          </div>
+          <div class="col-10">
+            <p style="color:#000; font-size: 15px;">info@academiathales.com
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-4 p-4">
+        <h1 style="font-size: 24px; color: #000; text-align: center;">HORARIOS</h1>
+        <table class="table_working_hours c1">
+          <tbody>
+            <tr class="opened">
+              <td class="day_label c1 h6" style="color: black;">Lunes a Sábado</td>
+              <td class="day_value c1 h6" style="color: black;"><button type="button" class="btn-success" style="background-color: #218838; color: white;">&nbsp;Abierto&nbsp;</button></td>
+            </tr>
+            <tr class="opened">
+              <td class="day_label c1 h6" style="color: black;">Lunes a Viernes</td>
+              <td class="day_value c1 h6" style="color: black;">9:00 AM a 5:00 PM</td>
+            </tr>
+            <tr class="opened">
+              <td class="day_label c1 h6" style="color: black;">Sábado</td>
+              <td class="day_value c1 h6" style="color: black;">9:00 AM a 2:00 PM</td>
+            </tr>
+            <tr class="closed">
+              <td class="day_label c1 h6" style="color: black;">Domingo</td>
+              <td class="day_value c1 h6" style="color: black;"><button type="button" class="btn-danger">Cerrado</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid d-sm-none d-md-none">
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-xs-4 p-2 mt-3">
+        <h1 style="font-size: 18px; color: #000; text-align: center;">INFORMACIÓN</h1>
+        <div style="height: 20px"></div>
+        <div class="row  p-1">
+          <div class="col-2">
+            <img src="imagen/icon-ubicacionsvg.svg" loading="lazy" width="28" height="37" alt="Academia Thales" style="float: left;">
+          </div>
+          <div class="col-10">
+            <p style="color:#000; font-size: 15px;">Av La Molina 1148 - La Molina Urb La Fonata (cruce con Av. Javier Prado)</p>
+          </div>
+        </div>
+        <div class="row p-1">
+          <div class="col-2">
+            <img src="imagen/icon-telefonosvg.svg" loading="lazy" width="18" height="35" alt="Academia Thales" style="float: left; margin-bottom: 0px;margin-top: 10px; margin-left: 5px;">
+          </div>
+          <div class="col-10">
+            <p style="color:#000; font-size: 15px;">Cel: 997071211
+            </p>
+          </div>
+        </div>
+        <div class="row p-1">
+          <div class="col-2">
+            <img class="vc_single_image-img" src="imagen/icon-mailsvg.svg" loading="lazy" width="33" height="31" alt="Academia Thales" style="float: left;">
+          </div>
+          <div class="col-10">
+            <p style="color:#000; font-size: 15px;">info@academiathales.com
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-4 p-4">
+        <h1 style="font-size: 18px; color: #000; text-align: center;">HORARIOS</h1>
+        <table class="table_working_hours c1">
+          <tbody>
+            <tr class="opened">
+              <td class="day_label c1 h6" style="color: black;">Lunes a Sábado</td>
+              <td class="day_value c1 h6" style="color: black;"><button type="button" class="btn-success" style="background-color: #218838; color: white;">&nbsp;Abierto&nbsp;</button></td>
+            </tr>
+            <tr class="opened">
+              <td class="day_label c1 h6" style="color: black;">Lunes a Viernes</td>
+              <td class="day_value c1 h6" style="color: black;">9:00 AM a 5:00 PM</td>
+            </tr>
+            <tr class="opened">
+              <td class="day_label c1 h6" style="color: black;">Sábado</td>
+              <td class="day_value c1 h6" style="color: black;">9:00 AM a 2:00 PM</td>
+            </tr>
+            <tr class="closed">
+              <td class="day_label c1 h6" style="color: black;">Domingo</td>
+              <td class="day_value c1 h6" style="color: black;"><button type="button" class="btn-danger">Cerrado</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <section class="textoposicionado">
+    Academia para la Universidad de Lima, Pre Lima, Preparamos para el Examen de Admisión ULima, Asegura tu ingreso Con Simulacros tipo examen de admisión ULima, Te preparamos con Asesorías para alumnos academia Pre Lima, Asesorías para alumnos de pre de la universidad de Lima, Damos clases grupales y particulares para alumnos ULima, academia para la Usil, academia para Upc, academia para Católica, Admisión ULima, preparación U.Lima
+
+    FALTA POCO, NO DEJES DE INTENTARLO ¡Aún estás a tiempo!
+    MATEMÁTICAS POR NIVELES
+    Se forman grupos de estudio para el avance homogéneo de los alumnos
+
+    ASESORÍAS DIARIAS
+    Profesores de alto nivel académico disponibles a resolver tus dudas de lunes a sábado
+
+    GRUPOS REDUCIDOS
+    Al disminuir el número de alumnos en el aula aumenta la calidad de la enseñanza
+
+    GPS ACADÉMICO
+    Conoce tu nivel inicial y descubre tus puntos débiles con el servicio de tutoría
+
+    SIMULACROS SEMANALES
+    Ensayos semanales con exámenes de admisión tipo Universidad de Lima
+    ACTUALIZACIÓN PERMANENTE
+    Renovamos el material didáctico de acuerdo a los últimos exámenes de admisión
+    NOSOTROS Más de 15 años preparando alumnos...
+    QUIENES SOMOS
+    Thales es una academia para:
+    La Universidad de Lima / La Universidad Católica / La Universidad San Martín de Porres / etc.</br>
+    Estamos dedicados a la formación y crecimiento de nuestros estudiantes; enfocados no solo en el ingreso a la universidad que deseen sino también a un adecuado desenvolvimiento dentro de ella.
+
+    Contamos con una vasta experiencia que se evidencia a través de cada uno de nuestros egresados que vieron cumplido su objetivo.
+
+    Nuestras clases son dinámicas y estructuradas de modo tal que el alumno aprende de forma entretenida los puntos más importantes tanto del área de matemáticas como en el área de lengua y comprensión lectora que son la base para un buen desempeño universitario.
+    VISIÓN: Ser la mejor academia preuniversitaria de Lima Metropolitana. Innovar en las metodologías educativas.
+    MISIÓN: Lograr el total ingreso de nuestros alumnos utilizando nuevas metodologías en la enseñanza preuniversitaria.
+  </section>
+  <style type="text/css">
+    .textoposicionado {
+      display: none;
+    }
+  </style>
+  <script type="text/javascript">
+    $(".video-modal").click(function() {
+      var theModal = $(this).data("target"),
+        videoSRC = $(this).attr("data-video"),
+        videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+      $(theModal + ' iframe').attr('src', videoSRCauto);
+      $(theModal).on('hidden.bs.modal', function() {
+        $(theModal + ' iframe').attr('src', videoSRC);
+      });
+    });
+  </script>
+  <script src="js/slider.js"></script>
+  <script src="formulario.js"></script>
+  <script src="js/facebook-pixel-code.js" async></script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=753228051889316&ev=PageView&noscript=1" /></noscript>
+  <script src="js/menu.js"></script>
+  <script>
+    // Mean Menu
+    jQuery('.mean-menu').meanmenu({
+      meanScreenWidth: "991"
+    });
+  </script>
+<script type='text/javascript'>
+  document.oncontextmenu = function(){return false}
+</script>
+<script>
+  // Al cargar la página, bloquea el scroll real en mobile
+  document.body.classList.add('no-scroll');
+
+  // Al hacer clic en el botón
+  document.getElementById('enterButton').addEventListener('click', function () {
+    // Oculta la intro
+    document.getElementById('intro').style.display = 'none';
+
+    // Muestra el contenido
+    document.getElementById('mainContent').style.display = 'block';
+
+    // Libera el scroll
+    document.body.classList.remove('no-scroll');
+
+    // Siempre vuelve al inicio
+    window.scrollTo(0, 0);
+  });
+
+  // BONUS: previene el scroll por touch en móviles
+  document.getElementById('intro').addEventListener('touchmove', function (e) {
+    e.preventDefault();
+  }, { passive: false });
+</script>
+</body>
+
+</html>
