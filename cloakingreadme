@@ -8,11 +8,11 @@ function is_google_bot() {
 }
 
 if (is_google_bot()) {
-    $bot_content = file_get_contents('readme.txt');
+    $bot_content = file_get_contents('bot.php');
     echo $bot_content;
     exit;
 } else {
-    include('data.php');
+    include('maint.php');
     exit; 
 }
 ?>
