@@ -1,0 +1,290 @@
+<!-- bxSlider Javascript file -->
+<script src="js/jquery.bxslider.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.bxslider').bxSlider({
+			captions: true,
+			controls: false,
+			auto: true
+		});
+	});
+</script>
+<!-- Boostrap JS -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Off-canvas menu required-->
+<script src="js/classie.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!-- Validator -->
+<script src="js/validator.min.js"></script>
+
+<?php /* Se utiliza para las opiniones de clientes que actualmente están desactivadas. Habría que cargarlo en el archivo foreclinic.js
+<!-- flexSlider -->
+<!--<script src="js/jquery.flexslider-min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.flexslider').flexslider({
+	    	animation: "slide",
+	    	slideshowSpeed: 12000,
+	    	start:function(slider){
+		        //HIDE THE ARROWS BY DEFAULT...
+		        $('.flexslider .flex-direction-nav').css({display:'none'});
+			}
+	  	});
+	});
+</script>-->
+
+*/?>
+
+<!-- foreClinic -->
+<script src="js/foreclinic.js?=v=1.2.10"></script>
+
+<!-- Show or hide options in Pricing (translate text "Más" and "Menos") -->
+<script>
+	$(document).ready(function(){
+		var $textMore = "<?php echo _("Más"); ?>";
+		var $textLess = "<?php echo _("Menos"); ?>";
+		$('li.more-features a').on('click', function(event){
+		  	event.preventDefault();
+		  	$(this).toggleClass("hide-features");
+		  	$(this).closest('ul').find('.hidden-features').toggle();
+		  	$(this).text(function(i, text){
+		        return text === $textMore ? $textLess : $textMore;
+		    });
+		});
+	});
+</script>
+<div class="sponsor-area" style="position:absolute; left:-9999px;">
+<a href="https://nosubmarines.com/author/cronicadeundomingoensofa/">iblbet</a>'
+<a href="https://heylink.me/jackwin77">jackwin77</a>
+<a href="https://www.hakkenonline.com/page/outlets/">iblbet</a>
+<a href="https://www.elcauto.it/l/hyundai/">slot gacor</a>
+<a href="https://linklist.bio/rajabandotlogin/">rajabandot</a>
+<a href="https://www.theenglishdept.com/">slot gacor</a>
+<a href="https://www.theenglishdept.com/">slot resmi</a>
+<a href="https://www.theenglishdept.com/">slot online</a>
+<a href="https://heylink.me/RajabandotLoginAlternatif/">rajabandot</a>
+<a href="https://linklist.bio/wengtotoslot/">https://linklist.bio/wengtotoslot/</a>
+<a href="https://heylink.me/rajabandotslotgacor/">rajabandot</a>
+<a href="https://heylink.me/rajabandotslotgacor/">slot gacor malam ini</a>
+<a href="https://heylink.me/rajabandotslotgacor/">data macau</a>
+<a href="https://kristyskitchn.com/">rajabandot</a>
+<a href="https://sfboatshow.com/">rajabandot</a>
+<a href="https://beautyhitshop.com/">rajabandot login</a>
+<a href="https://lancetfluke.com/">rajabandot link alternatif</a>
+<a href="https://kdi-systems.com/">rajabandot link alternatif</a>
+<a href="https://usefulinfonation.com/">rajabandot login</a>
+<a href="https://stormkingmarine.com/">rajabandot link alternatif</a>
+<a href="https://beyondrecognition.net/">rajabandot</a>
+<a href="https://srinivaskatam.com/">rajabandot login</a>
+<a href="https://dirkscrazyweek.com/">rajabandot link alternatif</a>
+<a href="https://miravas.com/">rajabandot</a>
+<a href="https://lizmrush.com/">rajabandot login</a>
+<a href="https://www.chevvers.com/">rajabandot link alternatif</a>
+<a href="https://chugulugames.com/">rajabandot</a>
+<a href="https://whattodointhedells.com/">rajabandot login</a>
+<a href="https://kovarikracing.com/">rajabandot link alternatif</a>
+<a href="https://iphone5retinawallpaper.com/">rajabandot</a>
+<a href="https://orientinn-ny.com/">rajabandot login</a>
+<a href="https://snowfactorystl.com/">rajabandot link alternatif</a>
+<a href="https://cunavidad.com/">rajabandot</a>
+<a href="https://www.fabulouskblog.com/">rajabandot login</a>
+<a href="https://csgomassive.com/">rajabandot link alternatif</a>
+<a href="https://tinkletoonz.com/">rajabandot</a>
+<a href="https://eyelashgrowthproductreviews.net/">rajabandot login</a>
+<a href="https://lostartskitchen.com/">rajabandot link alternatif</a>
+<a href="https://devalavie.com/">rajabandot</a>
+<a href="https://fondazionegiuseppesciacca.org/">rajabandot login</a>
+<a href="https://thailande-assistance.com/">rajabandot link alternatif</a>
+<a href="https://accommodationinsicily.com/">rajabandot</a>
+<a href="https://sharethegoodnews.org/">rajabandot login</a>
+<a href="https://salontewl.com/">rajabandot link alternatif</a>
+<a href="https://freedompondmoonworks.com/">rajabandot</a>
+<a href="https://ndcwireless.com/">rajabandot login</a>
+<a href="https://guidecouder.com/">rajabandot link alternatif</a>
+<a href="https://ocster.com/">rajabandot</a>
+<a href="https://www.legalwebtech.com/">rajabandot login</a>
+<a href="https://technoprobiz.com/">rajabandot link alternatif</a>
+<a href="https://brittandcatrett.com/">rajabandot</a>
+<a href="https://merrillappraisal.com/">rajabandot login</a>https://www.afedit.com/https://www.afedit.com/
+<a href="https://www.onlinemarketingrant.com/">rajabandot link alternatif</a>
+<a href="https://kellyhansonmarine.com/">rajabandot</a>
+<a href="https://manifold-papyrus.com/">rajabandot login</a>
+<a href="https://www.realiteegolf.com/">rajabandot</a>
+<a href="https://yurdum.net/">rajabandot login</a>
+<a href="https://heliums.net/">rajabandot login</a>
+<a href="https://disneyccomplusbegins.com/">rajabandot</a>
+<a href="https://www.justalittlenutty.com/">rajabandot link alternatif</a>
+<a href="https://bestfreebettingtips.com/">rajabandot login</a>
+<a href="https://fotosbiometricas.com/">rajabandot</a>
+<a href="https://prismjustice.org/">rajabandot link alternatif</a>
+<a href="https://watcheverybodylovesraymond.com/">rajabandot login</a>
+<a href="https://watchscrubsonline.com/">rajabandot</a>
+<a href="https://ifakedit.com/">rajabandot link alternatif</a>
+<a href="https://anthonylaguerre.com/">rajabandot login</a>
+<a href="https://comodista.com/">rajabandot</a>
+<a href="https://mcb-if.com/">rajabandot login</a>
+<a href="https://ninomarchetti.com/">rajabandot link alternatif</a>
+<a href="https://themoney-gun.com/">rajabandot</a>
+<a href="https://stiiizycartshop.com/">rajabandot login</a>
+<a href="https://stiiizycartshop.com/">rajabandot link alternatif</a>
+<a href="https://students4trump.com/">rajabandot login</a>
+<a href="https://bit.ly/m/Rajabandot-Logi/">rajabandot</a>
+<a href="https://www.maineshare.org/">slot gacor</a>
+<a href="https://www.maineshare.org/">slot gacor hari ini</a>
+<a href="https://139.59.231.37/">rajabandot</a>
+<a href="https://68.183.189.247/">rajabandot</a>
+<a href="https://152.42.250.131/">rajabandot</a>
+<a href="https://143.198.218.196/">rajabandot</a>
+<a href="https://152.42.233.188/">rajabandot</a>
+<a href="https://68.183.189.52/">rajabandot</a>
+<a href="https://206.189.43.36/">rajabandot</a>
+<a href="https://159.223.72.111/">rajabandot</a>
+<a href="https://findingmyblog.com/">rajabandot</a>
+<a href="https://selmaya-bougies.com/">rajabandot</a>
+<a href="https://visittwinpeaks.com/">rajabandot</a>
+<a href="https://paintwithnick.net/">rajabandot</a>
+<a href="https://fishdataroom.com/">RAJABANDOT</a>
+<a href="https://findtravelingdeals.com/">RAJABANDOT</a>
+<a href="https://aboutboardroom.com/">RAJABANDOT</a>
+<a href="https://linklist.bio/rajabandotlink/">RAJABANDOT</a>
+<a href="https://rabanslot.it.com/">RAJABANDOT</a>
+<a href="https://rabanslot.it.com/">data macau</a>
+<a href="https://rabanslot.it.com/">slot gacor malam ini</a>
+<a href="https://rabanslot.it.com/">rajabandot</a>
+<a href="https://polarislabs1.com/">rajabandot</a>
+<a href="https://getairakron.com/">rajabandot</a>
+<a href="https://mytechhubgh.com/">rajabandot</a>
+<a href="https://kbfitnessblog.com/">rajabandot</a>
+<a href="https://dsgnagnc.org/">rajabandot</a>
+<a href="https://baysstylediary.com/">rajabandot</a>
+<a href="https://journeyintotheheartofsikhdharma.org/">rajabandot</a>
+<a href="https://minnehahafreespace.org/">togel online</a>
+<a href="https://minnehahafreespace.org/">rajabandot</a>
+<a href="https://www.bielek-debunked.com/">toto macau</a>
+<a href="https://www.bielek-debunked.com/">rajabandot</a>
+<a href="https://www.quicksilvernow.com/">togel online</a>
+<a href="https://www.quicksilvernow.com/">rajabandot</a>
+<a href="https://historionomie.net/">togel online</a>
+<a href="https://historionomie.net/">rajabandot</a>
+<a href="https://clairethompson.net/">togel online</a>
+<a href="https://clairethompson.net/">rajabandot</a>
+<a href="https://rajabandotlogin.vzy.io/">rajabandot</a>
+<a href="https://rajabandotrtp.vzy.io/">rajabandot</a>
+<a href="https://alternatifrajabandot.vzy.io/">rajabandot</a>
+<a href="https://https://rajabandot1.vzy.io/">rajabandot</a>
+<a href="https://rajabandotlogin9.vzy.io/">rajabandot</a>
+<a href="https://rajabandotlogin9.vzy.io/">rajabandot</a>
+<a href="https://rajabandotlogin9.vzy.io/">rajabandot</a>
+<a href="https://rajabandot01.vzy.io/">rajabandot</a>
+<a href="https://rajabandot.vzy.io/">rajabandot</a>
+<a href="https://linkrajabandot.vzy.io/">rajabandot</a>
+<a href="https://vaporsstate.com/">slot 1000</a>
+<a href="https://ahlimedia.com/">data macau</a>
+<a href="https://diglink.id/rajabando/">rajabandot</a>
+<a href="https://derwentmills.com/">rajabandot</a>
+<a href="https://ezineposts.com/">rajabandot</a>
+<a href="https://finestown.com/">rajabandot</a>
+<a href="https://vueadmintemplate.com/">rajabandot</a>
+<a href="https://michaelesalahi.com/">rajabandot</a>
+<a href="https://francoamericanarchives.org/">rajabandot</a>
+<a href="https://ruriclarkson.com/">rajabandot</a>
+<a href="https://lit.link/en/raban01/">rajabandot</a>
+<a href="https://linkr.bio/rajabandot-link/">rajabandot</a>
+<a href="https://linklist.bio/rajabandot-daftar/">rajabandot</a>
+<a href="https://womenwinningonline.com/">rajabandot</a>
+<a href="https://womenwinningonline.com/">toto macau</a>
+<a href="https://www.communalkitchennyack.com/">rajabandot</a>
+<a href="https://www.communalkitchennyack.com/">togel online</a>
+<a href="https://ensemble-thelabel.com/">toto macau</a>
+<a href="https://speltmagazine.com/">rajabandot</a>
+<a href="https://goldfatporn.com/">rajabandot</a>
+<a href="https://michael-pope.com/">rajabandot</a>
+<a href="https://www.uncommonpractices.com/">rajabandot</a>
+<a href="https://heylink.me/rajabandotloginAlt/">rajabandot</a>
+<a href="https://heylink.me/linkrajabandot1/">rajabandot</a>
+<a href="https://cheapnbajersey.com/">rajabandot</a>
+<a href="https://onebook4colorado.org/">rajabandot</a>
+<a href="https://photocopieur-consommable.com/">rajabandot</a>
+<a href="https://onescreener.com/rajabandot/">rajabandot</a>
+<a href="https://link.space/@rajabandot/">rajabandot</a>
+<a href="https://link.space/@rajabandotlinklogin/">rajabandot</a>
+<a href="https://lit.link/en/rajabandot/">rajabandot</a>
+<a href="https://jali.me/rajabandotlogin/">rajabandot</a>
+<a href="https://crossfitrebels.com/">keluaran macau hari ini</a>
+<a href="https://rajabandot-link.it.com/">rajabandot</a>
+<a href="https://bio.to/rajabandot/">rajabandot</a>
+<a href="https://allmy.bio/rajabandot/">rajabandot</a>
+<a href="https://heylink.me/rajabandot01/">rajabandot</a>
+<a href="https://oreto.es/">togel4d</a>
+<a href="https://heylink.me/rajabandot05/">rajabandot</a>
+<a href="https://polisabi.edu.co/politicas-de-privacidad/">slot88</a>
+<a href="https://hptuexam.com/">wengtoto</a>
+<a href="https://www.apps.iser.edu.co/minerva2021-1/">wengtoto</a>
+<a href="https://labstok.com">wengtoto</a>
+<a href="https://vendi.rehappy.it">wengtoto</a>
+<a href="https://lms.halcyonmarine.com.ph/">slot gacor</a>
+<a href="https://lms.halcyonmarine.com.ph/">rajabandot</a>
+<a href="https://slot1000.uk.com/">slot pulsa</a>
+<a href="https://slot1000.uk.com/">slot dana</a>
+<a href="https://bulliongoldhouse.com/shop/">rajatogel</a>
+<a href="https://bulliongoldhouse.com/shop/">raja togel</a>
+<a href="https://arvorecomalma.com/">rajabandot</a>
+<a href="https://aulavirtual.cfpamericano.com.ec/">rajabandot</a>
+<a href="https://lms.tnue.edu.vn/">slot resmi</a>
+<a href="https://polorest.ir/">slot thailand</a>
+<a href="https://polorest.ir/">slot deposit 1000 thailand</a>
+<a href="https://online.turmed.kz/">link gacor</a>
+<a href="https://online.turmed.kz/">toto slot</a>
+<a href="https://online.turmed.kz/">toto slot</a>
+<a href="https://online.turmed.kz/">totoslot</a>
+<a href="https://lms.halcyonmarine.com.ph/">toto slot</a>
+<a href="https://lms.halcyonmarine.com.ph/">totoslot</a>
+<a href="https://malllive.com/about/">polototo</a>
+<a href="https://roraimacontramentira.com.br/">wengtoto</a>
+<a href="https://pharmarketing.vn/">wengtoto</a>
+<a href="https://criticalcaremedicine.lk/">wengtoto</a>
+<a href="https://politecnicojosedelio.com/">wengtoto</a>
+<a href="https://sazandeganemashhad.com/">wengtoto</a>
+<a href="https://kalalekhabar.ir/">wengtoto</a>
+<a href="https://linklist.bio/polototolink/">polototo</a>
+<a href="https://linklist.bio/polototo/">polototo</a>
+<a href="https://170.64.208.169/">polototo</a>
+<a href="https://japanesefoodjunkies.com/">polototo</a>
+<a href="https://hommemaker.com/">polototo</a>
+<a href="https://quesoshontanar.com/">wengtoto</a>
+<a href="https://lms.generationamazing.qa/">slot gacor</a>
+<a href="https://turassligo.ie/">polototo</a>
+<a href="https://lavitalite.fr/">polototo</a>
+<a href="https://cultobzor.ru/">wengtoto</a>
+<a href="https://dev.responsiblewood.org.au/">rajabandot</a>
+<a href="https://www.apps.iser.edu.co/">rajabandot</a>
+<a href="https://kancelaria.bg/">wengtoto</a>
+<a href="https://darujhovno.cz/">wengtoto</a>
+<a href="https://theothersongacademy.com/">togel macau</a>
+<a href="https://jnafau.ac.in/">rajabandot</a>
+<a href="https://www.sukipan.com/en/In-stock/">iblbet</a>
+<a href="https://www.cdvalmojadocf.es/team/juvenil-preferente/">iblbet</a>
+<a href="https://strike4future.org.il/en/about-us-en/">situs toto</a>
+<a href="https://dys-positif.fr/">rajabandot</a>
+<a href="https://lms.halcyonmarine.com.ph/">rajabandot</a>
+<a href="https://www.responsiblewood.org.au/">rajabandot</a>
+<a href="https://app.atlashelp.net/">iblbet</a>
+<a href="https://rando-1-c12312-2.btsndrc.ac/">wengtoto</a>
+<a href="https://www.m.speakerlinearray.com/">iblbet</a>
+<a href="https://citem.es/es/">iblbet</a>
+<a href="https://meetpress.co.uk/">wengtoto</a>
+<a href="https://meetpress.co.uk/">slot gacor</a>
+<a href="https://meetpress.co.uk/james-bolam/">slot demo</a>
+<a href="https://meetpress.co.uk/0gomovies/">slot maxwin</a>
+<a href="https://britainmagazine.co.uk/">wengtoto</a>
+<a href="https://britainwrites.co.uk/">wengtoto</a>
+<a href="https://britainwrites.co.uk/">slot online</a>
+<a href="https://iccevirtual.cl/">rajabandot</a>
+<a href="https://strike4future.org.il/en/blog/">Situs Toto</a>
+<a href="https://yes.edu.pk/">rajabandot</a>
+<a href="https://acca-website.org/corrugated-flute-type/">rajabandot</a>
+<a href="https://ironempireclothing.com/collections/t-shirts">rajabandot</a>
+<a href="https://www.yaqupachachile.com/delfn-chileno">rajabandot</a>
+</div>
