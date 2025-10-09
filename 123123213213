@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="es" xml:lang="es">
+<head>
+    <title>Entrar al sitio | INICIO</title>
+    <link rel="shortcut icon" href="//virtualcap.tecnologicoitca.edu.ec/pluginfile.php/1/theme_lambda2/favicon/1759886168/Logo%20200px-02%20%283%29.png" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="moodle, Entrar al sitio | INICIO" />
+<link rel="stylesheet" type="text/css" href="https://virtualcap.tecnologicoitca.edu.ec/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://virtualcap.tecnologicoitca.edu.ec/theme/styles.php/lambda2/1759886168_1/all" />
+<link rel="stylesheet" type="text/css" href="https://virtualcap.tecnologicoitca.edu.ec/course/format/onetopic/styles.php" />
+<script>
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/virtualcap.tecnologicoitca.edu.ec","apibase":"https:\/\/virtualcap.tecnologicoitca.edu.ec\/r.php\/api","homeurl":{},"sesskey":"KfnTqpxuJJ","sessiontimeout":"7200","sessiontimeoutwarning":"1200","themerev":"1759886168","slasharguments":1,"theme":"lambda2","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1759886168","admin":"admin","svgicons":true,"usertimezone":"UTC-5","language":"es","courseId":1,"courseContextId":2,"contextid":1,"contextInstanceId":0,"langrev":1760001602,"templaterev":"1759886168","siteId":1,"userId":0};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/virtualcap.tecnologicoitca.edu.ec\/lib\/yuilib\/3.18.1\/","comboBase":"https:\/\/virtualcap.tecnologicoitca.edu.ec\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/virtualcap.tecnologicoitca.edu.ec\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/virtualcap.tecnologicoitca.edu.ec\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/virtualcap.tecnologicoitca.edu.ec\/theme\/yui_combo.php?m\/1759886168\/","combine":true,"comboBase":"https:\/\/virtualcap.tecnologicoitca.edu.ec\/theme\/yui_combo.php?","ext":false,"root":"m\/1759886168\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_customcert-rearrange":{"requires":["dd-delegate","dd-drag"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form","datatype-date-format"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-qbank_editquestion-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emojipicker-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_h5p-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-beautify":{},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]}}},"gallery":{"name":"gallery","base":"https:\/\/virtualcap.tecnologicoitca.edu.ec\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/virtualcap.tecnologicoitca.edu.ec\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1759886168\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/virtualcap.tecnologicoitca.edu.ec\/lib\/javascript.php\/1759886168\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/virtualcap.tecnologicoitca.edu.ec\/lib\/javascript.php\/1759886168\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]}},"logInclude":[],"logExclude":[],"logLevel":null};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<meta name="moodle-validation" content="ad23d428142dc98c1df531896fe8f1fe"><meta name="robots" content="noindex" />
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body  id="page-login-index" class="format-site  path-login chrome dir-ltr lang-es yui-skin-sam yui3-skin-sam virtualcap-tecnologicoitca-edu-ec pagelayout-login course-1 context-1 notloggedin theme lambda-login m-45 form-centered bg-img">
+<div class="toast-wrapper mx-auto py-0 fixed-top" role="status" aria-live="polite"></div>
+
+
+
+<div id="page-wrapper">
+    <div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Salta al contenido principal</a>
+</div><script src="https://virtualcap.tecnologicoitca.edu.ec/lib/javascript.php/1759886168/lib/polyfills/polyfill.js"></script>
+<script src="https://virtualcap.tecnologicoitca.edu.ec/theme/yui_combo.php?rollup/3.18.1/yui-moodlesimple-min.js"></script><script src="https://virtualcap.tecnologicoitca.edu.ec/theme/jquery.php/core/jquery-3.7.1.min.js"></script>
+<script src="https://virtualcap.tecnologicoitca.edu.ec/lib/javascript.php/1759886168/lib/javascript-static.js"></script>
+<script src="https://virtualcap.tecnologicoitca.edu.ec/theme/javascript.php/lambda2/1759886168/head"></script>
+<script>
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+<div class="eupopup eupopup-container eupopup-container-block eupopup-container-bottom eupopup-block eupopup-style-compact" role="dialog" aria-label="Políticas">
+    </div>
+    <div class="eupopup-markup d-none">
+        <div class="eupopup-head"></div>
+        <div class="eupopup-body">
+            Para continuar usando este sitio web, debe aceptar nuestras políticas:
+            <ul>
+                    <li>
+                        <a href="https://virtualcap.tecnologicoitca.edu.ec/admin/tool/policy/view.php?versionid=3&amp;returnurl=https%3A%2F%2Fvirtualcap.tecnologicoitca.edu.ec%2Flogin%2Findex.php" data-action="view-guest" data-versionid="3" data-behalfid="1">
+                            Términos y Condiciones
+                        </a>
+                    </li>
+            </ul>
+        </div>
+        <div class="eupopup-buttons">
+            <a href="#" class="eupopup-button eupopup-button_1">Continuar</a>
+        </div>
+        <div class="clearfix"></div>
+        <a href="#" class="eupopup-closebutton">x</a>
+    </div>
+    <div id="page" class="container-fluid">
+        <section id="region-main" class="col-12 h-100" aria-label="Contenido">
+        <div class="login-wrapper">
+            <div class="login-container">
+                <div class="loginform-toggle">
+                    <h2 class="login-heading lambda-toggle">¿Desea acceder ahora con una cuenta de usuario completa?</h2>
+                </div>
+                <div role="main"><span id="maincontent"></span><div class="loginform">
+        <div id="loginlogo" class="login-logo">
+            <img id="logoimage" src="https://virtualcap.tecnologicoitca.edu.ec/pluginfile.php/1/core_admin/logo/0x200/1759886168/docentes.jpg" class="img-fluid" alt="INSTITUTO UNIVERSITARIO ITCA"/>
+            <h1 class="login-heading sr-only">Entrar a INSTITUTO UNIVERSITARIO ITCA</h1>
+        </div>
+        <form class="login-form" action="https://virtualcap.tecnologicoitca.edu.ec/login/index.php" method="post" id="login">
+            <input id="anchor" type="hidden" name="anchor" value="">
+            <script>document.getElementById('anchor').value = location.hash;</script>
+            <input type="hidden" name="logintoken" value="chK5z1quaffTAODragJYoGIdTBBIsJfb">
+            <div class="login-form-username mb-3">
+                <label for="username" class="sr-only">
+                        Nombre de usuario
+                </label>
+                <input type="text" name="username" id="username" class="form-control form-control-lg" value="" placeholder="Nombre de usuario" autocomplete="username">
+            </div>
+            <div class="login-form-password mb-3">
+                <label for="password" class="sr-only">Contraseña</label>
+                <input type="password" name="password" id="password" value="" class="form-control form-control-lg" placeholder="Contraseña" autocomplete="current-password">
+            </div>
+            <div class="login-form-submit mb-3">
+                <button class="btn btn-primary btn-lg" type="submit" id="loginbtn">Acceder</button>
+            </div>
+            <div class="login-form-forgotpassword mb-3">
+                <a href="https://virtualcap.tecnologicoitca.edu.ec/login/forgot_password.php">¿Olvidó su contraseña?</a>
+            </div>
+        </form>
+    <div class="login-divider"></div>
+    <div class="d-flex">
+            <div class="login-languagemenu">
+                <div class="action-menu moodle-actionmenu" id="action-menu-0" data-enhance="moodle-core-actionmenu">
+                
+                        <div class="menubar d-flex " id="action-menu-0-menubar">
+                
+                            
+                
+                
+                                <div class="action-menu-trigger">
+                                    <div class="dropdown">
+                                        <a
+                                            href="#"
+                                            tabindex="0"
+                                            class=" dropdown-toggle icon-no-margin"
+                                            id="action-menu-toggle-0"
+                                            aria-label="Español - Internacional ‎(es)‎"
+                                            data-toggle="dropdown"
+                                            role="button"
+                                            aria-haspopup="true"
+                                            aria-expanded="false"
+                                            aria-controls="action-menu-0-menu"
+                                        >
+                                            
+                                            Español - Internacional ‎(es)‎
+                                                
+                                            <b class="caret"></b>
+                                        </a>
+                                            <div class="dropdown-menu menu dropdown-menu-right" id="action-menu-0-menu" data-rel="menu-content" aria-labelledby="action-menu-toggle-0" role="menu">
+                                                                                                <a href="https://virtualcap.tecnologicoitca.edu.ec/login/index.php?lang=en" class="dropdown-item menu-action" data-lang="en" lang="en" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">English ‎(en)‎</span>
+                                        </a>
+                                                                                                <a href="#" class="dropdown-item menu-action" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Español - Internacional ‎(es)‎</span>
+                                        </a>
+                                                                                                <a href="https://virtualcap.tecnologicoitca.edu.ec/login/index.php?lang=es_mx" class="dropdown-item menu-action" data-lang="es_mx" lang="es-mx" role="menuitem" tabindex="-1" >
+                                                <span class="menu-action-text">Español - México ‎(es_mx)‎</span>
+                                        </a>
+                                            </div>
+                                    </div>
+                                </div>
+                
+                        </div>
+                
+                </div>
+            </div>
+            <div class="divider border-start align-self-center mx-3"></div>
+        <button type="button" class="btn btn-secondary"  data-modal="alert" data-modal-title-str='["cookiesenabled", "core"]'  data-modal-content-str='["cookiesenabled_help_html", "core"]'>Aviso de Cookies</button>
+    </div>
+</div></div>
+            </div>
+        </div>
+        </section>
+    </div>
+    
+    <footer id="page-footer" class="footer-popover bg-white">
+        <div data-region="footer-container-popover">
+            <button class="btn btn-icon bg-secondary icon-no-margin btn-footer-popover" data-action="footer-popover" aria-label="Mostrar pie de página">
+                <i class="icon fa fa-question fa-fw " aria-hidden="true"  ></i>
+            </button>
+        </div>
+        <div class="footer-content-popover container" data-region="footer-content-popover">
+                <div class="footer-section p-3 border-bottom">
+    
+    
+                        <div class="footer-support-link"><a href="https://virtualcap.tecnologicoitca.edu.ec/user/contactsitesupport.php"><i class="icon fa-regular fa-envelope fa-fw " aria-hidden="true"  ></i>Contactar con el soporte del sitio</a></div>
+                </div>
+            <div class="footer-section p-3 border-bottom">
+                <div class="logininfo">
+                    <div class="logininfo">Usted no se ha identificado.</div>
+                </div>
+                <div class="tool_usertours-resettourcontainer">
+                </div>
+    
+                <div class="tool_dataprivacy"><a href="https://virtualcap.tecnologicoitca.edu.ec/admin/tool/dataprivacy/summary.php">Resumen de retención de datos</a></div><div class="policiesfooter"><a href="https://virtualcap.tecnologicoitca.edu.ec/admin/tool/policy/viewall.php?returnurl=https%3A%2F%2Fvirtualcap.tecnologicoitca.edu.ec%2Flogin%2Findex.php">Políticas</a></div><div><a class="mobilelink" href="https://download.moodle.org/mobile?version=2024100705.03&amp;lang=es&amp;iosappid=633359593&amp;androidappid=com.moodle.moodlemobile&amp;siteurl=https%3A%2F%2Fvirtualcap.tecnologicoitca.edu.ec">Descargar la app para dispositivos móviles</a></div>
+                <script>
+//<![CDATA[
+var require = {
+    baseUrl : 'https://virtualcap.tecnologicoitca.edu.ec/lib/requirejs.php/1759886168/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://virtualcap.tecnologicoitca.edu.ec/lib/javascript.php/1759886168/lib/jquery/jquery-3.7.1.min',
+        jqueryui: 'https://virtualcap.tecnologicoitca.edu.ec/lib/javascript.php/1759886168/lib/jquery/ui-1.13.2/jquery-ui.min',
+        jqueryprivate: 'https://virtualcap.tecnologicoitca.edu.ec/lib/javascript.php/1759886168/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script src="https://virtualcap.tecnologicoitca.edu.ec/lib/javascript.php/1759886168/lib/requirejs/require.min.js"></script>
+<script>
+//<![CDATA[
+M.util.js_pending("core/first");
+require(['core/first'], function() {
+require(['core/prefetch'])
+;
+M.util.js_pending('filter_mathjaxloader/loader'); require(['filter_mathjaxloader/loader'], function(amd) {amd.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"es"}); M.util.js_complete('filter_mathjaxloader/loader');});;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp('es');
+});;
+
+        require(['jquery', 'tool_policy/jquery-eu-cookie-law-popup', 'tool_policy/policyactions'], function($, Popup, ActionsMod) {
+            // Initialise the guest popup.
+            $(document).ready(function() {
+                // Initialize popup.
+                $(document.body).addClass('eupopup');
+                if ($(".eupopup").length > 0) {
+                    $(document).euCookieLawPopup().init();
+                }
+
+                // Initialise the JS for the modal window which displays the policy versions.
+                ActionsMod.init('[data-action="view-guest"]');
+            });
+        });
+    ;
+
+require(['theme_boost/footer-popover'], function(FooterPopover) {
+    FooterPopover.init();
+});
+;
+
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+  M.util.js_complete('theme_boost/loader');
+});
+;
+
+            require(['core_form/events'], function(FormEvent) {
+                function autoFocus() {
+                    const userNameField = document.getElementById('username');
+                    if (userNameField.value.length == 0) {
+                        userNameField.focus();
+                    } else {
+                        document.getElementById('password').focus();
+                    }
+                }
+                autoFocus();
+                window.addEventListener(FormEvent.eventTypes.fieldStructureChanged, autoFocus);
+            });
+        require(['core/togglesensitive'], function(ToggleSensitive) {
+            ToggleSensitive.init("password", 1);
+        });
+    require(['core_form/submit'], function(Submit) {
+        Submit.init("loginbtn");
+    });
+;
+M.util.js_pending('core/notification'); require(['core/notification'], function(amd) {amd.init(1, []); M.util.js_complete('core/notification');});;
+M.util.js_pending('core/log'); require(['core/log'], function(amd) {amd.setConfig({"level":"warn"}); M.util.js_complete('core/log');});;
+M.util.js_pending('core/page_global'); require(['core/page_global'], function(amd) {amd.init(); M.util.js_complete('core/page_global');});;
+M.util.js_pending('core/utility'); require(['core/utility'], function(amd) {M.util.js_complete('core/utility');});;
+M.util.js_pending('core/storage_validation'); require(['core/storage_validation'], function(amd) {amd.init(null); M.util.js_complete('core/storage_validation');});
+    M.util.js_complete("core/first");
+});
+//]]>
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?delayStartupUntil=configured"></script>
+<script src="https://virtualcap.tecnologicoitca.edu.ec/theme/javascript.php/lambda2/1759886168/footer"></script>
+<script>
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"\u00daltima modificaci\u00f3n","name":"Nombre","error":"Error","info":"Informaci\u00f3n","yes":"S\u00ed","no":"No","cancel":"Cancelar","confirm":"Confirmar","areyousure":"\u00bfEst\u00e1 seguro?","closebuttontitle":"Cerrar","unknownerror":"Error desconocido","file":"Archivo","url":"URL","collapseall":"Colapsar todo","expandall":"Expandir todo"},"repository":{"type":"Tipo","size":"Tama\u00f1o","invalidjson":"Cadena JSON no v\u00e1lida","nofilesattached":"No se han adjuntado archivos","filepicker":"Selector de archivos","logout":"Salir","nofilesavailable":"No hay archivos disponibles","norepositoriesavailable":"Lo sentimos, ninguno de sus repositorios actuales puede devolver archivos en el formato solicitado.","fileexistsdialogheader":"El archivo existe","fileexistsdialog_editor":"Un archivo con ese nombre ha sido anexado al texto que Usted est\u00e1 editando","fileexistsdialog_filemanager":"Ya ha sido anexado un archivo con ese nombre","renameto":"Cambiar el nombre a \"{$a}\"","referencesexist":"Existen {$a} enlaces a este archivo","select":"Seleccionar"},"admin":{"confirmdeletecomments":"\u00bfSeguro que quiere eliminar el\/los comentario(s) seleccionados?","confirmation":"Confirmaci\u00f3n"},"debug":{"debuginfo":"Informaci\u00f3n de depuraci\u00f3n","line":"L\u00ednea","stacktrace":"Trazado de la pila (stack)"},"langconfig":{"labelsep":":"}};
+//]]>
+</script>
+<script>
+//<![CDATA[
+(function() {M.util.help_popups.setup(Y);
+ M.util.js_pending('random68e7c742a9d075'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random68e7c742a9d075'); });
+})();
+//]]>
+</script>
+
+            </div>
+            <div class="footer-section p-3">
+                <div>Desarrollado por <a href="https://moodle.com">Moodle</a></div>
+            </div>
+        </div>
+    
+        <div class="footer-content-debugging footer-dark bg-dark text-light">
+            <div class="container-fluid footer-dark-inner">
+                
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body></html>
